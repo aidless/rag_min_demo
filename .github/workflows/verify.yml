@@ -1,0 +1,18 @@
+name: verify
+
+on: [push, pull_request]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test runner
+        run: pip install pytest
+      - name: Baseline test (stdlib only, no bline imports)
+        run: python -m pytest -q
+      - name: Full pipeline smoke
+        run: python rag_demo.py

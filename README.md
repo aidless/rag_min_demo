@@ -3,12 +3,21 @@
 一句话：7 个文档 → 解析 → 句子感知分块 → 字二元组 TF-IDF 向量化 →
 余弦初排 + BM25 加权融合重排 → golden 集评测。**零依赖**，只有 Python3 标准库。
 
-## 运行
+## 运行（前提：先 `cd` 到本仓根，即 `rag_demo.py` 所在目录）
 
 ```bash
-python3 rag_min_demo/rag_demo.py                          # 全链路 + 5 题评测
-python3 rag_min_demo/rag_demo.py --query "分块太大有什么坏处"  # 单次查询演示
+python3 rag_demo.py                          # 全链路 + 5 题评测
+python3 rag_demo.py --query "分块太大有什么坏处"  # 单次查询演示
 ```
+
+### 一键复现
+
+```bash
+python3 --version   # 需 Python 3.8+（实测 3.12.3）
+bash demo.sh        # 等价于 python3 rag_demo.py + 一次单查询演示
+```
+
+预期输出（尾部）：`recall@3 = 5/5`，`MRR = 1.000`（5 题全部 PASS 且 rank=1）。
 
 实测：解析 7 文档 1411 字 → 10 chunk → 词表 1098 → 评测 recall@3 = 5/5，MRR = 1.000。
 
