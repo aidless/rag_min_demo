@@ -1,0 +1,1 @@
+[{"expect_chunks": ["eval#c1"], "expect_doc": "eval", "q": "清洗规则改完重跑全量评测AB对比看差值还是绝对值"}, {"expect_chunks": ["vector_db#c0"], "expect_doc": "vector_db", "q": "余弦维度归一化长短文本不可比调优时先抓哪一个"}, {"expect_chunks": ["failure_modes#c0", "failure_modes#c1"], "expect_doc": "failure_modes", "q": "引用校验环节没跑起来答案编号全挂错是谁的锅"}]

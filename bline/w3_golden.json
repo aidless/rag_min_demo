@@ -1,0 +1,331 @@
+{
+  "version": "w3-seed32",
+  "desc": "W2 32题SILVER双标注seed；P3再追加≥10对抗题",
+  "expected_doc_field": "expect_doc",
+  "expected_chunk_field": "expect_chunks（命中任一即chunk级命中）",
+  "queries": [
+    {
+      "q": "RAG 由哪几部分组成",
+      "type": "orig",
+      "note": "W1原题",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "检索增强生成的工作流程是什么样的",
+      "type": "paraphrase",
+      "note": "答案：先向量化→检索→拼进提示词→生成",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "label_note": "单chunk文档；工作流句在c0"
+    },
+    {
+      "q": "既想注入新知识又不想微调模型怎么办",
+      "type": "paraphrase",
+      "note": "答案：免微调注入新知识",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "label_note": "单chunk文档；免微调优势句在c0"
+    },
+    {
+      "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+      "type": "adversarial",
+      "note": "干扰eval.md（检索片段/依据）；答案在overview工作流程",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "label_note": "单chunk文档；拼进提示词属工作流程"
+    },
+    {
+      "q": "端到端正确率指的是什么",
+      "type": "paraphrase",
+      "note": "端到端正确率仅overview出现",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "label_note": "单chunk文档；端到端正确率仅c0出现"
+    },
+    {
+      "q": "分块太大或太小各有什么影响",
+      "type": "orig",
+      "note": "W1原题",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "label_note": "太大/太小两句皆在c0"
+    },
+    {
+      "q": "固定长度切分有什么缺点",
+      "type": "paraphrase",
+      "note": "答案：简单但易切断句子",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "label_note": "固定长度缺点句在c0"
+    },
+    {
+      "q": "滑动窗口重叠切分解决什么问题",
+      "type": "paraphrase",
+      "note": "答案：缓解边界截断",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "label_note": "缓解边界截断句在c0"
+    },
+    {
+      "q": "分块参数应该怎么定",
+      "type": "adversarial",
+      "note": "干扰vector_db（调优/压测）；答案在chunking无银弹实测",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c1"
+      ],
+      "label_note": "无银弹实测句仅c1，c0无此句"
+    },
+    {
+      "q": "为什么检索到了也答不全",
+      "type": "adversarial",
+      "note": "干扰eval.md（检索/答案）；答案在chunking语义切断",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "label_note": "检索到了也答不全原句在c0"
+    },
+    {
+      "q": "向量数据库怎么选型和调优",
+      "type": "orig",
+      "note": "W1原题",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "label_note": "整文档级问题：选型在c0、调优在c1，两chunk皆相关"
+    },
+    {
+      "q": "数据量小的时候有必要上Milvus吗",
+      "type": "paraphrase",
+      "note": "答案：几十万内单机FAISS，先单机后服务",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0"
+      ],
+      "label_note": "单机FAISS先单机后服务句在c0"
+    },
+    {
+      "q": "HNSW的ef_search调大有什么代价",
+      "type": "paraphrase",
+      "note": "答案：查询精度与延迟tradeoff",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "label_note": "efsearch精度延迟tradeoff句在c1"
+    },
+    {
+      "q": "纯向量检索在什么情况下会翻车",
+      "type": "adversarial",
+      "note": "干扰rag_overview（向量化/检索）；答案在vector_db生僻词翻车",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "label_note": "纯向量翻车句在c1"
+    },
+    {
+      "q": "长短文本的分数为什么不可比",
+      "type": "adversarial",
+      "note": "答案：L2归一化否则长短文本不可比",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "label_note": "L2归一化句因40字重叠同时出现在两chunk"
+    },
+    {
+      "q": "如何评估问答系统的效果",
+      "type": "orig",
+      "note": "W1原题",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0",
+        "eval#c1"
+      ],
+      "label_note": "整文档级问题：检索/生成侧在c0，评测纪律在c1"
+    },
+    {
+      "q": "golden集应该包含什么",
+      "type": "paraphrase",
+      "note": "答案：真实用户问题+标注文档编号",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "label_note": "golden集定义句在c0"
+    },
+    {
+      "q": "改了链路里的分块模块需要做什么",
+      "type": "paraphrase",
+      "note": "答案：改动任何一环重跑全量评测",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "label_note": "改动重跑全量评测句在c1"
+    },
+    {
+      "q": "新老版本对比应该看绝对值还是差值",
+      "type": "adversarial",
+      "note": "干扰chunking（对比召回率）；答案在eval只看差值",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "label_note": "只看差值句在c1"
+    },
+    {
+      "q": "答案里每条断言都要有依据吗",
+      "type": "adversarial",
+      "note": "干扰rag_overview（带依据/可追溯）；答案在eval断言找依据",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "label_note": "断言找依据完整句在c0；c1仅截断重复片段，不计"
+    },
+    {
+      "q": "Agent和单纯的大模型有什么区别",
+      "type": "paraphrase",
+      "note": "答案：配工具调用能力",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "Agent循环为什么要设最大步数",
+      "type": "paraphrase",
+      "note": "答案：防空转烧钱",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "单chunk文档；最大步数防空转句在c0"
+    },
+    {
+      "q": "工具返回内容太长怎么处理",
+      "type": "paraphrase",
+      "note": "答案：返回做截断防挤爆上下文",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "单chunk文档；截断防挤爆句在c0"
+    },
+    {
+      "q": "Agent缺知识时自己去查是怎么实现的",
+      "type": "adversarial",
+      "note": "干扰全部RAG文档（检索）；答案在agent_tools检索当工具",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "单chunk文档；检索当工具句在c0"
+    },
+    {
+      "q": "番茄炒蛋怎么做",
+      "type": "orig",
+      "note": "W1原题",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "炒鸡蛋要嫩有什么技巧",
+      "type": "paraphrase",
+      "note": "答案：凝固即盛出别炒老，大火",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "番茄炒蛋什么时候放盐和糖",
+      "type": "paraphrase",
+      "note": "答案：鸡蛋倒回后加盐和少许糖",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "先炒鸡蛋还是先炒番茄",
+      "type": "paraphrase",
+      "note": "答案：先炒鸡蛋盛出再起锅；易锚题",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "三天两晚的旅行怎么安排",
+      "type": "paraphrase",
+      "note": "答案：老城小吃/博物馆江边夜景/菜市场特产",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "旅行行李有什么建议",
+      "type": "paraphrase",
+      "note": "答案：只带必需品，充电宝身份证随身",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "第二天的行程是怎样的",
+      "type": "paraphrase",
+      "note": "答案：博物馆加江边步道晚上看夜景",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "去菜市场买特产是第几天",
+      "type": "paraphrase",
+      "note": "答案：第三天；易锚题",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "label_note": "单chunk文档"
+    }
+  ]
+}

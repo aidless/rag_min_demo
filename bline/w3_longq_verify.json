@@ -1,0 +1,87 @@
+{
+  "seed_q": "数据量小的时候有必要上Milvus吗",
+  "variant": "L-fill-near",
+  "deterministic_rerun_match": true,
+  "pure_cos_top5": [
+    [
+      "failure_modes#c1",
+      0.9695697558809835
+    ],
+    [
+      "failure_modes#c0",
+      0.30122531493517984
+    ],
+    [
+      "vector_db#c0",
+      0.0781334672813789
+    ],
+    [
+      "eval#c0",
+      0.07258490751719737
+    ],
+    [
+      "citation#c0",
+      0.07134433260414945
+    ]
+  ],
+  "pure_bm25_top5": [
+    [
+      "failure_modes#c1",
+      457.0528839411836
+    ],
+    [
+      "failure_modes#c0",
+      135.1917503550595
+    ],
+    [
+      "eval#c0",
+      41.48455759002773
+    ],
+    [
+      "vector_db#c0",
+      36.60734330169348
+    ],
+    [
+      "query_rewrite#c1",
+      35.64539532107323
+    ]
+  ],
+  "fill_scan": {
+    "50": {
+      "w_cos=0.0": 3,
+      "w_cos=0.2": 3,
+      "w_cos=0.4": 3,
+      "w_cos=0.6": 3,
+      "w_cos=0.8": 3,
+      "w_cos=1.0": 3,
+      "rrf_k=60": 3
+    },
+    "100": {
+      "w_cos=0.0": 3,
+      "w_cos=0.2": 3,
+      "w_cos=0.4": 3,
+      "w_cos=0.6": 3,
+      "w_cos=0.8": 3,
+      "w_cos=1.0": 3,
+      "rrf_k=60": 3
+    },
+    "200": {
+      "w_cos=0.0": null,
+      "w_cos=0.2": null,
+      "w_cos=0.4": null,
+      "w_cos=0.6": null,
+      "w_cos=0.8": 3,
+      "w_cos=1.0": 3,
+      "rrf_k=60": 3
+    },
+    "1000000000": {
+      "w_cos=0.0": null,
+      "w_cos=0.2": null,
+      "w_cos=0.4": null,
+      "w_cos=0.6": null,
+      "w_cos=0.8": 3,
+      "w_cos=1.0": 3,
+      "rrf_k=60": 3
+    }
+  }
+}

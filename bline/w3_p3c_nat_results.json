@@ -1,0 +1,353 @@
+{
+  "n": 11,
+  "hitdiv": 0,
+  "rankdiv": 0,
+  "rows": [
+    {
+      "cid": "N1-milvus-nat",
+      "src": "neardup/Milvus小数据量",
+      "q": "我们现在数据量也就几万条，运维人手也不多，有必要上Milvus这种向量数据库服务吗，还是单机FAISS先顶着？",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0"
+      ],
+      "label_note": "单机FAISS先单机后服务句在c0；问法自然化自seed原问，未粘贴原文。",
+      "intent": "保易混：点名Milvus/FAISS/单机，测BM25是否被服务名带偏、cos能否守住c0",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    },
+    {
+      "cid": "N2-select-nat",
+      "src": "neardup/向量数据库选型",
+      "q": "向量数据库选型和调优一般抓哪几个旋钮？HNSW的efsearch和混合检索具体要怎么定？",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "label_note": "整文档级问题沿用seed口径：选型c0、调优c1皆相关；关键词为自然追问用语。",
+      "intent": "保易混：旋钮/HNSW/混合检索同时命中c1，测两路是否分化",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    },
+    {
+      "cid": "N3-chunk-nat",
+      "src": "N-swap/检索到了也答不全",
+      "q": "切分做完检索分数看着挺高，但答案总是不全，像是前后指代丢了，该换哪种分块策略？",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "label_note": "同义改写seed原问（检索到了也答不全/前后指代丢失/分块策略皆在c0），未用原句。",
+      "intent": "N-swap自然化：1处同义改写+口语化，测自然噪声下两路是否分叉",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    },
+    {
+      "cid": "N4-eval-nat",
+      "src": "neardup/新老版本对比",
+      "q": "线上迭代了个新版本，老板问提升了多少，我直接报新版本的绝对分数行吗，还是必须拿同一批问题做AB对比只看差值？",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "label_note": "只看差值不看绝对值句在c1；问法为自然工作场景追问。",
+      "intent": "保易混：绝对分数/AB对比/差值三词同现，测BM25是否被带偏",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    },
+    {
+      "cid": "N5-steps-nat",
+      "src": "N-swap/Agent最大步数",
+      "q": "Agent循环跑起来有时一直打转停不下来还烧钱，工程上一般怎么防？",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "最大步数防空转句在c0；改写去掉关键词最大步数，纯语义指向。",
+      "intent": "N-swap自然化：去关键词纯语义问法，测cos能否独立命中",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    },
+    {
+      "cid": "N6-tools-nat",
+      "src": "N-swap/Agent查知识实现",
+      "q": "Agent缺背景知识的时候，怎么让它自己去查资料，这个检索工具是怎么接进循环的？",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "检索当工具句在c0；轻度改写，保留检索/工具关键词。",
+      "intent": "N-swap自然化：保留关键词的轻度改写，对照N5去关键词版",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    },
+    {
+      "cid": "N7-travel-nat",
+      "src": "N-swap/第二天的行程（反向题）",
+      "q": "第二天去哪玩，有什么推荐？",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "label_note": "单chunk文档；反向题的自然缩短版（原N-trunc机械截半的对照）。",
+      "intent": "反向题自然化：短问下加权rank3/rrf-miss模式是否保持",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    },
+    {
+      "cid": "R2-1-milvus-eval",
+      "src": "neardup/Milvus小数据量+R2",
+      "q": "几万条数据量，单机FAISS还是上Milvus服务？我们想先拿评测数据对比一下再拍板。",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0"
+      ],
+      "label_note": "问句是选型（c0），后半句评测数据为自然补充的跨主题从句（eval词汇），单答案维持选型。",
+      "intent": "跨主题从句施压：BM25是否被评测词汇拉向eval、cos能否守住vector_db",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    },
+    {
+      "cid": "R2-2-eval-frozen",
+      "src": "neardup/新老版本对比+R2",
+      "q": "新老版本对比只看差值不看绝对分数的话，评测集是不是必须冻结？",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "label_note": "复核修正：差值句与冻结纪律同在c1（c0为golden集/recall/忠实度），故单标c1；双遍复核已记。",
+      "intent": "单chunk多纪律点：自然问法下两路是否仍一致",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    },
+    {
+      "cid": "R2-3-chunk-tradeoff",
+      "src": "N-swap/检索到了也答不全+R2",
+      "q": "分块太大把噪声带进提示词浪费窗口，分块太小切断语义答不全，滑动窗口保留重叠能两全吗？",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "label_note": "大/小/重叠三现象全在c0；用金chunk自身词汇重述，测自然上限（预期全一致，阴性对照）。",
+      "intent": "阴性对照：金词汇重述应全格点一致，验证口径不误报",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    },
+    {
+      "cid": "R2-4-agent-guard",
+      "src": "N-swap/Agent最大步数+R2",
+      "q": "Agent循环空转烧钱，除了限制最大步数，工具返回太长挤爆上下文要一起截断吗？",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "单chunk文档；最大步数+截断两工程点同在c0，单答案。",
+      "intent": "同chunk多工程点：自然问法下两路是否仍一致",
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "hit_div": 0,
+      "rank_div": false
+    }
+  ],
+  "pool_chunks": 35,
+  "ref": "w_cos=0.6",
+  "top_k": 3,
+  "candidates": 10
+}

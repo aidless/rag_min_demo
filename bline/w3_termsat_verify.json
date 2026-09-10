@@ -1,0 +1,135 @@
+{
+  "n_hit_rows": 2,
+  "deterministic_rerun_match": true,
+  "scan_seed_q": "golden集应该包含什么",
+  "rare_bigram": "3和",
+  "rep_scan": {
+    "1": {
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": null
+      },
+      "max_abs_d_cos": 0.0351,
+      "max_abs_d_bm25": 3.7282
+    },
+    "2": {
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 2
+      },
+      "max_abs_d_cos": 0.0723,
+      "max_abs_d_bm25": 3.7282
+    },
+    "3": {
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 2
+      },
+      "max_abs_d_cos": 0.0908,
+      "max_abs_d_bm25": 3.7282
+    },
+    "5": {
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 2
+      },
+      "max_abs_d_cos": 0.11,
+      "max_abs_d_bm25": 3.7282
+    },
+    "8": {
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 2
+      },
+      "max_abs_d_cos": 0.1242,
+      "max_abs_d_bm25": 3.7282
+    },
+    "12": {
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 2
+      },
+      "max_abs_d_cos": 0.1342,
+      "max_abs_d_bm25": 3.7282
+    }
+  },
+  "rep8_pure_cos_top5": [
+    [
+      "eval#c0",
+      0.14995483935142423
+    ],
+    [
+      "recall_debug#c1",
+      0.10564588421989721
+    ],
+    [
+      "query_rewrite#c1",
+      0.10413691229954497
+    ],
+    [
+      "hybrid_retrieval#c1",
+      0.09199129076422166
+    ],
+    [
+      "citation#c1",
+      0.08003306716108352
+    ]
+  ],
+  "rep8_pure_bm25_top5": [
+    [
+      "recall_debug#c1",
+      20.226295182507823
+    ],
+    [
+      "query_rewrite#c1",
+      19.71986744328891
+    ],
+    [
+      "hybrid_retrieval#c1",
+      18.41358478422394
+    ],
+    [
+      "eval#c0",
+      18.24009493305246
+    ],
+    [
+      "citation#c1",
+      17.144303990286936
+    ]
+  ],
+  "new_types_by_rep": [
+    "3和",
+    "么3",
+    "和3"
+  ]
+}

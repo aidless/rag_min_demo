@@ -1,0 +1,4244 @@
+{
+  "n_probes": 128,
+  "n_pure_flip": 2,
+  "n_rankdiv": 5,
+  "n_hitdiv": 1,
+  "rows": [
+    {
+      "seed_q": "RAG 由哪几部分组成",
+      "variant": "L-fill-near",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 225,
+      "pure_cos_top1": "latency_opt#c0",
+      "pure_bm25_top1": "latency_opt#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "RAG 由哪几部分组成",
+      "variant": "L-fill-far",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 148,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 2,
+      "n_rank_values_chunk": 2,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "RAG 由哪几部分组成",
+      "variant": "L-ceil",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 226,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "RAG 由哪几部分组成",
+      "variant": "L-both",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 440,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "检索增强生成的工作流程是什么样的",
+      "variant": "L-fill-near",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 187,
+      "pure_cos_top1": "citation#c0",
+      "pure_bm25_top1": "citation#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "检索增强生成的工作流程是什么样的",
+      "variant": "L-fill-far",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 153,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "检索增强生成的工作流程是什么样的",
+      "variant": "L-ceil",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 231,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "检索增强生成的工作流程是什么样的",
+      "variant": "L-both",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 402,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "既想注入新知识又不想微调模型怎么办",
+      "variant": "L-fill-near",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 102,
+      "pure_cos_top1": "embedding_select#c1",
+      "pure_bm25_top1": "embedding_select#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "既想注入新知识又不想微调模型怎么办",
+      "variant": "L-fill-far",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 154,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "既想注入新知识又不想微调模型怎么办",
+      "variant": "L-ceil",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 232,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "既想注入新知识又不想微调模型怎么办",
+      "variant": "L-both",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 317,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "RAG把检索片段拼进提示词这步属于哪个环节",
+      "variant": "L-fill-near",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 235,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "RAG把检索片段拼进提示词这步属于哪个环节",
+      "variant": "L-fill-far",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 158,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "RAG把检索片段拼进提示词这步属于哪个环节",
+      "variant": "L-ceil",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 236,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "RAG把检索片段拼进提示词这步属于哪个环节",
+      "variant": "L-both",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 450,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": true,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 2,
+      "n_rank_values_chunk": 2,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "端到端正确率指的是什么",
+      "variant": "L-fill-near",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 217,
+      "pure_cos_top1": "rerank#c0",
+      "pure_bm25_top1": "rerank#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "端到端正确率指的是什么",
+      "variant": "L-fill-far",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 148,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "端到端正确率指的是什么",
+      "variant": "L-ceil",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 226,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "端到端正确率指的是什么",
+      "variant": "L-both",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "qlen": 432,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "分块太大或太小各有什么影响",
+      "variant": "L-fill-near",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 220,
+      "pure_cos_top1": "hybrid_retrieval#c0",
+      "pure_bm25_top1": "hybrid_retrieval#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "分块太大或太小各有什么影响",
+      "variant": "L-fill-far",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 150,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "分块太大或太小各有什么影响",
+      "variant": "L-ceil",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 227,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "分块太大或太小各有什么影响",
+      "variant": "L-both",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 434,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "固定长度切分有什么缺点",
+      "variant": "L-fill-near",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 138,
+      "pure_cos_top1": "judge_eval#c1",
+      "pure_bm25_top1": "judge_eval#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "固定长度切分有什么缺点",
+      "variant": "L-fill-far",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 148,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "固定长度切分有什么缺点",
+      "variant": "L-ceil",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 225,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "固定长度切分有什么缺点",
+      "variant": "L-both",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 352,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "滑动窗口重叠切分解决什么问题",
+      "variant": "L-fill-near",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 214,
+      "pure_cos_top1": "context_manage#c0",
+      "pure_bm25_top1": "context_manage#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "滑动窗口重叠切分解决什么问题",
+      "variant": "L-fill-far",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 151,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "滑动窗口重叠切分解决什么问题",
+      "variant": "L-ceil",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 228,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "滑动窗口重叠切分解决什么问题",
+      "variant": "L-both",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 428,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "分块参数应该怎么定",
+      "variant": "L-fill-near",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c1"
+      ],
+      "qlen": 229,
+      "pure_cos_top1": "query_rewrite#c0",
+      "pure_bm25_top1": "query_rewrite#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "分块参数应该怎么定",
+      "variant": "L-fill-far",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c1"
+      ],
+      "qlen": 146,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "分块参数应该怎么定",
+      "variant": "L-ceil",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c1"
+      ],
+      "qlen": 91,
+      "pure_cos_top1": "chunking#c1",
+      "pure_bm25_top1": "chunking#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "分块参数应该怎么定",
+      "variant": "L-both",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c1"
+      ],
+      "qlen": 311,
+      "pure_cos_top1": "query_rewrite#c0",
+      "pure_bm25_top1": "query_rewrite#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "为什么检索到了也答不全",
+      "variant": "L-fill-near",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 168,
+      "pure_cos_top1": "failure_modes#c0",
+      "pure_bm25_top1": "failure_modes#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "为什么检索到了也答不全",
+      "variant": "L-fill-far",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 148,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "为什么检索到了也答不全",
+      "variant": "L-ceil",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 225,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "为什么检索到了也答不全",
+      "variant": "L-both",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "qlen": 382,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "向量数据库怎么选型和调优",
+      "variant": "L-fill-near",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "qlen": 230,
+      "pure_cos_top1": "embedding_select#c0",
+      "pure_bm25_top1": "embedding_select#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "向量数据库怎么选型和调优",
+      "variant": "L-fill-far",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "qlen": 149,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "向量数据库怎么选型和调优",
+      "variant": "L-ceil",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "qlen": 186,
+      "pure_cos_top1": "vector_db#c0",
+      "pure_bm25_top1": "vector_db#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "向量数据库怎么选型和调优",
+      "variant": "L-both",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "qlen": 404,
+      "pure_cos_top1": "embedding_select#c0",
+      "pure_bm25_top1": "embedding_select#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "数据量小的时候有必要上Milvus吗",
+      "variant": "L-fill-near",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0"
+      ],
+      "qlen": 163,
+      "pure_cos_top1": "failure_modes#c1",
+      "pure_bm25_top1": "failure_modes#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 2,
+      "n_rank_values_chunk": 2,
+      "hit_div_doc_vs_ref": 3
+    },
+    {
+      "seed_q": "数据量小的时候有必要上Milvus吗",
+      "variant": "L-fill-far",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0"
+      ],
+      "qlen": 155,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "数据量小的时候有必要上Milvus吗",
+      "variant": "L-ceil",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0"
+      ],
+      "qlen": 192,
+      "pure_cos_top1": "vector_db#c0",
+      "pure_bm25_top1": "vector_db#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "数据量小的时候有必要上Milvus吗",
+      "variant": "L-both",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0"
+      ],
+      "qlen": 337,
+      "pure_cos_top1": "vector_db#c0",
+      "pure_bm25_top1": "vector_db#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "HNSW的ef_search调大有什么代价",
+      "variant": "L-fill-near",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "qlen": 228,
+      "pure_cos_top1": "data_clean#c0",
+      "pure_bm25_top1": "data_clean#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "HNSW的ef_search调大有什么代价",
+      "variant": "L-fill-far",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "qlen": 158,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "HNSW的ef_search调大有什么代价",
+      "variant": "L-ceil",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "qlen": 215,
+      "pure_cos_top1": "vector_db#c1",
+      "pure_bm25_top1": "vector_db#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "HNSW的ef_search调大有什么代价",
+      "variant": "L-both",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "qlen": 422,
+      "pure_cos_top1": "data_clean#c0",
+      "pure_bm25_top1": "data_clean#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "纯向量检索在什么情况下会翻车",
+      "variant": "L-fill-near",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "qlen": 221,
+      "pure_cos_top1": "hybrid_retrieval#c0",
+      "pure_bm25_top1": "hybrid_retrieval#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "纯向量检索在什么情况下会翻车",
+      "variant": "L-fill-far",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "qlen": 151,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "纯向量检索在什么情况下会翻车",
+      "variant": "L-ceil",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "qlen": 208,
+      "pure_cos_top1": "vector_db#c1",
+      "pure_bm25_top1": "vector_db#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "纯向量检索在什么情况下会翻车",
+      "variant": "L-both",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "qlen": 415,
+      "pure_cos_top1": "hybrid_retrieval#c0",
+      "pure_bm25_top1": "hybrid_retrieval#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "长短文本的分数为什么不可比",
+      "variant": "L-fill-near",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "qlen": 98,
+      "pure_cos_top1": "embedding_select#c1",
+      "pure_bm25_top1": "embedding_select#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "长短文本的分数为什么不可比",
+      "variant": "L-fill-far",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "qlen": 150,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "长短文本的分数为什么不可比",
+      "variant": "L-ceil",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "qlen": 187,
+      "pure_cos_top1": "vector_db#c0",
+      "pure_bm25_top1": "vector_db#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "长短文本的分数为什么不可比",
+      "variant": "L-both",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "qlen": 272,
+      "pure_cos_top1": "vector_db#c0",
+      "pure_bm25_top1": "vector_db#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "如何评估问答系统的效果",
+      "variant": "L-fill-near",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0",
+        "eval#c1"
+      ],
+      "qlen": 138,
+      "pure_cos_top1": "judge_eval#c1",
+      "pure_bm25_top1": "judge_eval#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "如何评估问答系统的效果",
+      "variant": "L-fill-far",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0",
+        "eval#c1"
+      ],
+      "qlen": 148,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "如何评估问答系统的效果",
+      "variant": "L-ceil",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0",
+        "eval#c1"
+      ],
+      "qlen": 177,
+      "pure_cos_top1": "eval#c0",
+      "pure_bm25_top1": "eval#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "如何评估问答系统的效果",
+      "variant": "L-both",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0",
+        "eval#c1"
+      ],
+      "qlen": 304,
+      "pure_cos_top1": "eval#c0",
+      "pure_bm25_top1": "eval#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "golden集应该包含什么",
+      "variant": "L-fill-near",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "qlen": 80,
+      "pure_cos_top1": "recall_debug#c1",
+      "pure_bm25_top1": "recall_debug#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "golden集应该包含什么",
+      "variant": "L-fill-far",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "qlen": 150,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "golden集应该包含什么",
+      "variant": "L-ceil",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "qlen": 179,
+      "pure_cos_top1": "eval#c0",
+      "pure_bm25_top1": "eval#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "golden集应该包含什么",
+      "variant": "L-both",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "qlen": 246,
+      "pure_cos_top1": "eval#c0",
+      "pure_bm25_top1": "eval#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "改了链路里的分块模块需要做什么",
+      "variant": "L-fill-near",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "qlen": 229,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "改了链路里的分块模块需要做什么",
+      "variant": "L-fill-far",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "qlen": 152,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "改了链路里的分块模块需要做什么",
+      "variant": "L-ceil",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "qlen": 143,
+      "pure_cos_top1": "eval#c1",
+      "pure_bm25_top1": "eval#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "改了链路里的分块模块需要做什么",
+      "variant": "L-both",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "qlen": 357,
+      "pure_cos_top1": "chunking#c0",
+      "pure_bm25_top1": "chunking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "新老版本对比应该看绝对值还是差值",
+      "variant": "L-fill-near",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "qlen": 95,
+      "pure_cos_top1": "context_manage#c1",
+      "pure_bm25_top1": "context_manage#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "新老版本对比应该看绝对值还是差值",
+      "variant": "L-fill-far",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "qlen": 153,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "新老版本对比应该看绝对值还是差值",
+      "variant": "L-ceil",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "qlen": 144,
+      "pure_cos_top1": "eval#c1",
+      "pure_bm25_top1": "eval#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "新老版本对比应该看绝对值还是差值",
+      "variant": "L-both",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "qlen": 223,
+      "pure_cos_top1": "eval#c1",
+      "pure_bm25_top1": "eval#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "答案里每条断言都要有依据吗",
+      "variant": "L-fill-near",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "qlen": 158,
+      "pure_cos_top1": "failure_modes#c1",
+      "pure_bm25_top1": "failure_modes#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "答案里每条断言都要有依据吗",
+      "variant": "L-fill-far",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "qlen": 150,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "答案里每条断言都要有依据吗",
+      "variant": "L-ceil",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "qlen": 179,
+      "pure_cos_top1": "eval#c0",
+      "pure_bm25_top1": "eval#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "答案里每条断言都要有依据吗",
+      "variant": "L-both",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "qlen": 324,
+      "pure_cos_top1": "eval#c0",
+      "pure_bm25_top1": "eval#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent和单纯的大模型有什么区别",
+      "variant": "L-fill-near",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 144,
+      "pure_cos_top1": "judge_eval#c1",
+      "pure_bm25_top1": "judge_eval#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent和单纯的大模型有什么区别",
+      "variant": "L-fill-far",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 154,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent和单纯的大模型有什么区别",
+      "variant": "L-ceil",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 211,
+      "pure_cos_top1": "agent_tools#c0",
+      "pure_bm25_top1": "agent_tools#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent和单纯的大模型有什么区别",
+      "variant": "L-both",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 338,
+      "pure_cos_top1": "agent_tools#c0",
+      "pure_bm25_top1": "agent_tools#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent循环为什么要设最大步数",
+      "variant": "L-fill-near",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 143,
+      "pure_cos_top1": "judge_eval#c1",
+      "pure_bm25_top1": "judge_eval#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent循环为什么要设最大步数",
+      "variant": "L-fill-far",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 153,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent循环为什么要设最大步数",
+      "variant": "L-ceil",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 210,
+      "pure_cos_top1": "agent_tools#c0",
+      "pure_bm25_top1": "agent_tools#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent循环为什么要设最大步数",
+      "variant": "L-both",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 337,
+      "pure_cos_top1": "agent_tools#c0",
+      "pure_bm25_top1": "agent_tools#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "工具返回内容太长怎么处理",
+      "variant": "L-fill-near",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 185,
+      "pure_cos_top1": "index_update#c0",
+      "pure_bm25_top1": "index_update#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "工具返回内容太长怎么处理",
+      "variant": "L-fill-far",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 149,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "工具返回内容太长怎么处理",
+      "variant": "L-ceil",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 206,
+      "pure_cos_top1": "agent_tools#c0",
+      "pure_bm25_top1": "agent_tools#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "工具返回内容太长怎么处理",
+      "variant": "L-both",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 379,
+      "pure_cos_top1": "agent_tools#c0",
+      "pure_bm25_top1": "agent_tools#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent缺知识时自己去查是怎么实现的",
+      "variant": "L-fill-near",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 234,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 2,
+      "n_rank_values_chunk": 2,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent缺知识时自己去查是怎么实现的",
+      "variant": "L-fill-far",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 156,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent缺知识时自己去查是怎么实现的",
+      "variant": "L-ceil",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 213,
+      "pure_cos_top1": "agent_tools#c0",
+      "pure_bm25_top1": "agent_tools#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "Agent缺知识时自己去查是怎么实现的",
+      "variant": "L-both",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "qlen": 428,
+      "pure_cos_top1": "agent_tools#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": true,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 2,
+      "n_rank_values_chunk": 2,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "番茄炒蛋怎么做",
+      "variant": "L-fill-near",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 227,
+      "pure_cos_top1": "query_rewrite#c0",
+      "pure_bm25_top1": "query_rewrite#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "番茄炒蛋怎么做",
+      "variant": "L-fill-far",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 144,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "番茄炒蛋怎么做",
+      "variant": "L-ceil",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 97,
+      "pure_cos_top1": "cooking#c0",
+      "pure_bm25_top1": "cooking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "番茄炒蛋怎么做",
+      "variant": "L-both",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 317,
+      "pure_cos_top1": "query_rewrite#c0",
+      "pure_bm25_top1": "query_rewrite#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "炒鸡蛋要嫩有什么技巧",
+      "variant": "L-fill-near",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 147,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "炒鸡蛋要嫩有什么技巧",
+      "variant": "L-fill-far",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 147,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "炒鸡蛋要嫩有什么技巧",
+      "variant": "L-ceil",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 100,
+      "pure_cos_top1": "cooking#c0",
+      "pure_bm25_top1": "cooking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "炒鸡蛋要嫩有什么技巧",
+      "variant": "L-both",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 237,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "番茄炒蛋什么时候放盐和糖",
+      "variant": "L-fill-near",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 206,
+      "pure_cos_top1": "vector_db#c1",
+      "pure_bm25_top1": "vector_db#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "番茄炒蛋什么时候放盐和糖",
+      "variant": "L-fill-far",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 149,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "番茄炒蛋什么时候放盐和糖",
+      "variant": "L-ceil",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 102,
+      "pure_cos_top1": "cooking#c0",
+      "pure_bm25_top1": "cooking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "番茄炒蛋什么时候放盐和糖",
+      "variant": "L-both",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 296,
+      "pure_cos_top1": "vector_db#c1",
+      "pure_bm25_top1": "vector_db#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "先炒鸡蛋还是先炒番茄",
+      "variant": "L-fill-near",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 89,
+      "pure_cos_top1": "context_manage#c1",
+      "pure_bm25_top1": "context_manage#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "先炒鸡蛋还是先炒番茄",
+      "variant": "L-fill-far",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 147,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "先炒鸡蛋还是先炒番茄",
+      "variant": "L-ceil",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 100,
+      "pure_cos_top1": "cooking#c0",
+      "pure_bm25_top1": "cooking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "先炒鸡蛋还是先炒番茄",
+      "variant": "L-both",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "qlen": 179,
+      "pure_cos_top1": "cooking#c0",
+      "pure_bm25_top1": "cooking#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "三天两晚的旅行怎么安排",
+      "variant": "L-fill-near",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 148,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "三天两晚的旅行怎么安排",
+      "variant": "L-fill-far",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 148,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "三天两晚的旅行怎么安排",
+      "variant": "L-ceil",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 95,
+      "pure_cos_top1": "travel#c0",
+      "pure_bm25_top1": "travel#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "三天两晚的旅行怎么安排",
+      "variant": "L-both",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 232,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "旅行行李有什么建议",
+      "variant": "L-fill-near",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 94,
+      "pure_cos_top1": "embedding_select#c1",
+      "pure_bm25_top1": "embedding_select#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "旅行行李有什么建议",
+      "variant": "L-fill-far",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 146,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "旅行行李有什么建议",
+      "variant": "L-ceil",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 93,
+      "pure_cos_top1": "travel#c0",
+      "pure_bm25_top1": "travel#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "旅行行李有什么建议",
+      "variant": "L-both",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 178,
+      "pure_cos_top1": "travel#c0",
+      "pure_bm25_top1": "travel#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "第二天的行程是怎样的",
+      "variant": "L-fill-near",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 225,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "第二天的行程是怎样的",
+      "variant": "L-fill-far",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 147,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 3,
+        "w_cos=0.2": 3,
+        "w_cos=0.4": 3,
+        "w_cos=0.6": 3,
+        "w_cos=0.8": 3,
+        "w_cos=1.0": 3,
+        "rrf_k=60": 3
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "第二天的行程是怎样的",
+      "variant": "L-ceil",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 94,
+      "pure_cos_top1": "travel#c0",
+      "pure_bm25_top1": "travel#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "第二天的行程是怎样的",
+      "variant": "L-both",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 309,
+      "pure_cos_top1": "rag_overview#c0",
+      "pure_bm25_top1": "rag_overview#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "去菜市场买特产是第几天",
+      "variant": "L-fill-near",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 205,
+      "pure_cos_top1": "vector_db#c1",
+      "pure_bm25_top1": "vector_db#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": null,
+        "w_cos=0.2": null,
+        "w_cos=0.4": null,
+        "w_cos=0.6": null,
+        "w_cos=0.8": null,
+        "w_cos=1.0": null,
+        "rrf_k=60": null
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "去菜市场买特产是第几天",
+      "variant": "L-fill-far",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 148,
+      "pure_cos_top1": "fitness#c0",
+      "pure_bm25_top1": "fitness#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "去菜市场买特产是第几天",
+      "variant": "L-ceil",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 95,
+      "pure_cos_top1": "travel#c0",
+      "pure_bm25_top1": "travel#c0",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 1,
+        "w_cos=0.2": 1,
+        "w_cos=0.4": 1,
+        "w_cos=0.6": 1,
+        "w_cos=0.8": 1,
+        "w_cos=1.0": 1,
+        "rrf_k=60": 1
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    },
+    {
+      "seed_q": "去菜市场买特产是第几天",
+      "variant": "L-both",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "qlen": 289,
+      "pure_cos_top1": "vector_db#c1",
+      "pure_bm25_top1": "vector_db#c1",
+      "pure_flip": false,
+      "doc_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "chunk_ranks": {
+        "w_cos=0.0": 2,
+        "w_cos=0.2": 2,
+        "w_cos=0.4": 2,
+        "w_cos=0.6": 2,
+        "w_cos=0.8": 2,
+        "w_cos=1.0": 2,
+        "rrf_k=60": 2
+      },
+      "n_rank_values_doc": 1,
+      "n_rank_values_chunk": 1,
+      "hit_div_doc_vs_ref": 0
+    }
+  ]
+}

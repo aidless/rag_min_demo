@@ -1,0 +1,2628 @@
+{
+  "generated_at": "2026-09-10T12:31:59.737494+08:00",
+  "git_sha": "unknown",
+  "top_k": 3,
+  "replay_gate": {
+    "pass": true,
+    "detail": [
+      {
+        "strategy": "w_cos=0.0",
+        "recall_at_k_doc": [
+          31,
+          32
+        ],
+        "mrr_doc": 0.9688,
+        "expect_recall": [
+          31,
+          32
+        ],
+        "expect_mrr": 0.9688,
+        "match": true
+      },
+      {
+        "strategy": "w_cos=0.2",
+        "recall_at_k_doc": [
+          31,
+          32
+        ],
+        "mrr_doc": 0.9688,
+        "expect_recall": [
+          31,
+          32
+        ],
+        "expect_mrr": 0.9688,
+        "match": true
+      },
+      {
+        "strategy": "w_cos=0.4",
+        "recall_at_k_doc": [
+          31,
+          32
+        ],
+        "mrr_doc": 0.9688,
+        "expect_recall": [
+          31,
+          32
+        ],
+        "expect_mrr": 0.9688,
+        "match": true
+      },
+      {
+        "strategy": "w_cos=0.6",
+        "recall_at_k_doc": [
+          31,
+          32
+        ],
+        "mrr_doc": 0.9688,
+        "expect_recall": [
+          31,
+          32
+        ],
+        "expect_mrr": 0.9688,
+        "match": true
+      },
+      {
+        "strategy": "w_cos=0.8",
+        "recall_at_k_doc": [
+          31,
+          32
+        ],
+        "mrr_doc": 0.9688,
+        "expect_recall": [
+          31,
+          32
+        ],
+        "expect_mrr": 0.9688,
+        "match": true
+      },
+      {
+        "strategy": "w_cos=1.0",
+        "recall_at_k_doc": [
+          31,
+          32
+        ],
+        "mrr_doc": 0.9688,
+        "expect_recall": [
+          31,
+          32
+        ],
+        "expect_mrr": 0.9688,
+        "match": true
+      },
+      {
+        "strategy": "rrf_k=60",
+        "recall_at_k_doc": [
+          31,
+          32
+        ],
+        "mrr_doc": 0.9688,
+        "expect_recall": [
+          31,
+          32
+        ],
+        "expect_mrr": 0.9688,
+        "match": true
+      }
+    ]
+  },
+  "extended_n_chunks": 35,
+  "n_queries": 32,
+  "cells": [
+    {
+      "recall_at_k_doc": [
+        30,
+        32
+      ],
+      "mrr_doc": 0.9375,
+      "wilson95_doc": [
+        0.7985,
+        0.9827
+      ],
+      "hit_vec_doc": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n_chunk_labeled": 32,
+      "recall_at_k_chunk": [
+        30,
+        32
+      ],
+      "mrr_chunk": 0.9375,
+      "wilson95_chunk": [
+        0.7985,
+        0.9827
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0",
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        }
+      ],
+      "strategy": "w_cos=0.0"
+    },
+    {
+      "recall_at_k_doc": [
+        30,
+        32
+      ],
+      "mrr_doc": 0.9375,
+      "wilson95_doc": [
+        0.7985,
+        0.9827
+      ],
+      "hit_vec_doc": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n_chunk_labeled": 32,
+      "recall_at_k_chunk": [
+        30,
+        32
+      ],
+      "mrr_chunk": 0.9375,
+      "wilson95_chunk": [
+        0.7985,
+        0.9827
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0",
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        }
+      ],
+      "strategy": "w_cos=0.2"
+    },
+    {
+      "recall_at_k_doc": [
+        30,
+        32
+      ],
+      "mrr_doc": 0.9375,
+      "wilson95_doc": [
+        0.7985,
+        0.9827
+      ],
+      "hit_vec_doc": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n_chunk_labeled": 32,
+      "recall_at_k_chunk": [
+        30,
+        32
+      ],
+      "mrr_chunk": 0.9375,
+      "wilson95_chunk": [
+        0.7985,
+        0.9827
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0",
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        }
+      ],
+      "strategy": "w_cos=0.4"
+    },
+    {
+      "recall_at_k_doc": [
+        30,
+        32
+      ],
+      "mrr_doc": 0.9375,
+      "wilson95_doc": [
+        0.7985,
+        0.9827
+      ],
+      "hit_vec_doc": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n_chunk_labeled": 32,
+      "recall_at_k_chunk": [
+        30,
+        32
+      ],
+      "mrr_chunk": 0.9375,
+      "wilson95_chunk": [
+        0.7985,
+        0.9827
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0",
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        }
+      ],
+      "strategy": "w_cos=0.6"
+    },
+    {
+      "recall_at_k_doc": [
+        30,
+        32
+      ],
+      "mrr_doc": 0.9375,
+      "wilson95_doc": [
+        0.7985,
+        0.9827
+      ],
+      "hit_vec_doc": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n_chunk_labeled": 32,
+      "recall_at_k_chunk": [
+        30,
+        32
+      ],
+      "mrr_chunk": 0.9375,
+      "wilson95_chunk": [
+        0.7985,
+        0.9827
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0",
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        }
+      ],
+      "strategy": "w_cos=0.8"
+    },
+    {
+      "recall_at_k_doc": [
+        30,
+        32
+      ],
+      "mrr_doc": 0.9219,
+      "wilson95_doc": [
+        0.7985,
+        0.9827
+      ],
+      "hit_vec_doc": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n_chunk_labeled": 32,
+      "recall_at_k_chunk": [
+        30,
+        32
+      ],
+      "mrr_chunk": 0.9219,
+      "wilson95_chunk": [
+        0.7985,
+        0.9827
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 2,
+          "chunk_rank": 2
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0",
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        }
+      ],
+      "strategy": "w_cos=1.0"
+    },
+    {
+      "recall_at_k_doc": [
+        30,
+        32
+      ],
+      "mrr_doc": 0.9219,
+      "wilson95_doc": [
+        0.7985,
+        0.9827
+      ],
+      "hit_vec_doc": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n_chunk_labeled": 32,
+      "recall_at_k_chunk": [
+        30,
+        32
+      ],
+      "mrr_chunk": 0.9219,
+      "wilson95_chunk": [
+        0.7985,
+        0.9827
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect_doc": "rag_overview",
+          "expect_chunks": [
+            "rag_overview#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect_doc": "chunking",
+          "expect_chunks": [
+            "chunking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect_doc": "vector_db",
+          "expect_chunks": [
+            "vector_db#c0",
+            "vector_db#c1"
+          ],
+          "doc_rank": 2,
+          "chunk_rank": 2
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0",
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": null,
+          "chunk_rank": null
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c1"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect_doc": "eval",
+          "expect_chunks": [
+            "eval#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect_doc": "agent_tools",
+          "expect_chunks": [
+            "agent_tools#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect_doc": "cooking",
+          "expect_chunks": [
+            "cooking#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect_doc": "travel",
+          "expect_chunks": [
+            "travel#c0"
+          ],
+          "doc_rank": 1,
+          "chunk_rank": 1
+        }
+      ],
+      "strategy": "rrf_k=60"
+    }
+  ],
+  "vs_ref_w_cos06": [
+    {
+      "strategy": "w_cos=0.0",
+      "disagree_hit_doc": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank_doc": 0,
+      "disagree_hit_chunk": 0,
+      "mcnemar_p_chunk_vs_ref": 1.0
+    },
+    {
+      "strategy": "w_cos=0.2",
+      "disagree_hit_doc": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank_doc": 0,
+      "disagree_hit_chunk": 0,
+      "mcnemar_p_chunk_vs_ref": 1.0
+    },
+    {
+      "strategy": "w_cos=0.4",
+      "disagree_hit_doc": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank_doc": 0,
+      "disagree_hit_chunk": 0,
+      "mcnemar_p_chunk_vs_ref": 1.0
+    },
+    {
+      "strategy": "w_cos=0.6",
+      "disagree_hit_doc": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank_doc": 0,
+      "disagree_hit_chunk": 0,
+      "mcnemar_p_chunk_vs_ref": 1.0
+    },
+    {
+      "strategy": "w_cos=0.8",
+      "disagree_hit_doc": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank_doc": 0,
+      "disagree_hit_chunk": 0,
+      "mcnemar_p_chunk_vs_ref": 1.0
+    },
+    {
+      "strategy": "w_cos=1.0",
+      "disagree_hit_doc": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank_doc": 1,
+      "disagree_hit_chunk": 0,
+      "mcnemar_p_chunk_vs_ref": 1.0
+    },
+    {
+      "strategy": "rrf_k=60",
+      "disagree_hit_doc": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank_doc": 1,
+      "disagree_hit_chunk": 0,
+      "mcnemar_p_chunk_vs_ref": 1.0
+    }
+  ],
+  "honesty": "P2只落基建：扩展管线+双口径+回放门禁；权重优劣结论等P4全集实测。"
+}

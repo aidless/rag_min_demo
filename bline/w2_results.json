@@ -1,0 +1,2080 @@
+{
+  "generated_at": "2026-09-10T18:05:46.206853+08:00",
+  "git_sha": "unknown",
+  "n_queries": 32,
+  "baseline_frozen": {
+    "recall_at_3": [
+      5,
+      5
+    ],
+    "mrr": 1.0,
+    "source": "rag_demo.py EVAL_SET（W2复跑仍5/5，见报告头）"
+  },
+  "config": {
+    "candidates": 10,
+    "note": "yaml配置位保留给enterprise-rag新仓；W1用JSON保持零依赖可解析",
+    "rrf_k": 60,
+    "top_k": 3,
+    "w_cos_grid": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ]
+  },
+  "cells": [
+    {
+      "recall_at_k": [
+        31,
+        32
+      ],
+      "mrr": 0.9688,
+      "wilson95_recall": [
+        0.8426,
+        0.9945
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "type": "orig",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect": "rag_overview",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "type": "orig",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "type": "orig",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": null,
+          "top1": "chunking"
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect": "agent_tools",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        }
+      ],
+      "hit_vec": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "strategy": "w_cos=0.0",
+      "w1_subset": {
+        "recall_at_k": [
+          5,
+          5
+        ],
+        "mrr": 1.0
+      }
+    },
+    {
+      "recall_at_k": [
+        31,
+        32
+      ],
+      "mrr": 0.9688,
+      "wilson95_recall": [
+        0.8426,
+        0.9945
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "type": "orig",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect": "rag_overview",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "type": "orig",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "type": "orig",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": null,
+          "top1": "chunking"
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect": "agent_tools",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        }
+      ],
+      "hit_vec": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "strategy": "w_cos=0.2",
+      "w1_subset": {
+        "recall_at_k": [
+          5,
+          5
+        ],
+        "mrr": 1.0
+      }
+    },
+    {
+      "recall_at_k": [
+        31,
+        32
+      ],
+      "mrr": 0.9688,
+      "wilson95_recall": [
+        0.8426,
+        0.9945
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "type": "orig",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect": "rag_overview",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "type": "orig",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "type": "orig",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": null,
+          "top1": "chunking"
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect": "agent_tools",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        }
+      ],
+      "hit_vec": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "strategy": "w_cos=0.4",
+      "w1_subset": {
+        "recall_at_k": [
+          5,
+          5
+        ],
+        "mrr": 1.0
+      }
+    },
+    {
+      "recall_at_k": [
+        31,
+        32
+      ],
+      "mrr": 0.9688,
+      "wilson95_recall": [
+        0.8426,
+        0.9945
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "type": "orig",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect": "rag_overview",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "type": "orig",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "type": "orig",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": null,
+          "top1": "chunking"
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect": "agent_tools",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        }
+      ],
+      "hit_vec": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "strategy": "w_cos=0.6",
+      "w1_subset": {
+        "recall_at_k": [
+          5,
+          5
+        ],
+        "mrr": 1.0
+      }
+    },
+    {
+      "recall_at_k": [
+        31,
+        32
+      ],
+      "mrr": 0.9688,
+      "wilson95_recall": [
+        0.8426,
+        0.9945
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "type": "orig",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect": "rag_overview",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "type": "orig",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "type": "orig",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": null,
+          "top1": "chunking"
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect": "agent_tools",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        }
+      ],
+      "hit_vec": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "strategy": "w_cos=0.8",
+      "w1_subset": {
+        "recall_at_k": [
+          5,
+          5
+        ],
+        "mrr": 1.0
+      }
+    },
+    {
+      "recall_at_k": [
+        31,
+        32
+      ],
+      "mrr": 0.9688,
+      "wilson95_recall": [
+        0.8426,
+        0.9945
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "type": "orig",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect": "rag_overview",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "type": "orig",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "type": "orig",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": null,
+          "top1": "chunking"
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect": "agent_tools",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        }
+      ],
+      "hit_vec": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "strategy": "w_cos=1.0",
+      "w1_subset": {
+        "recall_at_k": [
+          5,
+          5
+        ],
+        "mrr": 1.0
+      }
+    },
+    {
+      "recall_at_k": [
+        31,
+        32
+      ],
+      "mrr": 0.9688,
+      "wilson95_recall": [
+        0.8426,
+        0.9945
+      ],
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "type": "orig",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "检索增强生成的工作流程是什么样的",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "既想注入新知识又不想微调模型怎么办",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+          "expect": "rag_overview",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "端到端正确率指的是什么",
+          "expect": "rag_overview",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "rag_overview"
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "固定长度切分有什么缺点",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "滑动窗口重叠切分解决什么问题",
+          "expect": "chunking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "分块参数应该怎么定",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "为什么检索到了也答不全",
+          "expect": "chunking",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "chunking"
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "type": "orig",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "数据量小的时候有必要上Milvus吗",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "HNSW的ef_search调大有什么代价",
+          "expect": "vector_db",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "纯向量检索在什么情况下会翻车",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "长短文本的分数为什么不可比",
+          "expect": "vector_db",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "vector_db"
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "type": "orig",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "golden集应该包含什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "改了链路里的分块模块需要做什么",
+          "expect": "eval",
+          "type": "paraphrase",
+          "rank": null,
+          "top1": "chunking"
+        },
+        {
+          "q": "新老版本对比应该看绝对值还是差值",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "答案里每条断言都要有依据吗",
+          "expect": "eval",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "eval"
+        },
+        {
+          "q": "Agent和单纯的大模型有什么区别",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent循环为什么要设最大步数",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "工具返回内容太长怎么处理",
+          "expect": "agent_tools",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "Agent缺知识时自己去查是怎么实现的",
+          "expect": "agent_tools",
+          "type": "adversarial",
+          "rank": 1,
+          "top1": "agent_tools"
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "type": "orig",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "炒鸡蛋要嫩有什么技巧",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "番茄炒蛋什么时候放盐和糖",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "先炒鸡蛋还是先炒番茄",
+          "expect": "cooking",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "cooking"
+        },
+        {
+          "q": "三天两晚的旅行怎么安排",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "旅行行李有什么建议",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "第二天的行程是怎样的",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        },
+        {
+          "q": "去菜市场买特产是第几天",
+          "expect": "travel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top1": "travel"
+        }
+      ],
+      "hit_vec": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "strategy": "rrf_k=60",
+      "w1_subset": {
+        "recall_at_k": [
+          5,
+          5
+        ],
+        "mrr": 1.0
+      }
+    }
+  ],
+  "vs_ref_w_cos06": [
+    {
+      "strategy": "w_cos=0.0",
+      "disagree_hit": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank": 0
+    },
+    {
+      "strategy": "w_cos=0.2",
+      "disagree_hit": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank": 0
+    },
+    {
+      "strategy": "w_cos=0.4",
+      "disagree_hit": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank": 0
+    },
+    {
+      "strategy": "w_cos=0.6",
+      "disagree_hit": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank": 0
+    },
+    {
+      "strategy": "w_cos=0.8",
+      "disagree_hit": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank": 0
+    },
+    {
+      "strategy": "w_cos=1.0",
+      "disagree_hit": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank": 0
+    },
+    {
+      "strategy": "rrf_k=60",
+      "disagree_hit": 0,
+      "b": 0,
+      "c": 0,
+      "mcnemar_p_vs_ref": 1.0,
+      "disagree_rank": 0
+    }
+  ],
+  "by_doc_ref": {
+    "rag_overview": {
+      "n": 5,
+      "hits": 5,
+      "miss_q": []
+    },
+    "chunking": {
+      "n": 5,
+      "hits": 5,
+      "miss_q": []
+    },
+    "vector_db": {
+      "n": 5,
+      "hits": 5,
+      "miss_q": []
+    },
+    "eval": {
+      "n": 5,
+      "hits": 4,
+      "miss_q": [
+        "改了链路里的分块模块需要做什么"
+      ]
+    },
+    "agent_tools": {
+      "n": 4,
+      "hits": 4,
+      "miss_q": []
+    },
+    "cooking": {
+      "n": 4,
+      "hits": 4,
+      "miss_q": []
+    },
+    "travel": {
+      "n": 4,
+      "hits": 4,
+      "miss_q": []
+    }
+  },
+  "honesty": "SILVER n=32仍是小规模玩具语料；McNemar在零分歧时p=1无信息量，结论限于本语料，不做生产权重推荐。"
+}

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.log
+.venv/
+venv/
+results-local/
+# B-line new-repo exclusions: never commit venv, self-referencing symlinks,
+# cloud credentials (*.pem, *credentials*), or vector-DB server volumes.
+*.pem
+*credentials*

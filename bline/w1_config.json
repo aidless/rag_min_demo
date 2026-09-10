@@ -1,0 +1,1 @@
+{"candidates": 10, "note": "yaml配置位保留给enterprise-rag新仓；W1用JSON保持零依赖可解析", "rrf_k": 60, "top_k": 3, "w_cos_grid": [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]}

@@ -1,0 +1,525 @@
+{
+  "version": "w3-v3-44",
+  "desc": "seed32标签冻结 + adv12；P4全网格实测集",
+  "changelog": [
+    "seed32一题未改（含Q14长短文本与翻车题原标签，保持连续性）",
+    "新增adv12（5轮56探针精选，全部单答案，7格点零分歧）",
+    "A12采用同文档双标（40字重叠区规则，见L-blinew3-02）"
+  ],
+  "drift_flags": [
+    "seed-Q14长短文本：embedding_select#c0/c1同样完整回答（P1扩语料引入），extended池下cos路top1已是embedding#c1；标签维持vector_db，P4须做剔除敏感性分析",
+    "seed-翻车题：hybrid_retrieval#c0同样完整回答，双路margin仅1.05；标签维持vector_db#c1，P4须做剔除敏感性分析",
+    "seed-Q16 golden集：extended池下双路top1均为recall_debug#c1（P2已报干扰），标签维持eval#c0"
+  ],
+  "expected_doc_field": "expect_doc",
+  "expected_chunk_field": "expect_chunks",
+  "queries": [
+    {
+      "q": "RAG 由哪几部分组成",
+      "type": "orig",
+      "note": "W1原题",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "检索增强生成的工作流程是什么样的",
+      "type": "paraphrase",
+      "note": "答案：先向量化→检索→拼进提示词→生成",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "label_note": "单chunk文档；工作流句在c0"
+    },
+    {
+      "q": "既想注入新知识又不想微调模型怎么办",
+      "type": "paraphrase",
+      "note": "答案：免微调注入新知识",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "label_note": "单chunk文档；免微调优势句在c0"
+    },
+    {
+      "q": "RAG把检索片段拼进提示词这步属于哪个环节",
+      "type": "adversarial",
+      "note": "干扰eval.md（检索片段/依据）；答案在overview工作流程",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "label_note": "单chunk文档；拼进提示词属工作流程"
+    },
+    {
+      "q": "端到端正确率指的是什么",
+      "type": "paraphrase",
+      "note": "端到端正确率仅overview出现",
+      "expect_doc": "rag_overview",
+      "expect_chunks": [
+        "rag_overview#c0"
+      ],
+      "label_note": "单chunk文档；端到端正确率仅c0出现"
+    },
+    {
+      "q": "分块太大或太小各有什么影响",
+      "type": "orig",
+      "note": "W1原题",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "label_note": "太大/太小两句皆在c0"
+    },
+    {
+      "q": "固定长度切分有什么缺点",
+      "type": "paraphrase",
+      "note": "答案：简单但易切断句子",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "label_note": "固定长度缺点句在c0"
+    },
+    {
+      "q": "滑动窗口重叠切分解决什么问题",
+      "type": "paraphrase",
+      "note": "答案：缓解边界截断",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "label_note": "缓解边界截断句在c0"
+    },
+    {
+      "q": "分块参数应该怎么定",
+      "type": "adversarial",
+      "note": "干扰vector_db（调优/压测）；答案在chunking无银弹实测",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c1"
+      ],
+      "label_note": "无银弹实测句仅c1，c0无此句"
+    },
+    {
+      "q": "为什么检索到了也答不全",
+      "type": "adversarial",
+      "note": "干扰eval.md（检索/答案）；答案在chunking语义切断",
+      "expect_doc": "chunking",
+      "expect_chunks": [
+        "chunking#c0"
+      ],
+      "label_note": "检索到了也答不全原句在c0"
+    },
+    {
+      "q": "向量数据库怎么选型和调优",
+      "type": "orig",
+      "note": "W1原题",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "label_note": "整文档级问题：选型在c0、调优在c1，两chunk皆相关"
+    },
+    {
+      "q": "数据量小的时候有必要上Milvus吗",
+      "type": "paraphrase",
+      "note": "答案：几十万内单机FAISS，先单机后服务",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0"
+      ],
+      "label_note": "单机FAISS先单机后服务句在c0"
+    },
+    {
+      "q": "HNSW的ef_search调大有什么代价",
+      "type": "paraphrase",
+      "note": "答案：查询精度与延迟tradeoff",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "label_note": "efsearch精度延迟tradeoff句在c1"
+    },
+    {
+      "q": "纯向量检索在什么情况下会翻车",
+      "type": "adversarial",
+      "note": "干扰rag_overview（向量化/检索）；答案在vector_db生僻词翻车",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c1"
+      ],
+      "label_note": "纯向量翻车句在c1"
+    },
+    {
+      "q": "长短文本的分数为什么不可比",
+      "type": "adversarial",
+      "note": "答案：L2归一化否则长短文本不可比",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0",
+        "vector_db#c1"
+      ],
+      "label_note": "L2归一化句因40字重叠同时出现在两chunk"
+    },
+    {
+      "q": "如何评估问答系统的效果",
+      "type": "orig",
+      "note": "W1原题",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0",
+        "eval#c1"
+      ],
+      "label_note": "整文档级问题：检索/生成侧在c0，评测纪律在c1"
+    },
+    {
+      "q": "golden集应该包含什么",
+      "type": "paraphrase",
+      "note": "答案：真实用户问题+标注文档编号",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "label_note": "golden集定义句在c0"
+    },
+    {
+      "q": "改了链路里的分块模块需要做什么",
+      "type": "paraphrase",
+      "note": "答案：改动任何一环重跑全量评测",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "label_note": "改动重跑全量评测句在c1"
+    },
+    {
+      "q": "新老版本对比应该看绝对值还是差值",
+      "type": "adversarial",
+      "note": "干扰chunking（对比召回率）；答案在eval只看差值",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "label_note": "只看差值句在c1"
+    },
+    {
+      "q": "答案里每条断言都要有依据吗",
+      "type": "adversarial",
+      "note": "干扰rag_overview（带依据/可追溯）；答案在eval断言找依据",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c0"
+      ],
+      "label_note": "断言找依据完整句在c0；c1仅截断重复片段，不计"
+    },
+    {
+      "q": "Agent和单纯的大模型有什么区别",
+      "type": "paraphrase",
+      "note": "答案：配工具调用能力",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "Agent循环为什么要设最大步数",
+      "type": "paraphrase",
+      "note": "答案：防空转烧钱",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "单chunk文档；最大步数防空转句在c0"
+    },
+    {
+      "q": "工具返回内容太长怎么处理",
+      "type": "paraphrase",
+      "note": "答案：返回做截断防挤爆上下文",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "单chunk文档；截断防挤爆句在c0"
+    },
+    {
+      "q": "Agent缺知识时自己去查是怎么实现的",
+      "type": "adversarial",
+      "note": "干扰全部RAG文档（检索）；答案在agent_tools检索当工具",
+      "expect_doc": "agent_tools",
+      "expect_chunks": [
+        "agent_tools#c0"
+      ],
+      "label_note": "单chunk文档；检索当工具句在c0"
+    },
+    {
+      "q": "番茄炒蛋怎么做",
+      "type": "orig",
+      "note": "W1原题",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "炒鸡蛋要嫩有什么技巧",
+      "type": "paraphrase",
+      "note": "答案：凝固即盛出别炒老，大火",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "番茄炒蛋什么时候放盐和糖",
+      "type": "paraphrase",
+      "note": "答案：鸡蛋倒回后加盐和少许糖",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "先炒鸡蛋还是先炒番茄",
+      "type": "paraphrase",
+      "note": "答案：先炒鸡蛋盛出再起锅；易锚题",
+      "expect_doc": "cooking",
+      "expect_chunks": [
+        "cooking#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "三天两晚的旅行怎么安排",
+      "type": "paraphrase",
+      "note": "答案：老城小吃/博物馆江边夜景/菜市场特产",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "旅行行李有什么建议",
+      "type": "paraphrase",
+      "note": "答案：只带必需品，充电宝身份证随身",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "第二天的行程是怎样的",
+      "type": "paraphrase",
+      "note": "答案：博物馆加江边步道晚上看夜景",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "去菜市场买特产是第几天",
+      "type": "paraphrase",
+      "note": "答案：第三天；易锚题",
+      "expect_doc": "travel",
+      "expect_chunks": [
+        "travel#c0"
+      ],
+      "label_note": "单chunk文档"
+    },
+    {
+      "q": "维度归一化长短文本不可比调优时先抓哪一个",
+      "type": "adversarial-p3",
+      "expect_doc": "vector_db",
+      "expect_chunks": [
+        "vector_db#c0"
+      ],
+      "label_note": "词重叠陷阱；消歧子句“调优先抓哪个”指向vector_db三旋钮；embedding两chunk共享归一化/维度/长短文本全部关键词",
+      "trap": {
+        "doc": "embedding_select",
+        "chunks": [
+          "embedding_select#c1",
+          "embedding_select#c0"
+        ]
+      }
+    },
+    {
+      "q": "生僻新词向量检索翻车关键词路为什么能接住",
+      "type": "adversarial-p3",
+      "expect_doc": "hybrid_retrieval",
+      "expect_chunks": [
+        "hybrid_retrieval#c0"
+      ],
+      "label_note": "同词异义；问“为什么能接住”指向hybrid精确命中解释；vector_db#c1共享翻车/生僻词/混合检索全部关键词但只陈述翻车不解释接住原理",
+      "trap": {
+        "doc": "vector_db",
+        "chunks": [
+          "vector_db#c1"
+        ]
+      }
+    },
+    {
+      "q": "AB对比时换了Judge模型历史分数还能放在一起看吗",
+      "type": "adversarial-p3",
+      "expect_doc": "judge_eval",
+      "expect_chunks": [
+        "judge_eval#c1"
+      ],
+      "label_note": "词重叠陷阱；AB对比是eval#c1高频词；消歧子句“换Judge历史分数”指向judge#c1换尺子句",
+      "trap": {
+        "doc": "eval",
+        "chunks": [
+          "eval#c1"
+        ]
+      }
+    },
+    {
+      "q": "引用校验具体要查哪两件事",
+      "type": "adversarial-p3",
+      "expect_doc": "citation",
+      "expect_chunks": [
+        "citation#c0"
+      ],
+      "label_note": "词重叠陷阱；引用/编号/依据三词横跨citation/eval/failure三文档；消歧“查哪两件事”指向citation编号存在性加原文支撑",
+      "trap": {
+        "doc": "failure_modes",
+        "chunks": [
+          "failure_modes#c1",
+          "failure_modes#c0"
+        ]
+      }
+    },
+    {
+      "q": "改写prompt冻结进版本是防什么坏事",
+      "type": "adversarial-p3",
+      "expect_doc": "query_rewrite",
+      "expect_chunks": [
+        "query_rewrite#c1"
+      ],
+      "label_note": "同词异义（冻结）；冻结一词横跨query_rewrite#c1与judge_eval#c1；消歧“改写”指向前者",
+      "trap": {
+        "doc": "judge_eval",
+        "chunks": [
+          "judge_eval#c1"
+        ]
+      }
+    },
+    {
+      "q": "正确段排十名开外没装进窗口是检索问题还是截断问题",
+      "type": "adversarial-p3",
+      "expect_doc": "failure_modes",
+      "expect_chunks": [
+        "failure_modes#c0"
+      ],
+      "label_note": "词重叠陷阱；截断/窗口是context_manage高频词；消歧“十名开外加融合”指向failure被淹没象限",
+      "trap": {
+        "doc": "context_manage",
+        "chunks": [
+          "context_manage#c1"
+        ]
+      }
+    },
+    {
+      "q": "换了Judge模型之后历史打分还能用吗",
+      "type": "adversarial-p3",
+      "expect_doc": "judge_eval",
+      "expect_chunks": [
+        "judge_eval#c1"
+      ],
+      "label_note": "同词异义（Judge全文档）；Judge/模型/打分/分数横跨c0/c1；答案尺子作废句仅c1，但c0在7格点下稳定第一",
+      "trap": {
+        "doc": "judge_eval（同文档）",
+        "chunks": [
+          "judge_eval#c0"
+        ]
+      }
+    },
+    {
+      "q": "清洗规则进了版本管理改完重跑全量评测时AB对比看什么",
+      "type": "adversarial-p3",
+      "expect_doc": "eval",
+      "expect_chunks": [
+        "eval#c1"
+      ],
+      "label_note": "词重叠陷阱（最难）；清洗/规则/版本/重跑/全量/评测六词全中data_clean#c1；AB对比是唯一eval消歧词但权重不足，全格点被反超",
+      "trap": {
+        "doc": "data_clean",
+        "chunks": [
+          "data_clean#c1",
+          "data_clean#c0"
+        ]
+      }
+    },
+    {
+      "q": "AB对比前评测集冻结换Judge之后历史分数还能对比吗",
+      "type": "adversarial-p3",
+      "expect_doc": "judge_eval",
+      "expect_chunks": [
+        "judge_eval#c1"
+      ],
+      "label_note": "词重叠陷阱（前提加设问）；前提分句AB对比/冻结/评测集全中eval#c1，设问换Judge历史分数指向judge#c1；前提在检索中压过设问，全格点rank2",
+      "trap": {
+        "doc": "eval",
+        "chunks": [
+          "eval#c1"
+        ]
+      }
+    },
+    {
+      "q": "为什么说切分和分块在关键词检索眼里是两个词",
+      "type": "adversarial-p3",
+      "expect_doc": "hybrid_retrieval",
+      "expect_chunks": [
+        "hybrid_retrieval#c0"
+      ],
+      "label_note": "同词异义（分块）；切分/分块/检索三词横跨hybrid与chunking；消歧“在它眼里是两个词”指向hybrid关键词视角句",
+      "trap": {
+        "doc": "chunking",
+        "chunks": [
+          "chunking#c0"
+        ]
+      }
+    },
+    {
+      "q": "扫权重网格看recall曲线拐点定的是什么参数",
+      "type": "adversarial-p3",
+      "expect_doc": "hybrid_retrieval",
+      "expect_chunks": [
+        "hybrid_retrieval#c1"
+      ],
+      "label_note": "对照组（易题）；权重网格/拐点/recall三词组合仅hybrid#c1同时具备；用于确认harness对易题不断言分歧",
+      "trap": {
+        "doc": "eval",
+        "chunks": [
+          "eval#c0"
+        ]
+      }
+    },
+    {
+      "q": "引用校验环节没跑起来答案编号全挂错是谁的锅",
+      "type": "adversarial-p3",
+      "expect_doc": "failure_modes",
+      "expect_chunks": [
+        "failure_modes#c0",
+        "failure_modes#c1"
+      ],
+      "label_note": "同文档重叠区；答案句横跨40字重叠区同时存在于c0/c1（与seed Q14同构）；单标任一chunk都会制造均匀rank2伪影，故双标",
+      "trap": {
+        "doc": "failure_modes（同文档）",
+        "chunks": [
+          "failure_modes#c1"
+        ]
+      }
+    }
+  ]
+}

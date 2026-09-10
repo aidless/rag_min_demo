@@ -1,0 +1,1 @@
+{"expected_doc_field": "doc_id", "frozen_from": "rag_min_demo/rag_demo.py EVAL_SET（只读引用，W1不复制逻辑）", "queries": [{"expect": "rag_overview", "q": "RAG 由哪几部分组成"}, {"expect": "chunking", "q": "分块太大或太小各有什么影响"}, {"expect": "vector_db", "q": "向量数据库怎么选型和调优"}, {"expect": "eval", "q": "如何评估问答系统的效果"}, {"expect": "cooking", "q": "番茄炒蛋怎么做"}], "top_k": 3}

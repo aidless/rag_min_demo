@@ -1,0 +1,9 @@
+{
+  "verified_at": "2026-09-10T16:00:36.679514+08:00",
+  "n_recomputed": 320,
+  "n_mismatch": 0,
+  "summary_match": true,
+  "noise_text_match": true,
+  "synth_count_match": true,
+  "gate": "PASS"
+}

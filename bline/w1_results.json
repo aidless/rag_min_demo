@@ -1,0 +1,274 @@
+{
+  "generated_at": "2026-09-10T18:05:46.150905+08:00",
+  "git_sha": "unknown",
+  "baseline_frozen": {
+    "recall_at_3": [
+      5,
+      5
+    ],
+    "mrr": 1.0,
+    "source": "rag_demo.py EVAL_SET（本次复跑已复现）"
+  },
+  "config": {
+    "candidates": 10,
+    "note": "yaml配置位保留给enterprise-rag新仓；W1用JSON保持零依赖可解析",
+    "rrf_k": 60,
+    "top_k": 3,
+    "w_cos_grid": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ]
+  },
+  "cells": [
+    {
+      "recall_at_k": [
+        5,
+        5
+      ],
+      "mrr": 1.0,
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "rank": 1
+        }
+      ],
+      "strategy": "w_cos=0.0"
+    },
+    {
+      "recall_at_k": [
+        5,
+        5
+      ],
+      "mrr": 1.0,
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "rank": 1
+        }
+      ],
+      "strategy": "w_cos=0.2"
+    },
+    {
+      "recall_at_k": [
+        5,
+        5
+      ],
+      "mrr": 1.0,
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "rank": 1
+        }
+      ],
+      "strategy": "w_cos=0.4"
+    },
+    {
+      "recall_at_k": [
+        5,
+        5
+      ],
+      "mrr": 1.0,
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "rank": 1
+        }
+      ],
+      "strategy": "w_cos=0.6"
+    },
+    {
+      "recall_at_k": [
+        5,
+        5
+      ],
+      "mrr": 1.0,
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "rank": 1
+        }
+      ],
+      "strategy": "w_cos=0.8"
+    },
+    {
+      "recall_at_k": [
+        5,
+        5
+      ],
+      "mrr": 1.0,
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "rank": 1
+        }
+      ],
+      "strategy": "w_cos=1.0"
+    },
+    {
+      "recall_at_k": [
+        5,
+        5
+      ],
+      "mrr": 1.0,
+      "ranks": [
+        {
+          "q": "RAG 由哪几部分组成",
+          "expect": "rag_overview",
+          "rank": 1
+        },
+        {
+          "q": "分块太大或太小各有什么影响",
+          "expect": "chunking",
+          "rank": 1
+        },
+        {
+          "q": "向量数据库怎么选型和调优",
+          "expect": "vector_db",
+          "rank": 1
+        },
+        {
+          "q": "如何评估问答系统的效果",
+          "expect": "eval",
+          "rank": 1
+        },
+        {
+          "q": "番茄炒蛋怎么做",
+          "expect": "cooking",
+          "rank": 1
+        }
+      ],
+      "strategy": "rrf_k=60"
+    }
+  ],
+  "honesty": "n=5为冒烟规模；网格内任何权重差异均可能是过拟合，不做生产权重推荐。"
+}
