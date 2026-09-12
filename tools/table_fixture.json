@@ -1,0 +1,11 @@
+{
+  "note": "C 线无关；B 线表问答的最小确定性 fixture（P3 未迁移项 StructGPT 用）。纯数据。",
+  "columns": ["name", "dept", "city", "salary", "years"],
+  "rows": [
+    ["alice", "RD", "beijing", 30, 3],
+    ["bob", "RD", "shanghai", 25, 2],
+    ["carol", "RD", "beijing", 35, 5],
+    ["dave", "Sales", "shenzhen", 20, 1],
+    ["erin", "Sales", "beijing", 22, 4]
+  ]
+}

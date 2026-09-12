@@ -92,3 +92,30 @@
   - StructGPT 表问答分支：B 线**无表格语料**，落地需新增数据（属新增能力而非迁移配方）→ 本轮不做，留待有表格语料时评估。
 - 迁移边界复核：未建远端；未 push；未碰 `gsm8k-self-evolve` / `mini-agent-runtime-bench`。
 
+
+---
+
+## P3-HARDEN-B2：B 线补齐两处「未迁移项」（2026-09-12，本地 commit，绝不 push）
+
+- 动因：P3 首轮把 B 线两处标为「未迁移」——RankGPT 列式 rerank（无 LLM）、
+  StructGPT 表问答（无表格语料）。本轮把**可验证的非 LLM 部分**补齐。
+- 新增（只加法；`rag_demo.py`/`docs/` 仍冻结）：
+  - `tools/rankgpt_rerank.py`：列式排列提示模板 + 排列解析 + 可插拔执行器 + 滑窗策略。
+  - `tools/table_qa.py` + `tools/table_fixture.json`：两阶段（schema 选择 → cell 定位）
+    表问答 + EM 度量 + 最小确定性 fixture。
+  - `tests/test_rankgpt_table.py`：13 项断言（含诚实边界与非空性）。
+- 实测（cwd=rag_min_demo，`python3`）：
+  - `python3 -m pytest -q tests/` → `25 passed`（原 12 + 新增 13），exit 0。
+  - `python3 rag_demo.py` → `recall@3 = 5/5, MRR = 1.000`（冻结基线未回归）。
+- 本轮发现并修正的 1 处真缺陷：
+  - `table_qa.normalize` 先把 `.` 当标点剔除 → 小数被毁（`"2.0"` 变 `"20"`），
+    使 `em("2","2.0")` 误判为不等。修正为**先试数值解析**再退到去标点。
+- 新增的守卫（反证性）：
+  - 未注入 `llm_fn` 时**显式抛 `NoLLMError`**，拒绝静默退化为原序（防止假结果）。
+  - `llm_fn` 输出不可解析为完整排列时**显式抛 ValueError**。
+  - **回显提示必须被拒**：提示内联格式示例 `[] > [] > []` 会使数字重复出现，
+    解析要求恰为 `1..n` 的完整排列 → 回显必然被拒（fail-closed）。
+- 诚实边界（未迁移，保持如实）：
+  - **真实 LLM 调用未接入**（本仓无 LLM/权重）：接口就绪，行为已由确定性桩验证；
+    这不等于 RankGPT 的 nDCG 增益已被复现。
+  - 表问答是**小表确定性管线**（5 行 fixture），不是 LLM 语义解析，不声称泛化性。
