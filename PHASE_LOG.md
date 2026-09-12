@@ -56,3 +56,39 @@
   - 改动：`PHASE_LOG.md` 追加本节；新建 `FINAL_ACCEPTANCE.md`；harness 重跑仅 `generated_at` 时间戳变化的已跟踪结果文件 `bline/w1_results.json`、`bline/w2_results.json`、`bline/w3_p2_check.json`（`git diff` 确认数字无变化）。
   - Commit：`P2-CLOSE: baseline + W1-W3 green, no push`（add 仅上述 5 文件，无新代码文件）。
   - 从未运行 `git push`；无远端可推。
+
+---
+
+## P3-HARDEN-B1：B 线评测门（2026-09-12，本地 commit，绝不 push）
+
+- 前提：`P3-harden-design.md` v0.1 的 B 线 5 配方；用户全权授权；`rag_demo.py` + `docs/` 保持**冻结**未动。
+- 新增（全部为**新文件**，不改基线）：
+  - `tools/longbench_metrics.py`：LongBench 六度量 stdlib-only 移植（count/retrieval/classification/f1/qa_f1/rouge-l）。
+  - `tests/test_metrics_regression.py`：R59 六度量回归门（含契约 + 上游缺陷 + 非空性）。
+  - `tools/confidence_gate.py`：Self-RAG 置信门控（免检索直答 vs 全检索 + τ 校准）。
+  - `tests/test_confidence_gate.py`：门控数字回归（含污染方向与非空性）。
+  - `tools/rerank_ndcg.py`：nDCG@k 度量 + 非 LLM reranker 三臂对照。
+  - `tests/test_rerank_ndcg.py`：rerank/nDCG 回归。
+  - `tests/test_gates_run.py`：把三个独立门脚本纳入 pytest 守护。
+- 实测数字（可复算，cwd=rag_min_demo，`python3`）：
+  - `tests/test_metrics_regression.py` → exit 0：count 0.5000 / retrieval 0.5000 / cls 1.0000 / f1 0.8182 / qa_f1 0.8000 / rouge 0.8000（**与 R59 记档六值逐项一致**）。
+  - `tools/confidence_gate.py` → exit 0：
+    - 缺陷检出：`parse_docs` 的 title 退化为全文（title==body）= `['cooking','travel']`（单行 .txt）。
+    - golden(5)：免检索 5/5、全检索 5/5（区分度低）。
+    - W2(32)：免检索(未修正) 20/32=0.625 → **免检索(修正) 17/32=0.531**；全检索 31/32=0.969。
+    - **检索增益 = +0.438**（修正后）；τ*=0.40 可跳过 15/32（47%）且不丢命中。
+  - `tools/rerank_ndcg.py` → exit 0（三臂）：
+    - 冻结基线 recall@3=0.969 MRR=0.969 nDCG@3=0.969，**含重复文档名次 18/32**。
+    - 覆盖率重排：ΔnDCG +0.0000（**无增益，如实记录**）。
+    - 文档多样重排：recall@3 **1.000(+0.031)**、MRR 0.979、nDCG@3 **0.984(+0.0156)**、重复名次 **0/32**。
+  - `python3 -m pytest -q tests/` → **12 passed**，exit 0。
+  - `python3 rag_demo.py` → `recall@3 = 5/5, MRR = 1.000`（**冻结基线未回归**）。
+- 本轮两项**缺陷发现与修正**（非装饰性）：
+  1. `classification_score` 边遍历边 `remove` → 跳过待删项；修正为列表推导（反证：上游语义 0.5 vs 正解 1.0）。
+  2. nDCG 按 chunk 名次直接计分 → **同一文档多 chunk 被重复计分，nDCG 可 >1（实测 1.63）**；修正为文档级去重 + 越界不变量守卫。
+- 未迁移（诚实边界）：
+  - LongBench 的 jieba/fuzzywuzzy/rouge 分支（retrieval_zh/rouge_zh/qa_f1_zh/code_sim）——不在 R59 六度量内且违反零依赖约束。
+  - RankGPT 的**列式 LLM rerank prompt + LLM 调用**未实现（本仓无 LLM/权重）；仅落地 nDCG 度量与非 LLM 确定性 reranker。
+  - StructGPT 表问答分支：B 线**无表格语料**，落地需新增数据（属新增能力而非迁移配方）→ 本轮不做，留待有表格语料时评估。
+- 迁移边界复核：未建远端；未 push；未碰 `gsm8k-self-evolve` / `mini-agent-runtime-bench`。
+
