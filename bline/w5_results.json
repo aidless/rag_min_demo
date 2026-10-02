@@ -1,0 +1,2562 @@
+{
+  "model": "BAAI/bge-small-zh-v1.5",
+  "control": "fixed_220_o40",
+  "arms": {
+    "control_sparse_w4": {
+      "n_chunks": 88,
+      "span_full_at_3": 0.984375,
+      "span_cover_at_3": 0.9932291666666667,
+      "doc_hit_at_3": 1.0,
+      "mean_top3_chars": 605.09375,
+      "by_type": {
+        "boundary": {
+          "hit": 14,
+          "total": 14,
+          "recall": 1.0
+        },
+        "multi_hop": {
+          "hit": 20,
+          "total": 20,
+          "recall": 1.0
+        },
+        "single": {
+          "hit": 30,
+          "total": 30,
+          "recall": 1.0
+        }
+      },
+      "detail": [
+        {
+          "q": "固定长度切分会把句子切成什么样",
+          "type": "single",
+          "expect_doc": "contextual_chunking",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "contextual_chunking",
+            "multi_hop",
+            "contextual_chunking"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "提高重叠比例要付出什么代价",
+          "type": "single",
+          "expect_doc": "chunking_limits",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "chunking_limits",
+            "contextual_chunking",
+            "query_rewriting"
+          ],
+          "top3_chars": 506
+        },
+        {
+          "q": "题量少于多少时准确率的变化不能当结论",
+          "type": "single",
+          "expect_doc": "eval_metrics",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "eval_metrics",
+            "eval_metrics",
+            "task_planning"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "MRR 和 recall@k 的计算方式有什么不同",
+          "type": "single",
+          "expect_doc": "eval_metrics",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "eval_metrics",
+            "eval_metrics",
+            "eval_metrics"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "BM25 和余弦相似度各自擅长什么",
+          "type": "single",
+          "expect_doc": "hybrid_search",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "hybrid_search",
+            "hybrid_search",
+            "chunking_limits"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "上下文重建是什么意思",
+          "type": "single",
+          "expect_doc": "contextual_chunking",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "contextual_chunking",
+            "multi_hop",
+            "contextual_compression"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "重排序分哪两个阶段",
+          "type": "single",
+          "expect_doc": "rerank",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "rerank",
+            "rerank",
+            "rerank"
+          ],
+          "top3_chars": 546
+        },
+        {
+          "q": "什么查询需要走不同的检索路径",
+          "type": "single",
+          "expect_doc": "query_routing",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "query_routing",
+            "multi_hop",
+            "query_rewriting"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "索引什么时候会失效",
+          "type": "single",
+          "expect_doc": "index_freshness",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "benchmark_stability",
+            "index_freshness",
+            "eval_metrics"
+          ],
+          "top3_chars": 563
+        },
+        {
+          "q": "查询改写主要有哪几类形式",
+          "type": "single",
+          "expect_doc": "query_rewriting",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "query_rewriting",
+            "production_pitfalls",
+            "generation_suppression"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "分块的局限在哪里",
+          "type": "single",
+          "expect_doc": "chunking_limits",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "chunking_limits",
+            "contextual_chunking",
+            "structured_data"
+          ],
+          "top3_chars": 598
+        },
+        {
+          "q": "分块参数和召回率是什么关系",
+          "type": "single",
+          "expect_doc": "chunking_limits",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "chunking_limits",
+            "chunking_limits",
+            "index_freshness"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "上下文压缩和分块方向有何不同",
+          "type": "single",
+          "expect_doc": "contextual_compression",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "contextual_compression",
+            "contextual_compression",
+            "contextual_compression"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "压缩的三种形态分别是什么",
+          "type": "single",
+          "expect_doc": "contextual_compression",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "contextual_compression",
+            "contextual_compression",
+            "cost_scale"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "压缩和重排的顺序为什么重要",
+          "type": "single",
+          "expect_doc": "contextual_compression",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "contextual_compression",
+            "contextual_compression",
+            "rerank"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "交叉编码器和双编码器有什么差别",
+          "type": "single",
+          "expect_doc": "rerank",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "rerank",
+            "hybrid_search",
+            "rerank"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "列表式重排有什么优势",
+          "type": "single",
+          "expect_doc": "rerank",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "rerank",
+            "rerank",
+            "rerank"
+          ],
+          "top3_chars": 546
+        },
+        {
+          "q": "融合时为什么要做最大归一化",
+          "type": "single",
+          "expect_doc": "hybrid_search",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "hybrid_search",
+            "hybrid_search_extra",
+            "hybrid_search"
+          ],
+          "top3_chars": 567
+        },
+        {
+          "q": "稀疏高维表示是介于哪两条路线之间",
+          "type": "single",
+          "expect_doc": "hybrid_search_extra",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "hybrid_search_extra",
+            "hybrid_search_extra",
+            "contextual_chunking"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "多跳问答的困难分哪两级",
+          "type": "single",
+          "expect_doc": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "multi_hop",
+            "query_routing",
+            "production_pitfalls"
+          ],
+          "top3_chars": 603
+        },
+        {
+          "q": "构造多跳题目有什么常见陷阱",
+          "type": "single",
+          "expect_doc": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "multi_hop",
+            "multi_hop",
+            "multi_hop"
+          ],
+          "top3_chars": 578
+        },
+        {
+          "q": "任务规划拆得太细会怎样",
+          "type": "single",
+          "expect_doc": "task_planning",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "task_planning",
+            "task_planning",
+            "task_planning"
+          ],
+          "top3_chars": 581
+        },
+        {
+          "q": "错误率为什么会随链长指数上升",
+          "type": "single",
+          "expect_doc": "task_planning",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "task_planning",
+            "structured_data",
+            "structured_data"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "判分器的三条偏好是什么",
+          "type": "single",
+          "expect_doc": "judge_model",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "judge_model",
+            "judge_model",
+            "judge_model"
+          ],
+          "top3_chars": 624
+        },
+        {
+          "q": "怎么检验判分器有没有位置偏好",
+          "type": "single",
+          "expect_doc": "judge_model",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "judge_model",
+            "judge_model",
+            "judge_model"
+          ],
+          "top3_chars": 624
+        },
+        {
+          "q": "拒答阈值的调整会带来什么权衡",
+          "type": "single",
+          "expect_doc": "abstention_calibration",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "generation_suppression",
+            "abstention_calibration",
+            "abstention_calibration"
+          ],
+          "top3_chars": 557
+        },
+        {
+          "q": "提示模板里什么影响准确率最大",
+          "type": "single",
+          "expect_doc": "prompt_template",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "prompt_template",
+            "prompt_template",
+            "prompt_template"
+          ],
+          "top3_chars": 572
+        },
+        {
+          "q": "表格转文本有什么问题",
+          "type": "single",
+          "expect_doc": "structured_data",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "structured_data",
+            "eval_metrics",
+            "eval_metrics"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "长文档的位置偏置是怎么来的",
+          "type": "single",
+          "expect_doc": "long_document",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "long_document",
+            "judge_model",
+            "long_document"
+          ],
+          "top3_chars": 597
+        },
+        {
+          "q": "外部接口引入后评测要注意什么",
+          "type": "single",
+          "expect_doc": "tools_external",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "tools_external",
+            "tools_external",
+            "tools_external"
+          ],
+          "top3_chars": 519
+        },
+        {
+          "q": "块长和召回率是什么关系",
+          "type": "multi_hop",
+          "expect_doc": "chunking_limits",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "chunking_limits",
+            "chunking_limits",
+            "rerank"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "块长这个部署参数该怎么定",
+          "type": "multi_hop",
+          "expect_doc": "chunking_limits",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "chunking_limits",
+            "chunking_limits",
+            "hybrid_search"
+          ],
+          "top3_chars": 552
+        },
+        {
+          "q": "recall@3 和 MRR 的断言强度差在哪",
+          "type": "multi_hop",
+          "expect_doc": "eval_metrics",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "eval_metrics",
+            "eval_metrics",
+            "eval_metrics"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "召回阶段和精排阶段的目标有什么区别",
+          "type": "multi_hop",
+          "expect_doc": "rerank",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "rerank",
+            "pipeline_overview",
+            "rerank"
+          ],
+          "top3_chars": 546
+        },
+        {
+          "q": "为什么融合权重要随语料标定",
+          "type": "multi_hop",
+          "expect_doc": "hybrid_search",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "hybrid_search_extra",
+            "hybrid_search",
+            "hybrid_search"
+          ],
+          "top3_chars": 459
+        },
+        {
+          "q": "上下文重建的两种方法各有什么代价",
+          "type": "multi_hop",
+          "expect_doc": "contextual_chunking",
+          "span_full": 0,
+          "span_cover": 0.567,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "contextual_chunking",
+            "multi_hop",
+            "query_routing"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "多跳任务的整体成功率为什么远低于单跳",
+          "type": "multi_hop",
+          "expect_doc": "task_planning",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "task_planning",
+            "task_planning",
+            "multi_hop"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "拒答率和正确率的关系是什么",
+          "type": "multi_hop",
+          "expect_doc": "abstention_calibration",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "abstention_calibration",
+            "abstention_calibration",
+            "generation_suppression"
+          ],
+          "top3_chars": 557
+        },
+        {
+          "q": "检索链路里瓶颈怎么确定",
+          "type": "multi_hop",
+          "expect_doc": "pipeline_overview",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "pipeline_overview",
+            "tools_external",
+            "pipeline_overview"
+          ],
+          "top3_chars": 490
+        },
+        {
+          "q": "删除文档时为什么不能只从候选里排除",
+          "type": "multi_hop",
+          "expect_doc": "index_freshness",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "index_freshness",
+            "index_freshness",
+            "query_routing"
+          ],
+          "top3_chars": 583
+        },
+        {
+          "q": "长文档评测怎么做才有意义",
+          "type": "multi_hop",
+          "expect_doc": "long_document",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "long_document",
+            "tools_external",
+            "long_document"
+          ],
+          "top3_chars": 597
+        },
+        {
+          "q": "工具描述写得含糊会造成什么后果",
+          "type": "multi_hop",
+          "expect_doc": "tools_external",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "tools_external",
+            "tools_external",
+            "contextual_chunking"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "结构化数据什么时候该用专用接口",
+          "type": "multi_hop",
+          "expect_doc": "structured_data",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "structured_data",
+            "structured_data",
+            "structured_data"
+          ],
+          "top3_chars": 630
+        },
+        {
+          "q": "核验里间接支撑和强支撑怎么分",
+          "type": "multi_hop",
+          "expect_doc": "evidence_verification",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "citation_traceability",
+            "evidence_verification",
+            "citation_traceability"
+          ],
+          "top3_chars": 612
+        },
+        {
+          "q": "不支持和反驳为什么必须分开判定",
+          "type": "multi_hop",
+          "expect_doc": "evidence_verification",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "evidence_verification",
+            "citation_traceability",
+            "evidence_verification"
+          ],
+          "top3_chars": 563
+        },
+        {
+          "q": "抑制方法的失效模式是什么",
+          "type": "multi_hop",
+          "expect_doc": "generation_suppression",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "generation_suppression",
+            "generation_suppression",
+            "hybrid_search_extra"
+          ],
+          "top3_chars": 626
+        },
+        {
+          "q": "查询改写最大的风险是什么",
+          "type": "multi_hop",
+          "expect_doc": "query_rewriting",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "query_rewriting",
+            "query_rewriting",
+            "production_pitfalls"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "改写和重排的交互要注意什么",
+          "type": "multi_hop",
+          "expect_doc": "query_rewriting",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "contextual_chunking",
+            "query_rewriting",
+            "rerank"
+          ],
+          "top3_chars": 519
+        },
+        {
+          "q": "成本核算最容易漏掉哪一块",
+          "type": "multi_hop",
+          "expect_doc": "cost_scale",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "cost_scale",
+            "cost_scale",
+            "query_routing"
+          ],
+          "top3_chars": 547
+        },
+        {
+          "q": "评测集稳定性受什么影响",
+          "type": "multi_hop",
+          "expect_doc": "benchmark_stability",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "benchmark_stability",
+            "benchmark_stability",
+            "benchmark_stability"
+          ],
+          "top3_chars": 594
+        },
+        {
+          "q": "生产环境里最典型的失败是什么",
+          "type": "boundary",
+          "expect_doc": "production_pitfalls",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "production_pitfalls",
+            "prompt_template",
+            "structured_data"
+          ],
+          "top3_chars": 630
+        },
+        {
+          "q": "反馈回路怎么识别",
+          "type": "boundary",
+          "expect_doc": "production_pitfalls",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "production_pitfalls",
+            "production_pitfalls",
+            "abstention_calibration"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "可追溯的最低要求是什么",
+          "type": "boundary",
+          "expect_doc": "citation_traceability",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "citation_traceability",
+            "citation_traceability",
+            "eval_metrics"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "伪引用和真引用的区别在哪",
+          "type": "boundary",
+          "expect_doc": "citation_traceability",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "citation_traceability",
+            "citation_traceability",
+            "generation_suppression"
+          ],
+          "top3_chars": 660
+        },
+        {
+          "q": "量化对长尾查询影响更大是为什么",
+          "type": "boundary",
+          "expect_doc": "lightweight_deploy",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "lightweight_deploy",
+            "production_pitfalls",
+            "production_pitfalls"
+          ],
+          "top3_chars": 603
+        },
+        {
+          "q": "延迟的构成为什么常被高估",
+          "type": "boundary",
+          "expect_doc": "lightweight_deploy",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "lightweight_deploy",
+            "tools_external",
+            "tools_external"
+          ],
+          "top3_chars": 519
+        },
+        {
+          "q": "省下 KV 缓存为什么反而更慢",
+          "type": "boundary",
+          "expect_doc": "cost_scale",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "cost_scale",
+            "production_pitfalls",
+            "query_routing"
+          ],
+          "top3_chars": 583
+        },
+        {
+          "q": "批处理参数混用会导致什么",
+          "type": "boundary",
+          "expect_doc": "cost_scale",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "cost_scale",
+            "tools_external",
+            "pipeline_overview"
+          ],
+          "top3_chars": 519
+        },
+        {
+          "q": "只报最好一次为什么不诚实",
+          "type": "boundary",
+          "expect_doc": "benchmark_stability",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "benchmark_stability",
+            "benchmark_stability",
+            "multi_hop"
+          ],
+          "top3_chars": 594
+        },
+        {
+          "q": "选择偏差体现在哪",
+          "type": "boundary",
+          "expect_doc": "benchmark_stability",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "benchmark_stability",
+            "eval_metrics",
+            "judge_model"
+          ],
+          "top3_chars": 594
+        },
+        {
+          "q": "多跳题里中间实体为什么不出现",
+          "type": "boundary",
+          "expect_doc": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "multi_hop",
+            "multi_hop",
+            "chunking_limits"
+          ],
+          "top3_chars": 578
+        },
+        {
+          "q": "上下文重建的收益会在哪一层被掩盖",
+          "type": "boundary",
+          "expect_doc": "contextual_chunking",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "contextual_chunking",
+            "contextual_chunking",
+            "pipeline_overview"
+          ],
+          "top3_chars": 599
+        },
+        {
+          "q": "压缩和重排哪个先做的理由",
+          "type": "boundary",
+          "expect_doc": "contextual_compression",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "contextual_compression",
+            "contextual_compression",
+            "contextual_chunking"
+          ],
+          "top3_chars": 628
+        },
+        {
+          "q": "路由评测为什么要分层",
+          "type": "boundary",
+          "expect_doc": "query_routing",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_docs": [
+            "query_routing",
+            "query_routing",
+            "query_routing"
+          ],
+          "top3_chars": 583
+        }
+      ],
+      "strategy": "fixed_220_o40"
+    },
+    "dense_plain": {
+      "span_full_at_3": 0.921875,
+      "span_cover_at_3": 0.9483165922619048,
+      "doc_hit_at_3": 1.0,
+      "mean_top3_chars": 609.3125,
+      "by_type": {
+        "boundary": {
+          "hit": 14,
+          "total": 14,
+          "recall": 1.0
+        },
+        "multi_hop": {
+          "hit": 20,
+          "total": 20,
+          "recall": 1.0
+        },
+        "single": {
+          "hit": 30,
+          "total": 30,
+          "recall": 1.0
+        }
+      },
+      "detail": [
+        {
+          "q": "固定长度切分会把句子切成什么样",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "提高重叠比例要付出什么代价",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "题量少于多少时准确率的变化不能当结论",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "MRR 和 recall@k 的计算方式有什么不同",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "BM25 和余弦相似度各自擅长什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "上下文重建是什么意思",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "重排序分哪两个阶段",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "什么查询需要走不同的检索路径",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "索引什么时候会失效",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 519
+        },
+        {
+          "q": "查询改写主要有哪几类形式",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 551
+        },
+        {
+          "q": "分块的局限在哪里",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "分块参数和召回率是什么关系",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "上下文压缩和分块方向有何不同",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "压缩的三种形态分别是什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "压缩和重排的顺序为什么重要",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "交叉编码器和双编码器有什么差别",
+          "type": "single",
+          "span_full": 0,
+          "span_cover": 0.812,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "列表式重排有什么优势",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "融合时为什么要做最大归一化",
+          "type": "single",
+          "span_full": 0,
+          "span_cover": 0.417,
+          "doc_in_top3": 1,
+          "top3_chars": 567
+        },
+        {
+          "q": "稀疏高维表示是介于哪两条路线之间",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "多跳问答的困难分哪两级",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "构造多跳题目有什么常见陷阱",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 578
+        },
+        {
+          "q": "任务规划拆得太细会怎样",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 581
+        },
+        {
+          "q": "错误率为什么会随链长指数上升",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 519
+        },
+        {
+          "q": "判分器的三条偏好是什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 624
+        },
+        {
+          "q": "怎么检验判分器有没有位置偏好",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 624
+        },
+        {
+          "q": "拒答阈值的调整会带来什么权衡",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 591
+        },
+        {
+          "q": "提示模板里什么影响准确率最大",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "表格转文本有什么问题",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "长文档的位置偏置是怎么来的",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 597
+        },
+        {
+          "q": "外部接口引入后评测要注意什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 519
+        },
+        {
+          "q": "块长和召回率是什么关系",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "块长这个部署参数该怎么定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "recall@3 和 MRR 的断言强度差在哪",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "召回阶段和精排阶段的目标有什么区别",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 546
+        },
+        {
+          "q": "为什么融合权重要随语料标定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 459
+        },
+        {
+          "q": "上下文重建的两种方法各有什么代价",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "多跳任务的整体成功率为什么远低于单跳",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "拒答率和正确率的关系是什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 591
+        },
+        {
+          "q": "检索链路里瓶颈怎么确定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 490
+        },
+        {
+          "q": "删除文档时为什么不能只从候选里排除",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "长文档评测怎么做才有意义",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 597
+        },
+        {
+          "q": "工具描述写得含糊会造成什么后果",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "结构化数据什么时候该用专用接口",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 630
+        },
+        {
+          "q": "核验里间接支撑和强支撑怎么分",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 612
+        },
+        {
+          "q": "不支持和反驳为什么必须分开判定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 563
+        },
+        {
+          "q": "抑制方法的失效模式是什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 626
+        },
+        {
+          "q": "查询改写最大的风险是什么",
+          "type": "multi_hop",
+          "span_full": 0,
+          "span_cover": 0.267,
+          "doc_in_top3": 1,
+          "top3_chars": 551
+        },
+        {
+          "q": "改写和重排的交互要注意什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 519
+        },
+        {
+          "q": "成本核算最容易漏掉哪一块",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 567
+        },
+        {
+          "q": "评测集稳定性受什么影响",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 603
+        },
+        {
+          "q": "生产环境里最典型的失败是什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 626
+        },
+        {
+          "q": "反馈回路怎么识别",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "可追溯的最低要求是什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 591
+        },
+        {
+          "q": "伪引用和真引用的区别在哪",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 594
+        },
+        {
+          "q": "量化对长尾查询影响更大是为什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 551
+        },
+        {
+          "q": "延迟的构成为什么常被高估",
+          "type": "boundary",
+          "span_full": 0,
+          "span_cover": 0.125,
+          "doc_in_top3": 1,
+          "top3_chars": 447
+        },
+        {
+          "q": "省下 KV 缓存为什么反而更慢",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "批处理参数混用会导致什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 594
+        },
+        {
+          "q": "只报最好一次为什么不诚实",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 594
+        },
+        {
+          "q": "选择偏差体现在哪",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 594
+        },
+        {
+          "q": "多跳题里中间实体为什么不出现",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 578
+        },
+        {
+          "q": "上下文重建的收益会在哪一层被掩盖",
+          "type": "boundary",
+          "span_full": 0,
+          "span_cover": 0.071,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "压缩和重排哪个先做的理由",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "路由评测为什么要分层",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 583
+        }
+      ],
+      "n_chunks": 88,
+      "vec_dim": 512,
+      "note": "同口径对照：稠密检索 + 不做上下文重建"
+    },
+    "contextual_retrieval": {
+      "span_full_at_3": 0.953125,
+      "span_cover_at_3": 0.9684810914855073,
+      "doc_hit_at_3": 0.96875,
+      "mean_top3_chars": 602.28125,
+      "by_type": {
+        "boundary": {
+          "hit": 14,
+          "total": 14,
+          "recall": 1.0
+        },
+        "multi_hop": {
+          "hit": 19,
+          "total": 20,
+          "recall": 0.95
+        },
+        "single": {
+          "hit": 29,
+          "total": 30,
+          "recall": 0.9666666666666667
+        }
+      },
+      "detail": [
+        {
+          "q": "固定长度切分会把句子切成什么样",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 578
+        },
+        {
+          "q": "提高重叠比例要付出什么代价",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "题量少于多少时准确率的变化不能当结论",
+          "type": "single",
+          "span_full": 0,
+          "span_cover": 0.087,
+          "doc_in_top3": 0,
+          "top3_chars": 591
+        },
+        {
+          "q": "MRR 和 recall@k 的计算方式有什么不同",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "BM25 和余弦相似度各自擅长什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "上下文重建是什么意思",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "重排序分哪两个阶段",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "什么查询需要走不同的检索路径",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "索引什么时候会失效",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 519
+        },
+        {
+          "q": "查询改写主要有哪几类形式",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "分块的局限在哪里",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "分块参数和召回率是什么关系",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "上下文压缩和分块方向有何不同",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "压缩的三种形态分别是什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "压缩和重排的顺序为什么重要",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "交叉编码器和双编码器有什么差别",
+          "type": "single",
+          "span_full": 0,
+          "span_cover": 0.812,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "列表式重排有什么优势",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 546
+        },
+        {
+          "q": "融合时为什么要做最大归一化",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 567
+        },
+        {
+          "q": "稀疏高维表示是介于哪两条路线之间",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 567
+        },
+        {
+          "q": "多跳问答的困难分哪两级",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 578
+        },
+        {
+          "q": "构造多跳题目有什么常见陷阱",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 578
+        },
+        {
+          "q": "任务规划拆得太细会怎样",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 581
+        },
+        {
+          "q": "错误率为什么会随链长指数上升",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 519
+        },
+        {
+          "q": "判分器的三条偏好是什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 624
+        },
+        {
+          "q": "怎么检验判分器有没有位置偏好",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 624
+        },
+        {
+          "q": "拒答阈值的调整会带来什么权衡",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 591
+        },
+        {
+          "q": "提示模板里什么影响准确率最大",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 572
+        },
+        {
+          "q": "表格转文本有什么问题",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "长文档的位置偏置是怎么来的",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 597
+        },
+        {
+          "q": "外部接口引入后评测要注意什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 519
+        },
+        {
+          "q": "块长和召回率是什么关系",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "块长这个部署参数该怎么定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 628
+        },
+        {
+          "q": "recall@3 和 MRR 的断言强度差在哪",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "召回阶段和精排阶段的目标有什么区别",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 546
+        },
+        {
+          "q": "为什么融合权重要随语料标定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 459
+        },
+        {
+          "q": "上下文重建的两种方法各有什么代价",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 628
+        },
+        {
+          "q": "多跳任务的整体成功率为什么远低于单跳",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 578
+        },
+        {
+          "q": "拒答率和正确率的关系是什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 591
+        },
+        {
+          "q": "检索链路里瓶颈怎么确定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 631
+        },
+        {
+          "q": "删除文档时为什么不能只从候选里排除",
+          "type": "multi_hop",
+          "span_full": 0,
+          "span_cover": 0.083,
+          "doc_in_top3": 0,
+          "top3_chars": 546
+        },
+        {
+          "q": "长文档评测怎么做才有意义",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 597
+        },
+        {
+          "q": "工具描述写得含糊会造成什么后果",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "结构化数据什么时候该用专用接口",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 630
+        },
+        {
+          "q": "核验里间接支撑和强支撑怎么分",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 611
+        },
+        {
+          "q": "不支持和反驳为什么必须分开判定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 563
+        },
+        {
+          "q": "抑制方法的失效模式是什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 626
+        },
+        {
+          "q": "查询改写最大的风险是什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 551
+        },
+        {
+          "q": "改写和重排的交互要注意什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 551
+        },
+        {
+          "q": "成本核算最容易漏掉哪一块",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 567
+        },
+        {
+          "q": "评测集稳定性受什么影响",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 594
+        },
+        {
+          "q": "生产环境里最典型的失败是什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 603
+        },
+        {
+          "q": "反馈回路怎么识别",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "可追溯的最低要求是什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 612
+        },
+        {
+          "q": "伪引用和真引用的区别在哪",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "量化对长尾查询影响更大是为什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 479
+        },
+        {
+          "q": "延迟的构成为什么常被高估",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 588
+        },
+        {
+          "q": "省下 KV 缓存为什么反而更慢",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 588
+        },
+        {
+          "q": "批处理参数混用会导致什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "只报最好一次为什么不诚实",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 594
+        },
+        {
+          "q": "选择偏差体现在哪",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 594
+        },
+        {
+          "q": "多跳题里中间实体为什么不出现",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 578
+        },
+        {
+          "q": "上下文重建的收益会在哪一层被掩盖",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 628
+        },
+        {
+          "q": "压缩和重排哪个先做的理由",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "路由评测为什么要分层",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 554
+        }
+      ],
+      "n_chunks": 88,
+      "vec_dim": 512
+    },
+    "late_chunking": {
+      "span_full_at_3": 0.90625,
+      "span_cover_at_3": 0.9248939405806181,
+      "doc_hit_at_3": 0.953125,
+      "mean_top3_chars": 608.65625,
+      "by_type": {
+        "boundary": {
+          "hit": 12,
+          "total": 14,
+          "recall": 0.8571428571428571
+        },
+        "multi_hop": {
+          "hit": 19,
+          "total": 20,
+          "recall": 0.95
+        },
+        "single": {
+          "hit": 30,
+          "total": 30,
+          "recall": 1.0
+        }
+      },
+      "detail": [
+        {
+          "q": "固定长度切分会把句子切成什么样",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "提高重叠比例要付出什么代价",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "题量少于多少时准确率的变化不能当结论",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "MRR 和 recall@k 的计算方式有什么不同",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "BM25 和余弦相似度各自擅长什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "上下文重建是什么意思",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "重排序分哪两个阶段",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 546
+        },
+        {
+          "q": "什么查询需要走不同的检索路径",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "索引什么时候会失效",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "查询改写主要有哪几类形式",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 551
+        },
+        {
+          "q": "分块的局限在哪里",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "分块参数和召回率是什么关系",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "上下文压缩和分块方向有何不同",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "压缩的三种形态分别是什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "压缩和重排的顺序为什么重要",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "交叉编码器和双编码器有什么差别",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "列表式重排有什么优势",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "融合时为什么要做最大归一化",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 567
+        },
+        {
+          "q": "稀疏高维表示是介于哪两条路线之间",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 567
+        },
+        {
+          "q": "多跳问答的困难分哪两级",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 578
+        },
+        {
+          "q": "构造多跳题目有什么常见陷阱",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 578
+        },
+        {
+          "q": "任务规划拆得太细会怎样",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 581
+        },
+        {
+          "q": "错误率为什么会随链长指数上升",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 519
+        },
+        {
+          "q": "判分器的三条偏好是什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 624
+        },
+        {
+          "q": "怎么检验判分器有没有位置偏好",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 624
+        },
+        {
+          "q": "拒答阈值的调整会带来什么权衡",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 591
+        },
+        {
+          "q": "提示模板里什么影响准确率最大",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 572
+        },
+        {
+          "q": "表格转文本有什么问题",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 628
+        },
+        {
+          "q": "长文档的位置偏置是怎么来的",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 597
+        },
+        {
+          "q": "外部接口引入后评测要注意什么",
+          "type": "single",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 628
+        },
+        {
+          "q": "块长和召回率是什么关系",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "块长这个部署参数该怎么定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "recall@3 和 MRR 的断言强度差在哪",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "召回阶段和精排阶段的目标有什么区别",
+          "type": "multi_hop",
+          "span_full": 0,
+          "span_cover": 0.533,
+          "doc_in_top3": 1,
+          "top3_chars": 546
+        },
+        {
+          "q": "为什么融合权重要随语料标定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 459
+        },
+        {
+          "q": "上下文重建的两种方法各有什么代价",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "多跳任务的整体成功率为什么远低于单跳",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "拒答率和正确率的关系是什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 591
+        },
+        {
+          "q": "检索链路里瓶颈怎么确定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 631
+        },
+        {
+          "q": "删除文档时为什么不能只从候选里排除",
+          "type": "multi_hop",
+          "span_full": 0,
+          "span_cover": 0.083,
+          "doc_in_top3": 0,
+          "top3_chars": 546
+        },
+        {
+          "q": "长文档评测怎么做才有意义",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 597
+        },
+        {
+          "q": "工具描述写得含糊会造成什么后果",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "结构化数据什么时候该用专用接口",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 630
+        },
+        {
+          "q": "核验里间接支撑和强支撑怎么分",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 612
+        },
+        {
+          "q": "不支持和反驳为什么必须分开判定",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 611
+        },
+        {
+          "q": "抑制方法的失效模式是什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 626
+        },
+        {
+          "q": "查询改写最大的风险是什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 551
+        },
+        {
+          "q": "改写和重排的交互要注意什么",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 551
+        },
+        {
+          "q": "成本核算最容易漏掉哪一块",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 624
+        },
+        {
+          "q": "评测集稳定性受什么影响",
+          "type": "multi_hop",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 594
+        },
+        {
+          "q": "生产环境里最典型的失败是什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 569
+        },
+        {
+          "q": "反馈回路怎么识别",
+          "type": "boundary",
+          "span_full": 0,
+          "span_cover": 0.158,
+          "doc_in_top3": 0,
+          "top3_chars": 660
+        },
+        {
+          "q": "可追溯的最低要求是什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 560
+        },
+        {
+          "q": "伪引用和真引用的区别在哪",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 612
+        },
+        {
+          "q": "量化对长尾查询影响更大是为什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 551
+        },
+        {
+          "q": "延迟的构成为什么常被高估",
+          "type": "boundary",
+          "span_full": 0,
+          "span_cover": 0.125,
+          "doc_in_top3": 1,
+          "top3_chars": 588
+        },
+        {
+          "q": "省下 KV 缓存为什么反而更慢",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "批处理参数混用会导致什么",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 624
+        },
+        {
+          "q": "只报最好一次为什么不诚实",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 560
+        },
+        {
+          "q": "选择偏差体现在哪",
+          "type": "boundary",
+          "span_full": 0,
+          "span_cover": 0.222,
+          "doc_in_top3": 0,
+          "top3_chars": 624
+        },
+        {
+          "q": "多跳题里中间实体为什么不出现",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 578
+        },
+        {
+          "q": "上下文重建的收益会在哪一层被掩盖",
+          "type": "boundary",
+          "span_full": 0,
+          "span_cover": 0.071,
+          "doc_in_top3": 1,
+          "top3_chars": 615
+        },
+        {
+          "q": "压缩和重排哪个先做的理由",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 660
+        },
+        {
+          "q": "路由评测为什么要分层",
+          "type": "boundary",
+          "span_full": 1,
+          "span_cover": 1.0,
+          "doc_in_top3": 1,
+          "top3_chars": 583
+        }
+      ],
+      "n_chunks": 88,
+      "vec_dim": 512,
+      "window_coverage": {
+        "docs": 26,
+        "docs_needing_multiple_windows": 12,
+        "max_doc_tokens": 725
+      }
+    }
+  },
+  "verdict": "pass",
+  "gate_detail": "contextual_retrieval: 整体 +0.031 | boundary +0.000 | single -0.033（对照 dense_plain）\nlate_chunking: 整体 -0.016 | boundary -0.143 | single +0.000（对照 dense_plain）\n  ⚠ 跨度不足 0.02（<2 题），按 notes 只报数字不下方向性结论",
+  "notes": {
+    "caliber_isolation": "本表与 W4 表不比较 doc_hit：W4 是稀疏检索，本表是稠密检索，doc_hit 的差异里混着检索器差异。只有 span_full 同口径可比。更关键：重建档的收益必须对照 dense_plain，不是对照 W4 稀疏基线——首版拿稀疏基线当对照，contextual 的符号整个反了（-0.031 vs +0.031）。",
+    "two_bugs_found_by_sign_flip": "(1) token 截断：26 篇里 20 篇被砍尾，late_chunking 退化到 -0.188，因为 late chunking 的前提就是整篇都在上下文里，截断等于取消前提；(2) 滑窗重叠后按 n_avail 比例映射 token 位置会系统性漂移（1000 token 的文档漂 6%，220 字符块偏约 14 token），逐 token 建 pos_map 后 late_chunking 从 -0.031 回到 -0.016。两者都是我的实现 bug，由结果异常暴露，不是被门挡下的。",
+    "mechanism_not_supported": "contextual_retrieval 的 +0.031 增益全在 single 类（-0.033），boundary 类是 +0.000 —— 它没有兑现「重建主要救边界题」这个命题，收益反而来自把单跳题定位得更准。负结果：报数字，不下机制结论。",
+    "token_pooling_caveat": "late_chunking 的 token 区间按字符比例映射（中文一字一 token），边界不精确；这是 late chunking 的固有性质，换来的是不依赖 offset_mapping 的可复现性。",
+    "encoder_scope": "bge-small-zh-v1.5（24.0M 参数，中文，512 维，CLS 池化 + L2 归一），本机 CPU 可跑，无 GPU 依赖 => 6GB 机器上可复现；但换编码器（尤其跨语言/多语模型）结论可能变。",
+    "sample_size_caveat": "64 题。跨度若小于 5 题，不做方向性结论，只报数字。"
+  }
+}
