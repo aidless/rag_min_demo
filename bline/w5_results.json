@@ -15,6 +15,23 @@
           "recall": 1.0
         },
         "multi_hop": {
+          "hit": 19,
+          "total": 20,
+          "recall": 0.95
+        },
+        "single": {
+          "hit": 30,
+          "total": 30,
+          "recall": 1.0
+        }
+      },
+      "by_type_doc": {
+        "boundary": {
+          "hit": 14,
+          "total": 14,
+          "recall": 1.0
+        },
+        "multi_hop": {
           "hit": 20,
           "total": 20,
           "recall": 1.0
@@ -932,6 +949,23 @@
       "mean_top3_chars": 609.3125,
       "by_type": {
         "boundary": {
+          "hit": 12,
+          "total": 14,
+          "recall": 0.8571428571428571
+        },
+        "multi_hop": {
+          "hit": 19,
+          "total": 20,
+          "recall": 0.95
+        },
+        "single": {
+          "hit": 28,
+          "total": 30,
+          "recall": 0.9333333333333333
+        }
+      },
+      "by_type_doc": {
+        "boundary": {
           "hit": 14,
           "total": 14,
           "recall": 1.0
@@ -1482,6 +1516,23 @@
           "recall": 0.95
         },
         "single": {
+          "hit": 28,
+          "total": 30,
+          "recall": 0.9333333333333333
+        }
+      },
+      "by_type_doc": {
+        "boundary": {
+          "hit": 14,
+          "total": 14,
+          "recall": 1.0
+        },
+        "multi_hop": {
+          "hit": 19,
+          "total": 20,
+          "recall": 0.95
+        },
+        "single": {
           "hit": 29,
           "total": 30,
           "recall": 0.9666666666666667
@@ -2010,6 +2061,23 @@
       "doc_hit_at_3": 0.953125,
       "mean_top3_chars": 608.65625,
       "by_type": {
+        "boundary": {
+          "hit": 10,
+          "total": 14,
+          "recall": 0.7142857142857143
+        },
+        "multi_hop": {
+          "hit": 18,
+          "total": 20,
+          "recall": 0.9
+        },
+        "single": {
+          "hit": 30,
+          "total": 30,
+          "recall": 1.0
+        }
+      },
+      "by_type_doc": {
         "boundary": {
           "hit": 12,
           "total": 14,
@@ -2550,7 +2618,7 @@
     }
   },
   "verdict": "pass",
-  "gate_detail": "contextual_retrieval: 整体 +0.031 | boundary +0.000 | single -0.033（对照 dense_plain）\nlate_chunking: 整体 -0.016 | boundary -0.143 | single +0.000（对照 dense_plain）\n  ⚠ 跨度不足 0.02（<2 题），按 notes 只报数字不下方向性结论",
+  "gate_detail": "contextual_retrieval: 整体 +0.031 | boundary +0.143 | single +0.000（对照 dense_plain）\nlate_chunking: 整体 -0.016 | boundary -0.143 | single +0.067（对照 dense_plain）\n  ⚠ 跨度不足 0.02（<2 题），按 notes 只报数字不下方向性结论",
   "notes": {
     "caliber_isolation": "本表与 W4 表不比较 doc_hit：W4 是稀疏检索，本表是稠密检索，doc_hit 的差异里混着检索器差异。只有 span_full 同口径可比。更关键：重建档的收益必须对照 dense_plain，不是对照 W4 稀疏基线——首版拿稀疏基线当对照，contextual 的符号整个反了（-0.031 vs +0.031）。",
     "two_bugs_found_by_sign_flip": "(1) token 截断：26 篇里 20 篇被砍尾，late_chunking 退化到 -0.188，因为 late chunking 的前提就是整篇都在上下文里，截断等于取消前提；(2) 滑窗重叠后按 n_avail 比例映射 token 位置会系统性漂移（1000 token 的文档漂 6%，220 字符块偏约 14 token），逐 token 建 pos_map 后 late_chunking 从 -0.031 回到 -0.016。两者都是我的实现 bug，由结果异常暴露，不是被门挡下的。",

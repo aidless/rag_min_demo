@@ -204,7 +204,8 @@ class DenseIndex:
 
 def evaluate_dense(chunks, meta, vecs, golden, torch, tok, mdl):
     index = DenseIndex(vecs)
-    hit, cov_sum, char_sum, ndoc, detail = 0, 0.0, 0, defaultdict(list), []
+    hit, cov_sum, char_sum = 0, 0.0, 0
+    ndoc, nsfull, detail = defaultdict(list), defaultdict(list), []
     for q in golden["queries"]:
         qv = encode([q["q"]], tok, mdl, torch)[0]
         idxs, _ = index.retrieve(qv, top_k=3)
@@ -219,15 +220,25 @@ def evaluate_dense(chunks, meta, vecs, golden, torch, tok, mdl):
         char_sum += sum(len(t) for t in tops)
         d = 1 if q["expect_doc"] in [meta[i] for i in idxs] else 0
         ndoc[q["type"]].append(d)
+        nsfull[q["type"]].append(full)
         detail.append({"q": q["q"], "type": q["type"], "span_full": full,
                        "span_cover": round(cov, 3), "doc_in_top3": d,
                        "top3_chars": sum(len(t) for t in tops)})
     n = len(golden["queries"]) or 1
+    # by_type **必须与头条同指标**（span_full）。原实现把它挂在 doc_in_top3 上，
+    # 于是同一个键名下存的是 doc-hit、头条记的是 span-full：键名一样、含义
+    # 两样，任何拿 by_type 去读头条口径的人都会悄悄读到另一套数。本函数
+    # 曾因此报出「增益全在 single 类」的错误机制结论（真值是 boundary
+    # +0.143、其余类 +0.000）。doc 维度的分项另存 by_type_doc，不混用。
     return {"span_full_at_3": hit / n, "span_cover_at_3": cov_sum / n,
             "doc_hit_at_3": sum(sum(v) for v in ndoc.values()) / n,
             "mean_top3_chars": char_sum / n,
             "by_type": {k: {"hit": sum(v), "total": len(v),
-                            "recall": sum(v) / len(v)} for k, v in sorted(ndoc.items())},
+                            "recall": sum(v) / len(v)}
+                        for k, v in sorted(nsfull.items())},
+            "by_type_doc": {k: {"hit": sum(v), "total": len(v),
+                                "recall": sum(v) / len(v)}
+                            for k, v in sorted(ndoc.items())},
             "detail": detail}
 
 
@@ -346,6 +357,7 @@ def mechanism_gate(arms):
     for name in ("contextual_retrieval", "late_chunking"):
         a, c = arms[name], arms["dense_plain"]
         gain = a["span_full_at_3"] - c["span_full_at_3"]
+        # by_type 现在是 span_full 口径（与头条同指标），与机制主张一致
         bt = a["by_type"].get("boundary", {}).get("recall", 0.0)
         bc = c["by_type"].get("boundary", {}).get("recall", 0.0)
         single_gain = (a["by_type"].get("single", {}).get("recall", 0.0)

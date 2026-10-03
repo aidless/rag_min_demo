@@ -219,6 +219,7 @@ def evaluate(corpus, golden, max_chars, overlap, sentence_aware):
     index = Index(chunks, meta)
     nchunk = [0, 0.0, 0]      # span_full 命中数, cover 累加, 总数
     ndoc = defaultdict(lambda: [0, 0])
+    nsfull = defaultdict(lambda: [0, 0])
     noise = [0.0, 0]
     detail = []
     for q in golden["queries"]:
@@ -242,6 +243,8 @@ def evaluate(corpus, golden, max_chars, overlap, sentence_aware):
         hit = 1 if q["expect_doc"] in top_docs else 0
         ndoc[q["type"]][0] += hit
         ndoc[q["type"]][1] += 1
+        nsfull[q["type"]][0] += full
+        nsfull[q["type"]][1] += 1
         detail.append({"q": q["q"], "type": q["type"], "expect_doc": q["expect_doc"],
                        "span_full": full, "span_cover": round(cov, 3),
                        "doc_in_top3": hit, "top3_docs": top_docs,
@@ -253,8 +256,13 @@ def evaluate(corpus, golden, max_chars, overlap, sentence_aware):
         "span_cover_at_3": nchunk[1] / n,
         "doc_hit_at_3": sum(v[0] for v in ndoc.values()) / n,
         "mean_top3_chars": noise[0] / (noise[1] or 1),
+        # by_type 与头条同指标（span_full）。原实现挂在 doc 命中上，
+        # 键名与头条一样、含义两样；W5 复用本函数的稀疏对照臂时因此
+        # 报出「multi_hop 记 20、重算实为 19」这类假篡改告警。
         "by_type": {k: {"hit": v[0], "total": v[1], "recall": v[0] / v[1]}
-                    for k, v in sorted(ndoc.items())},
+                    for k, v in sorted(nsfull.items())},
+        "by_type_doc": {k: {"hit": v[0], "total": v[1], "recall": v[0] / v[1]}
+                        for k, v in sorted(ndoc.items())},
         "detail": detail,
     }
 

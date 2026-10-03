@@ -52,6 +52,23 @@
           "recall": 1.0
         },
         "multi_hop": {
+          "hit": 19,
+          "total": 20,
+          "recall": 0.95
+        },
+        "single": {
+          "hit": 30,
+          "total": 30,
+          "recall": 1.0
+        }
+      },
+      "by_type_doc": {
+        "boundary": {
+          "hit": 14,
+          "total": 14,
+          "recall": 1.0
+        },
+        "multi_hop": {
           "hit": 20,
           "total": 20,
           "recall": 1.0
@@ -972,6 +989,23 @@
       "doc_hit_at_3": 0.984375,
       "mean_top3_chars": 580.53125,
       "by_type": {
+        "boundary": {
+          "hit": 14,
+          "total": 14,
+          "recall": 1.0
+        },
+        "multi_hop": {
+          "hit": 18,
+          "total": 20,
+          "recall": 0.9
+        },
+        "single": {
+          "hit": 29,
+          "total": 30,
+          "recall": 0.9666666666666667
+        }
+      },
+      "by_type_doc": {
         "boundary": {
           "hit": 14,
           "total": 14,
@@ -1904,6 +1938,23 @@
           "recall": 1.0
         },
         "multi_hop": {
+          "hit": 13,
+          "total": 20,
+          "recall": 0.65
+        },
+        "single": {
+          "hit": 26,
+          "total": 30,
+          "recall": 0.8666666666666667
+        }
+      },
+      "by_type_doc": {
+        "boundary": {
+          "hit": 14,
+          "total": 14,
+          "recall": 1.0
+        },
+        "multi_hop": {
           "hit": 19,
           "total": 20,
           "recall": 0.95
@@ -2830,6 +2881,23 @@
           "recall": 1.0
         },
         "multi_hop": {
+          "hit": 19,
+          "total": 20,
+          "recall": 0.95
+        },
+        "single": {
+          "hit": 30,
+          "total": 30,
+          "recall": 1.0
+        }
+      },
+      "by_type_doc": {
+        "boundary": {
+          "hit": 14,
+          "total": 14,
+          "recall": 1.0
+        },
+        "multi_hop": {
           "hit": 20,
           "total": 20,
           "recall": 1.0
@@ -3750,6 +3818,23 @@
       "doc_hit_at_3": 1.0,
       "mean_top3_chars": 589.296875,
       "by_type": {
+        "boundary": {
+          "hit": 14,
+          "total": 14,
+          "recall": 1.0
+        },
+        "multi_hop": {
+          "hit": 15,
+          "total": 20,
+          "recall": 0.75
+        },
+        "single": {
+          "hit": 27,
+          "total": 30,
+          "recall": 0.9
+        }
+      },
+      "by_type_doc": {
         "boundary": {
           "hit": 14,
           "total": 14,
