@@ -55,5 +55,11 @@ bash demo.sh        # 等价于 python3 rag_demo.py + 一次单查询演示
 - 许可：`bline/LICENSE` 为 MIT（新仓根 LICENSE 由此复制）。
 - 新仓纳入（计划）：config / hybrid / reranker / harness / latency / golden /
   results / demo.sh / BLINE_REPORT；排除：venv、自指 symlink、云凭证、向量库服务。
-- 状态：本地准备就绪，可建仓迁移；本次不建远端仓、不写核心检索代码。
-  详情见 `bline/BLINE_REPORT.md`。
+- 状态：**B 线仓 `../enterprise-rag` 已于 2026-10-11 落地**。大库口径实测
+  （11994 chunk）recall@3 = 8/10、MRR = 0.55、p50 = 3.25ms，与本仓的 5/5
+  **不可比**：库大小差约 1200 倍，且本仓语料只有 `.md`，工程事实
+  （`.py`/`.json`）系统性缺席。迁移中的三条反直觉结论（真语义向量在同一
+  语料上没赢稀疏融合、bigram 重排零贡献、照搬 w_cos = 0.6 反而更差）见
+  `../enterprise-rag/hybrid/RESULTS_M1.md`；`enterprise-rag/baseline/` 是本仓
+  的冻结复制，逻辑与语料未改。
+- 许可：MIT（见 `LICENSE`，与 `bline/LICENSE` 一致）。
