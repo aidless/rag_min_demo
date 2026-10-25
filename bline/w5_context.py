@@ -23,7 +23,7 @@ cs.IR, 2025-04-28）——该文只比了 late chunking 与 contextual retrieval
 W5 表需要 venv，两表可比因为语料/题集/评分函数完全相同。
 
 用法：
-  /home/liuzewen/.venvs/w4-torch/bin/python bline/w5_context.py [--selftest]
+  python bline/w5_context.py [--selftest]   # 需 torch/transformers 环境
 退出码：0=完成且门通过 / 1=门失败 / 3=缺编码器（诚实降级，不是静默跳过）
 """
 import glob
@@ -60,8 +60,8 @@ def load_encoder():
         from transformers import AutoModel, AutoTokenizer
     except ImportError as e:
         raise EncoderError(
-            "缺 torch/transformers（%s）。用 /home/liuzewen/.venvs/w4-torch/bin/python "
-            "运行；本仓根因是工作区路径含字面反斜杠，venv 无法建在工作区内。" % e)
+            "缺 torch/transformers（%s）。用启用 torch 的 Python 环境运行"
+            "（注意：工作区路径含字面反斜杠时 venv 无法建在工作区内）。" % e)
     # **为什么用快照目录而不是模型名**：cache 里没有 refs/main 的 resolve 记录，
     # 按名字加载会先 HEAD 一次远端（离线时报 LocalEntryNotFoundError，尽管
     # model.safetensors 就在磁盘上）。直接指向快照目录既离线可复现，也不依赖
