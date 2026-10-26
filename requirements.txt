@@ -1,0 +1,7 @@
+# aidless/rag_min_demo — optional dependencies only
+#
+# All third-party imports in this repo sit inside try/except ImportError guards or
+# function bodies, i.e. the code runs without them. Uncomment what you need.
+
+# torch>=2.0  # bline/w5_context.py:59
+# transformers>=4.40  # bline/w5_context.py:60
