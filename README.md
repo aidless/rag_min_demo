@@ -34,12 +34,49 @@ bash demo.sh        # 等价于 python3 rag_demo.py + 一次单查询演示
    面试点：纯向量对精确实体翻车，线上都是混合检索；权重本身也是可调参。
 5. **评测**：5 条问题各有期望文档（golden 集，冻结），报 recall@3 与 MRR。
 
-## 诚实边界（面试官追问时主动说）
+## 证明什么 / 不证明什么（面试官追问时主动说）
 
-- 语料只有 7 文档 10 chunk，5/5 说明链路跑通，不说明检索质量——规模证据
-  在 paper_agent 的 54 万篇 FAISS 侧。
-- 字二元组处理不了同义改写（如问"切分"搜"分块"会弱），生产切 embedding。
-- 单机暴力检索，10 chunk 谈不上 ANN；索引选型结论见 `docs/vector_db.md`。
+**证明什么（本仓内可复现）：**
+
+1. **全链路跑通**：7 文档 1411 字 → 10 chunk → 字二元组词表 1098 →
+   `recall@3 = 5/5`、`MRR = 1.000`（5 题全部 PASS 且 rank=1）。这是**冻结基线**
+   （`tests/test_baseline.py` 断言 `hits==5` 且 `mrr≈1.0`，任一漂移即 FAIL）。
+2. **检索有区分度**：语料含 2 个干扰项（`docs/cooking.txt`、`docs/travel.txt`），
+   5 题各自命中期望文档而非干扰项——证明检索不是把所有问题都映射到同一文档。
+3. **确定性**：`python3 rag_demo.py` 每次输出相同的 5/5 与 1.000（无 LLM、无随机）。
+4. **工具与测试可运行**：`python3 -m pytest -q tests/` → **25 passed**（含
+   `test_baseline`、`test_confidence_gate`、`test_rerank_ndcg`、`test_rankgpt_table`、
+   `test_gates_run`）。`tools/rerank_ndcg.py`、`tools/confidence_gate.py`、
+   `tools/rankgpt_rerank.py`（库）+ `tools/table_qa.py` 均可独立运行，exit 0。
+
+**不证明什么（诚实边界）：**
+
+- **不证明检索质量**：语料只有 7 文档 10 chunk，5/5 只说明链路跑通，不说明检索
+  泛化质量——规模证据在 `paper_agent` 的 54 万篇 FAISS 侧。
+- **字二元组处理不了同义改写**（如问"切分"搜"分块"会弱），生产切 embedding。
+- **单机暴力检索**，10 chunk 谈不上 ANN；索引选型结论见 `docs/vector_db.md`。
+- **RankGPT 的 nDCG 增益未复现**：`tools/rankgpt_rerank.py` 只落地提示模板 +
+  排列解析 + 确定性桩，**未接真实 LLM**（本仓无 LLM/权重）。未注入 `llm_fn` 时
+  显式抛 `NoLLMError`，绝不静默退化为原序（fail-closed，已被测试断言）。
+- **表问答是 5 行 fixture 的确定性管线**，不是 LLM 语义解析，不声称泛化性。
+- **`tools/rerank_ndcg.py` 的文档多样重排增益（recall 31/32→32/32，MRR 0.969→0.979，
+  nDCG@3 0.969→0.984）** 只在 W2(32) 这一冻结子集上实测，不外推到其他语料。
+
+## 复算（所有数字从本仓重算）
+
+```bash
+# 全链路 + 冻结基线（recall@3=5/5, MRR=1.000）
+python3 rag_demo.py
+
+# 测试套件（25 passed）
+python3 -m pytest -q tests/
+
+# rerank/nDCG 三臂对照（文档多样重排 Δrecall +0.0312）
+python3 tools/rerank_ndcg.py
+
+# 检索增益对照（W2 全检索 − 免检索 = +0.438）
+python3 tools/confidence_gate.py
+```
 
 ## 文件
 
