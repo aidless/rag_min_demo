@@ -1,5 +1,7 @@
 # 最小 RAG 全链路 demo
 
+[![CI](https://github.com/aidless/rag_min_demo/actions/workflows/checks.yml/badge.svg)](https://github.com/aidless/rag_min_demo/actions/workflows/checks.yml)
+
 一句话：7 个文档 → 解析 → 句子感知分块 → 字二元组 TF-IDF 向量化 →
 余弦初排 + BM25 加权融合重排 → golden 集评测。**零依赖**，只有 Python3 标准库。
 
