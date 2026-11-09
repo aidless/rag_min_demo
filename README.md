@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/aidless/rag_min_demo/actions/workflows/checks.yml/badge.svg)](https://github.com/aidless/rag_min_demo/actions/workflows/checks.yml)
 
+> **English TL;DR**: A minimal end-to-end RAG demo in one ~200-line, zero-dependency Python file: parse 7 documents, sentence-aware chunking, character-bigram TF-IDF vectors, cosine plus BM25 fusion reranking, and a frozen 5-question golden-set evaluation (`python3 rag_demo.py`: recall@3 = 5/5, MRR = 1.000). Written as a teachable pipeline, it states its own ceiling — 5/5 shows the chain runs, not retrieval quality; synonym paraphrase and ANN-scale retrieval are explicitly out of scope, with the baseline frozen for the follow-up enterprise-rag repo.
+
 一句话：7 个文档 → 解析 → 句子感知分块 → 字二元组 TF-IDF 向量化 →
 余弦初排 + BM25 加权融合重排 → golden 集评测。**零依赖**，只有 Python3 标准库。
 
