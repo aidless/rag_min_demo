@@ -45,6 +45,37 @@ bash demo.sh        # 等价于 python3 rag_demo.py + 一次单查询演示
 - 字二元组处理不了同义改写（如问"切分"搜"分块"会弱），生产切 embedding。
 - 单机暴力检索，10 chunk 谈不上 ANN；索引选型结论见 `docs/vector_db.md`。
 
+## 融合权重消融（真实数据，`bline/`）
+
+冻结基线（`w_cos=0.6` + BM25，本仓 5 题 golden 集）：recall@3 = 5/5，MRR = 1.000。
+W1/W2 两轮消融扫描 `w_cos ∈ {0.0, 0.2, 0.4, 0.6, 0.8, 1.0}`（rrf_k=60，candidates=10，top_k=3），
+数据全部来自仓库内已落盘的 `bline/w1_results.json`（2026-09-10）与 `bline/w2_results.json`（2026-09-10）。
+
+### W1：冻结 golden 集（n=5）
+
+| w_cos | recall@3 | MRR |
+|-------|----------|-----|
+| 0.0 / 0.2 / 0.4 / 0.6 / 0.8 / 1.0 | 全部 5/5 | 全部 1.000 |
+
+### W2：扩到 32 题（orig / paraphrase / adversarial 三型）
+
+| 检索策略 | recall@3 | MRR | Wilson 95% CI (recall) | McNemar p (vs w_cos=0.6) |
+|----------|----------|-----|------------------------|--------------------------|
+| w_cos = 0.0–1.0 六档 + rrf_k=60 | 全部 31/32 | 全部 0.9688 | [0.8426, 0.9945] | 全部 1.0（零分歧） |
+
+唯一失分题（7 档全部 miss，rank=None）：「改了链路里的分块模块需要做什么」（期望 `eval`，属 paraphrase 型，
+命中缺口记录在 `by_doc_ref.eval`）。分文档看：rag_overview/chunking/vector_db/agent_tools/cooking/travel
+全部满分，仅 `eval` 组 4/5。
+
+### 诚实结论（来自 json 内 honesty 字段，原样引用）
+
+- W1：n=5 为冒烟规模；网格内任何权重差异均可能是过拟合，不做生产权重推荐。
+- W2：SILVER——n=32 仍是小规模玩具语料；McNemar 在零分歧时 p=1 无信息量，
+  结论限于本语料，不做生产权重推荐。
+- 工程含义：**在该语料上融合权重不敏感**——权重扫描没有拉开差距，反而说明
+  小语料 + 字二元组下瓶颈不在融合权重；把权重当首要调参对象是伪优化。
+  规模化后的权重敏感性结论在 `../enterprise-rag/hybrid/RESULTS_M1.md`。
+
 ## 文件
 
 - `rag_demo.py`：单文件全链路（约 200 行，可现场逐段讲，只读冻结，不改）
