@@ -37,7 +37,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 from w4_ablation import (  # noqa: E402  复用切块/评分，绝不改它
-    CANDIDATES, GOLDEN, W_BM25, W_COS, chunk_text, evaluate, load_corpus,
+    GOLDEN, chunk_text, evaluate, load_corpus,
 )
 
 RESULTS = os.path.join(HERE, "w5_results.json")

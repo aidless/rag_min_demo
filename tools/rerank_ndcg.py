@@ -146,7 +146,7 @@ def main():
         "rerank 文档多样": ranked_diverse,
     }
     results = {}
-    print(f"[W2(32) 三臂对照]")
+    print("[W2(32) 三臂对照]")
     for name, fn in arms.items():
         rows = [{"expect": exp, "ids": [d for _, d in fn(q, chunks, index)]}
                 for q, exp in qa]

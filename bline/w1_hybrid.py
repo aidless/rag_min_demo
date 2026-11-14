@@ -3,7 +3,6 @@
 输入为已算好的分数dict {chunk_idx: score}，输出为排序后的 [(score, idx)]。
 归一化口径与冻结基线一致：cand内max-norm。
 """
-import math
 
 
 def max_norm(scores):

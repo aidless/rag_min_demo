@@ -16,7 +16,7 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.dirname(HERE))
 import rag_demo
 from w1_hybrid import rrf_fusion, weighted_fusion
-from w3_harness import build_extended, norm_item, strategies
+from w3_harness import build_extended, strategies
 
 with open(os.path.join(HERE, "w1_config.json"), encoding="utf-8") as f:
     cfg = json.load(f)
