@@ -1,137 +1,218 @@
-# 最小 RAG 全链路 demo
+# 字二元组 RAG 教学演示：冒烟跑通，不是检索质量
 
 [![CI](https://github.com/aidless/rag_min_demo/actions/workflows/checks.yml/badge.svg)](https://github.com/aidless/rag_min_demo/actions/workflows/checks.yml)
 
-> **English TL;DR**: A minimal end-to-end RAG demo in one ~200-line, zero-dependency Python file: parse 7 documents, sentence-aware chunking, character-bigram TF-IDF vectors, cosine plus BM25 fusion reranking, and a frozen 5-question golden-set evaluation (`python3 rag_demo.py`: recall@3 = 5/5, MRR = 1.000). Written as a teachable pipeline, it states its own ceiling — 5/5 shows the chain runs, not retrieval quality; synonym paraphrase and ANN-scale retrieval are explicitly out of scope, with the baseline frozen for the follow-up enterprise-rag repo.
+> **English TL;DR**: This demo chunks a handful of short docs with the standard library and retrieves them by character-bigram cosine and BM25, to show the chain runs offline.
+> The original frozen quiz is only a smoke test, not retrieval quality, synonym handling, or adoption.
+> The harder questions were written by the author after reading the docs, hashed before scoring; whether fusion beats either single method is only whatever the pre-registered rule prints in the number block.
 
-一句话：7 个文档 → 解析 → 句子感知分块 → 字二元组 TF-IDF 向量化 →
-余弦初排 + BM25 加权融合重排 → golden 集评测。**零依赖**，只有 Python3 标准库。
+这条演示用标准库把几篇短文档切块，再用字二元组的余弦和 BM25 做检索，用来证明整条链路能离线跑通。
+原来的冻结小测验只说明冒烟是否通过，不能当成检索质量、同义改写能力或别人在用。
+更难的一版题是作者读完文档后自己写的，先冻结哈希再计分；融合是否优于单路，只以计分块里的预注册规则为准。
 
-## 运行（前提：先 `cd` 到本仓根，即 `rag_demo.py` 所在目录）
-
-```bash
-python3 rag_demo.py                          # 全链路 + 5 题评测
-python3 rag_demo.py --query "分块太大有什么坏处"  # 单次查询演示
-```
-
-### 一键复现
+## 复现
 
 ```bash
-python3 --version   # 需 Python 3.8+（实测 3.12.3）
-bash demo.sh        # 等价于 python3 rag_demo.py + 一次单查询演示
+make check
 ```
 
-预期输出（尾部）：`recall@3 = 5/5`，`MRR = 1.000`（5 题全部 PASS 且 rank=1）。
+`make check` 用 `python3` 离线重算下面计分块的每一个数字。题面哈希或语料哈希变了也会失败。不安装第三方包。题面、协议和哈希在 `evalset/hard_v1/`。失败模式见 `FAILURE_MODES.md`。
 
-实测：解析 7 文档 1411 字 → 10 chunk → 词表 1098 → 评测 recall@3 = 5/5，MRR = 1.000。
+<!-- hard-v1-numbers:start -->
+hard_v1 questions.json sha256: 4478e43167e17eea623850f15c761e6c1edd4eb0933d1a6c546cb51e28699718
+corpus sha256 (frozen in the question file, rechecked):
+- agent_tools.md 64c6df24fab00f62497ed9cab4f9763a3e555d895ca7790b69fba01c74074b8d
+- chunking.md 084142f2e1ea5c30a44f7b1f3163cc9d029e74103da48cb49f63df2240d6f6b7
+- cooking.txt 02b7f91914263beb0807edb8dc49afdaf3fb70b5cc0e92f0e0d957e74d79d7b2
+- eval.md 2672866197a423981c8144db47563a368ed3453b9af39f04cee4cb090abaddb5
+- rag_overview.md efa1b30c0bb75f94ae4aede33d426daa33c3b5837f5635505f75df5cb7e07d97
+- travel.txt b48530cedfd8dcf1afb88734abe31fea689e040fa330bfd401fdd372f9f58803
+- vector_db.md 982343faf6331b2bd0ed875e336bf49d5aaeb0a8d27e8a3688c94b29aa57424c
+Smoke (original five-question quiz, demo defaults, not part of the 28): docs 7, parsed chars 1411, chunks 10, vocab 1098, recall@3 5/5, MRR 1.0000.
+hard_v1 is author-written and small: n=28 (paraphrase 8, exact_entity 8, multi_doc 6, unanswerable 6). Labels were hashed before this scoring run.
+Decision (chunk 220, overlap 40, answerable items only):
+中文：
+- 按预注册规则，fusion(0.6) 的 recall 没有同时胜过 cosine 和 bm25。
+- fusion(0.6) 与 cosine 在 recall 上打平（差 0.0000，区间 [0.0000, 0.0000]）。
+- fusion(0.6) 与 bm25 在 recall 上打平（差 0.0000，区间 [0.0000, 0.0000]）。
+- 按预注册规则，fusion(0.6) 的 MRR 没有同时胜过 cosine 和 bm25。
+- fusion(0.6) 在 mrr 上低于 cosine（差 -0.0076，配对区间 [-0.0227, 0.0000]）。
+- fusion(0.6) 在 mrr 上的点估计高于 bm25（差 0.0076，配对区间 [0.0000, 0.0227]），但按规则不算赢。
+English:
+- On recall, fusion(0.6) does not beat both single methods.
+- fusion(0.6) ties cosine on recall (diff 0.0000, CI [0.0000, 0.0000]).
+- fusion(0.6) ties bm25 on recall (diff 0.0000, CI [0.0000, 0.0000]).
+- On MRR, fusion(0.6) does not beat both single methods.
+- fusion(0.6) is lower than cosine on mrr (diff -0.0076, paired CI [-0.0227, 0.0000]).
+- fusion(0.6) is higher than bm25 on mrr (diff 0.0076, paired CI [0.0000, 0.0227]) but that is not a win.
 
-## 链路说明（面试按这个讲）
+Primary methods at chunk 220, all answerable items:
+| method | hits | n | recall@3 | recall 95% CI | MRR | MRR 95% CI |
+| --- | --- | --- | --- | --- | --- | --- |
+| cosine | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8409 | [0.7500, 0.9318] |
+| bm25 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8258 | [0.7121, 0.9242] |
+| fusion_0.6 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8333 | [0.7273, 0.9318] |
 
-1. **解析**：读 `.md`/`.txt`，去 markdown 标记，保留 doc_id/标题/原文/字数。
-   生产升级：PDF 用 MinerU 解析，HTML 去标签，元数据入库。
-2. **分块**：句子感知（按 。！？ 切）+ 上限 220 字 + 重叠 40 字，超长单句硬切。
-   面试点：分块太大带噪声浪费窗口，太小切断语义——参数用召回率实测，不拍脑袋。
-3. **向量化**：字二元组 TF-IDF（`1+log(tf)`，平滑 idf），L2 归一化。
-   面试点：归一化后余弦才可比；中文不用分词器也能 work，但生产用 embedding
-   （BGE/M3E）+ FAISS 才能处理同义改写，这是本 demo 明确不装的部分。
-4. **检索排序**：余弦取 top-10 初排 → `0.6*余弦 + 0.4*BM25` 融合重排取 3。
-   面试点：纯向量对精确实体翻车，线上都是混合检索；权重本身也是可调参。
-5. **评测**：5 条问题各有期望文档（golden 集，冻结），报 recall@3 与 MRR。
+Paired differences at chunk 220, all answerable items (A minus B):
+| metric | A | B | diff | paired 95% CI | relation | win |
+| --- | --- | --- | --- | --- | --- | --- |
+| recall | fusion_0.6 | cosine | 0.0000 | [0.0000, 0.0000] | tie | false |
+| mrr | fusion_0.6 | cosine | -0.0076 | [-0.0227, 0.0000] | lower | false |
+| recall | fusion_0.6 | bm25 | 0.0000 | [0.0000, 0.0000] | tie | false |
+| mrr | fusion_0.6 | bm25 | 0.0076 | [0.0000, 0.0227] | higher | false |
+| recall | bm25 | cosine | 0.0000 | [0.0000, 0.0000] | tie | false |
+| mrr | bm25 | cosine | -0.0152 | [-0.0379, 0.0000] | lower | false |
 
-## 证明什么 / 不证明什么（面试官追问时主动说）
+Per category at chunk 220:
+| category | method | hits | n | recall@3 | recall 95% CI | MRR | MRR 95% CI |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| paraphrase | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |
+| paraphrase | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |
+| paraphrase | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |
+| exact_entity | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| exact_entity | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| exact_entity | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| multi_doc | cosine | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
+| multi_doc | bm25 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4722 | [0.4167, 0.5000] |
+| multi_doc | fusion_0.6 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
 
-**证明什么（本仓内可复现）：**
+Fusion weight sweep at chunk 220. w_bm25 is IEEE 1-w_cos (1-0.8 = 0.19999999999999996, which is not the literal 0.2). w=0 reranks the cosine top-10; it is not full-corpus BM25.
+| w_cos | w_bm25 | category | hits | n | recall@3 | recall 95% CI | MRR | MRR 95% CI |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.0 | 1.0000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8258 | [0.7121, 0.9242] |
+| 0.0 | 1.0000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |
+| 0.0 | 1.0000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 0.0 | 1.0000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4722 | [0.4167, 0.5000] |
+| 0.2 | 0.8000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8258 | [0.7121, 0.9242] |
+| 0.2 | 0.8000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |
+| 0.2 | 0.8000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 0.2 | 0.8000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4722 | [0.4167, 0.5000] |
+| 0.4 | 0.6000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8333 | [0.7273, 0.9318] |
+| 0.4 | 0.6000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |
+| 0.4 | 0.6000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 0.4 | 0.6000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
+| 0.6 | 0.4000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8333 | [0.7273, 0.9318] |
+| 0.6 | 0.4000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |
+| 0.6 | 0.4000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 0.6 | 0.4000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
+| 0.8 | 0.2000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8333 | [0.7273, 0.9318] |
+| 0.8 | 0.2000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |
+| 0.8 | 0.2000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 0.8 | 0.2000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
+| 1.0 | 0.0000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8409 | [0.7500, 0.9318] |
+| 1.0 | 0.0000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |
+| 1.0 | 0.0000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 1.0 | 0.0000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
 
-1. **全链路跑通**：7 文档 1411 字 → 10 chunk → 字二元组词表 1098 →
-   `recall@3 = 5/5`、`MRR = 1.000`（5 题全部 PASS 且 rank=1）。这是**冻结基线**
-   （`tests/test_baseline.py` 断言 `hits==5` 且 `mrr≈1.0`，任一漂移即 FAIL）。
-2. **检索有区分度**：语料含 2 个干扰项（`docs/cooking.txt`、`docs/travel.txt`），
-   5 题各自命中期望文档而非干扰项——证明检索不是把所有问题都映射到同一文档。
-3. **确定性**：`python3 rag_demo.py` 每次输出相同的 5/5 与 1.000（无 LLM、无随机）。
-4. **工具与测试可运行**：`python3 -m pytest -q tests/` → **25 passed**（含
-   `test_baseline`、`test_confidence_gate`、`test_rerank_ndcg`、`test_rankgpt_table`、
-   `test_gates_run`）。`tools/rerank_ndcg.py`、`tools/confidence_gate.py`、
-   `tools/rankgpt_rerank.py`（库）+ `tools/table_qa.py` 均可独立运行，exit 0。
+Chunk length sweep, overlap 40, three methods:
+| chunk | category | method | hits | n | recall@3 | recall 95% CI | MRR | MRR 95% CI |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 120 | all | cosine | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8182 | [0.7045, 0.9242] |
+| 120 | all | bm25 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8182 | [0.7045, 0.9242] |
+| 120 | all | fusion_0.6 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8182 | [0.7045, 0.9242] |
+| 120 | paraphrase | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |
+| 120 | paraphrase | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |
+| 120 | paraphrase | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |
+| 120 | exact_entity | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 120 | exact_entity | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 120 | exact_entity | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 120 | multi_doc | cosine | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4167 | [0.3611, 0.4722] |
+| 120 | multi_doc | bm25 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4167 | [0.3611, 0.4722] |
+| 120 | multi_doc | fusion_0.6 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4167 | [0.3611, 0.4722] |
+| 220 | all | cosine | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8409 | [0.7500, 0.9318] |
+| 220 | all | bm25 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8258 | [0.7121, 0.9242] |
+| 220 | all | fusion_0.6 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8333 | [0.7273, 0.9318] |
+| 220 | paraphrase | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |
+| 220 | paraphrase | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |
+| 220 | paraphrase | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |
+| 220 | exact_entity | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 220 | exact_entity | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 220 | exact_entity | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 220 | multi_doc | cosine | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
+| 220 | multi_doc | bm25 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4722 | [0.4167, 0.5000] |
+| 220 | multi_doc | fusion_0.6 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
+| 400 | all | cosine | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8106 | [0.7045, 0.9091] |
+| 400 | all | bm25 | 21 | 22 | 0.9545 | [0.8636, 1.0000] | 0.8182 | [0.6818, 0.9318] |
+| 400 | all | fusion_0.6 | 21 | 22 | 0.9545 | [0.8636, 1.0000] | 0.7955 | [0.6818, 0.9091] |
+| 400 | paraphrase | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.8542 | [0.6667, 1.0000] |
+| 400 | paraphrase | bm25 | 7 | 8 | 0.8750 | [0.6250, 1.0000] | 0.8750 | [0.6250, 1.0000] |
+| 400 | paraphrase | fusion_0.6 | 7 | 8 | 0.8750 | [0.6250, 1.0000] | 0.8125 | [0.5625, 1.0000] |
+| 400 | exact_entity | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 400 | exact_entity | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 400 | exact_entity | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |
+| 400 | multi_doc | cosine | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
+| 400 | multi_doc | bm25 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
+| 400 | multi_doc | fusion_0.6 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |
 
-**不证明什么（诚实边界）：**
+Abstain at chunk 220. A row abstains only when that procedure returns no chunk. rag_demo.retrieve has no score threshold.
+| method | answerable abstain | unanswerable abstain |
+| --- | --- | --- |
+| cosine | 0/22 | 3/6 |
+| bm25 | 0/22 | 3/6 |
+| fusion_0.6 | 0/22 | 3/6 |
+Pre-registered abstain prediction failed: fusion(0.6) abstained on 3 of 6 unanswerable items. No score threshold was added after the fact.
+Empty means the query bigram vector had no positive weight. It is not a score cutoff. Per unanswerable item at chunk 220:
+| id | method | abstain | returned docs |
+| --- | --- | --- | --- |
+| U1 | cosine | false | rag_overview,chunking,agent_tools |
+| U1 | bm25 | false | rag_overview,chunking,agent_tools |
+| U1 | fusion_0.6 | false | rag_overview,chunking,vector_db |
+| U2 | cosine | true | (empty) |
+| U2 | bm25 | true | (empty) |
+| U2 | fusion_0.6 | true | (empty) |
+| U3 | cosine | false | vector_db,agent_tools,chunking |
+| U3 | bm25 | false | vector_db,agent_tools,chunking |
+| U3 | fusion_0.6 | false | vector_db,vector_db,travel |
+| U4 | cosine | false | vector_db,agent_tools,rag_overview |
+| U4 | bm25 | false | vector_db,agent_tools,rag_overview |
+| U4 | fusion_0.6 | false | vector_db,agent_tools,rag_overview |
+| U5 | cosine | true | (empty) |
+| U5 | bm25 | true | (empty) |
+| U5 | fusion_0.6 | true | (empty) |
+| U6 | cosine | true | (empty) |
+| U6 | bm25 | true | (empty) |
+| U6 | fusion_0.6 | true | (empty) |
 
-- **不证明检索质量**：语料只有 7 文档 10 chunk，5/5 只说明链路跑通，不说明检索
-  泛化质量——规模证据在 `paper_agent` 的 54 万篇 FAISS 侧。
-- **字二元组处理不了同义改写**（如问"切分"搜"分块"会弱），生产切 embedding。
-- **单机暴力检索**，10 chunk 谈不上 ANN；索引选型结论见 `docs/vector_db.md`。
-- **RankGPT 的 nDCG 增益未复现**：`tools/rankgpt_rerank.py` 只落地提示模板 +
-  排列解析 + 确定性桩，**未接真实 LLM**（本仓无 LLM/权重）。未注入 `llm_fn` 时
-  显式抛 `NoLLMError`，绝不静默退化为原序（fail-closed，已被测试断言）。
-- **表问答是 5 行 fixture 的确定性管线**，不是 LLM 语义解析，不声称泛化性。
-- **`tools/rerank_ndcg.py` 的文档多样重排增益（recall 31/32→32/32，MRR 0.969→0.979，
-  nDCG@3 0.969→0.984）** 只在 W2(32) 这一冻结子集上实测，不外推到其他语料。
+Definition, not a fitted result: a two-doc hit's rank is the covering prefix, so that rank is at least 2 and multi_doc MRR is at most 0.5000. 0.5000 on that category means every item completed at rank 2.
+Observational only, not the win rule: all-answerable recall is below the slice size at chunk 400 bm25 21/22, chunk 400 fusion_0.6 21/22. The win rule stays chunk 220 and is not moved onto these cells.
 
-## 复算（所有数字从本仓重算）
+Answerable misses at chunk 220 for cosine, bm25, and fusion(0.6): none.
 
-```bash
-# 全链路 + 冻结基线（recall@3=5/5, MRR=1.000）
-python3 rag_demo.py
+Answerable rows worse than the best rank this metric allows (1 for one doc, 2 for two docs), three methods, all three chunk lengths:
+- chunk 120 P2 paraphrase cosine rank 2 (best 1) got eval,chunking,rag_overview expect chunking
+- chunk 120 M2 multi_doc cosine rank 3 (best 2) got rag_overview,rag_overview,agent_tools expect rag_overview,agent_tools
+- chunk 120 M3 multi_doc cosine rank 3 (best 2) got chunking,chunking,vector_db expect chunking,vector_db
+- chunk 120 M5 multi_doc cosine rank 3 (best 2) got vector_db,vector_db,eval expect vector_db,eval
+- chunk 120 P2 paraphrase bm25 rank 2 (best 1) got eval,chunking,agent_tools expect chunking
+- chunk 120 M2 multi_doc bm25 rank 3 (best 2) got rag_overview,rag_overview,agent_tools expect rag_overview,agent_tools
+- chunk 120 M3 multi_doc bm25 rank 3 (best 2) got chunking,chunking,vector_db expect chunking,vector_db
+- chunk 120 M5 multi_doc bm25 rank 3 (best 2) got vector_db,vector_db,eval expect vector_db,eval
+- chunk 120 P2 paraphrase fusion_0.6 rank 2 (best 1) got eval,chunking,agent_tools expect chunking
+- chunk 120 M2 multi_doc fusion_0.6 rank 3 (best 2) got rag_overview,rag_overview,agent_tools expect rag_overview,agent_tools
+- chunk 120 M3 multi_doc fusion_0.6 rank 3 (best 2) got chunking,chunking,vector_db expect chunking,vector_db
+- chunk 120 M5 multi_doc fusion_0.6 rank 3 (best 2) got vector_db,vector_db,eval expect vector_db,eval
+- chunk 220 P2 paraphrase cosine rank 2 (best 1) got eval,chunking,agent_tools expect chunking
+- chunk 220 P2 paraphrase bm25 rank 3 (best 1) got eval,agent_tools,chunking expect chunking
+- chunk 220 M5 multi_doc bm25 rank 3 (best 2) got vector_db,vector_db,eval expect vector_db,eval
+- chunk 220 P2 paraphrase fusion_0.6 rank 3 (best 1) got eval,agent_tools,chunking expect chunking
+- chunk 400 P2 paraphrase cosine rank 3 (best 1) got eval,agent_tools,chunking expect chunking
+- chunk 400 P5 paraphrase cosine rank 2 (best 1) got chunking,vector_db,agent_tools expect vector_db
+- chunk 400 P2 paraphrase bm25 rank 0 (best 1) got eval,agent_tools,rag_overview expect chunking
+- chunk 400 P2 paraphrase fusion_0.6 rank 0 (best 1) got eval,agent_tools,rag_overview expect chunking
+- chunk 400 P5 paraphrase fusion_0.6 rank 2 (best 1) got chunking,vector_db,agent_tools expect vector_db
 
-# 测试套件（25 passed）
-python3 -m pytest -q tests/
+Tuning disclosure: 0.6/0.4 and chunk 220 / overlap 40 were already the demo defaults in rag_demo.py before these 28 questions existed. Neighbors 120 and 400 and weights [0.0, 0.2, 0.4, 0.6, 0.8, 1.0] were written into PROTOCOL.md before scoring. No weight or chunk length is promoted to a new default from this grid. Reporting the grid on the same frozen file is a tuning-on-test risk; the win rule is the only comparison that counts.
+Bootstrap: B=2000, seed=20261116, fresh random.Random per interval, k_lo=(25*(B-1))//1000=49, k_hi=(975*(B-1)+999)//1000=1950.
+<!-- hard-v1-numbers:end -->
 
-# rerank/nDCG 三臂对照（文档多样重排 Δrecall +0.0312）
-python3 tools/rerank_ndcg.py
+## 范围
 
-# 检索增益对照（W2 全检索 − 免检索 = +0.438）
-python3 tools/confidence_gate.py
-```
+冒烟测验仍是 `rag_demo.py` 里原来的那一小套题，用来看链路是否跑通，不进入更难题的计分。`bline/` 与 `PHASE_LOG.md` 里的旧笔记不由 `make check` 重算，也不算本页的结论。
 
-## 融合权重消融（真实数据，`bline/`）
+## Status
 
-冻结基线（`w_cos=0.6` + BM25，本仓 5 题 golden 集）：recall@3 = 5/5，MRR = 1.000。
-W1/W2 两轮消融扫描 `w_cos ∈ {0.0, 0.2, 0.4, 0.6, 0.8, 1.0}`（rrf_k=60，candidates=10，top_k=3），
-数据全部来自仓库内已落盘的 `bline/w1_results.json`（2026-09-10）与 `bline/w2_results.json`（2026-09-10）。
+STATUS: WORK-IN-PROGRESS — not A yet
 
-### W1：冻结 golden 集（n=5）
+Gap: the live GitHub About text is still the previous one-line description. This pull request cannot change repository settings. It should read: "Minimal zero-dependency character-bigram RAG teaching demo. A smoke pass is not retrieval quality, and the author-written set is not production use or adoption."
 
-| w_cos | recall@3 | MRR |
-|-------|----------|-----|
-| 0.0 / 0.2 / 0.4 / 0.6 / 0.8 / 1.0 | 全部 5/5 | 全部 1.000 |
-
-### W2：扩到 32 题（orig / paraphrase / adversarial 三型）
-
-| 检索策略 | recall@3 | MRR | Wilson 95% CI (recall) | McNemar p (vs w_cos=0.6) |
-|----------|----------|-----|------------------------|--------------------------|
-| w_cos = 0.0–1.0 六档 + rrf_k=60 | 全部 31/32 | 全部 0.9688 | [0.8426, 0.9945] | 全部 1.0（零分歧） |
-
-唯一失分题（7 档全部 miss，rank=None）：「改了链路里的分块模块需要做什么」（期望 `eval`，属 paraphrase 型，
-命中缺口记录在 `by_doc_ref.eval`）。分文档看：rag_overview/chunking/vector_db/agent_tools/cooking/travel
-全部满分，仅 `eval` 组 4/5。
-
-### 诚实结论（来自 json 内 honesty 字段，原样引用）
-
-- W1：n=5 为冒烟规模；网格内任何权重差异均可能是过拟合，不做生产权重推荐。
-- W2：SILVER——n=32 仍是小规模玩具语料；McNemar 在零分歧时 p=1 无信息量，
-  结论限于本语料，不做生产权重推荐。
-- 工程含义：**在该语料上融合权重不敏感**——权重扫描没有拉开差距，反而说明
-  小语料 + 字二元组下瓶颈不在融合权重；把权重当首要调参对象是伪优化。
-  规模化后的权重敏感性结论在 `../enterprise-rag/hybrid/RESULTS_M1.md`。
-
-## 文件
-
-- `rag_demo.py`：单文件全链路（约 200 行，可现场逐段讲，只读冻结，不改）
-- `docs/`：5 个主题文档 + 2 个干扰项（做饭/旅行，证明检索有区分度，只读冻结）
-- `bline/`：B 线迁移准备（MIT LICENSE + BLINE_REPORT 设计报告，只新增不改基线）
-
-## B 线（enterprise-rag）迁移准备（bounded，只新增 + 文档）
-
-- 基线冻结：recall@3 = 5/5，MRR = 1.000（本节不改该数字）。
-- 脱敏：`rag_min_demo/` 内无真实密钥、无 `/data1` 与 Administrator 绝对路径残留、
-  无 TOKEN/API_KEY 变量名、无 symlink、无 venv（2026-09-10 grep + find 检查通过）。
-- 许可：`bline/LICENSE` 为 MIT（新仓根 LICENSE 由此复制）。
-- 新仓纳入（计划）：config / hybrid / reranker / harness / latency / golden /
-  results / demo.sh / BLINE_REPORT；排除：venv、自指 symlink、云凭证、向量库服务。
-- 状态：**B 线仓 `../enterprise-rag` 已于 2026-10-11 落地**。大库口径实测
-  （11994 chunk）recall@3 = 8/10、MRR = 0.55、p50 = 3.25ms，与本仓的 5/5
-  **不可比**：库大小差约 1200 倍，且本仓语料只有 `.md`，工程事实
-  （`.py`/`.json`）系统性缺席。迁移中的三条反直觉结论（真语义向量在同一
-  语料上没赢稀疏融合、bigram 重排零贡献、照搬 w_cos = 0.6 反而更差）见
-  `../enterprise-rag/hybrid/RESULTS_M1.md`；`enterprise-rag/baseline/` 是本仓
-  的冻结复制，逻辑与语料未改。
-- 许可：MIT（见 `LICENSE`，与 `bline/LICENSE` 一致）。
+缺口：线上 GitHub About 仍是旧的一句话。本 PR 改不到仓库设置。应改为：「最小零依赖字二元组 RAG 教学演示。冒烟跑通不是检索质量，作者自写题集也不等于生产使用或采用。」

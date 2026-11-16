@@ -1,0 +1,6359 @@
+{
+  "abstain": [
+    {
+      "answerable_abstain": 0,
+      "answerable_n": 22,
+      "method": "cosine",
+      "unanswerable_abstain": 3,
+      "unanswerable_n": 6
+    },
+    {
+      "answerable_abstain": 0,
+      "answerable_n": 22,
+      "method": "bm25",
+      "unanswerable_abstain": 3,
+      "unanswerable_n": 6
+    },
+    {
+      "answerable_abstain": 0,
+      "answerable_n": 22,
+      "method": "fusion_0.6",
+      "unanswerable_abstain": 3,
+      "unanswerable_n": 6
+    }
+  ],
+  "abstain_prediction": "Pre-registered abstain prediction failed: fusion(0.6) abstained on 3 of 6 unanswerable items. No score threshold was added after the fact.",
+  "audit": [
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "chunking",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "chunking",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "eval",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "agent_tools",
+        "agent_tools",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "cooking",
+        "agent_tools",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "eval",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "travel",
+        "agent_tools",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "cosine",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "chunking",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "cosine",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "cosine",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 120,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 120,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 120,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "chunking",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "eval",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "agent_tools",
+        "agent_tools",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "cooking",
+        "agent_tools",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "eval",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "travel",
+        "agent_tools",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "bm25",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "chunking",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "bm25",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "bm25",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 120,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 120,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 120,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "chunking",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "eval",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "agent_tools",
+        "agent_tools",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "cooking",
+        "eval",
+        "eval"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "eval",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "travel",
+        "eval",
+        "cooking"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "chunking",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "fusion_0.6",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "chunking",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "fusion_0.6",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "fusion_0.6",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 120,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "cooking"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 120,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 120,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "chunking",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "cooking",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "bm25",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "cooking",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "bm25",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "fusion_0.0",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "cooking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "fusion_0.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "fusion_0.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "fusion_0.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "fusion_0.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "fusion_0.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "fusion_0.0",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "fusion_0.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "fusion_0.0",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "fusion_0.0",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "travel"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "fusion_0.0",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "fusion_0.0",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "fusion_0.0",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "fusion_0.0",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "fusion_0.2",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "cooking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "fusion_0.2",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "fusion_0.2",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "fusion_0.2",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "fusion_0.2",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "fusion_0.2",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "fusion_0.2",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "fusion_0.2",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "fusion_0.2",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "fusion_0.2",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "travel"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "fusion_0.2",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "fusion_0.2",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "fusion_0.2",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "fusion_0.2",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "fusion_0.4",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "cooking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "fusion_0.4",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "fusion_0.4",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "fusion_0.4",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "fusion_0.4",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "fusion_0.4",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "eval",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "fusion_0.4",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "fusion_0.4",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "fusion_0.4",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "fusion_0.4",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "travel"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "fusion_0.4",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "fusion_0.4",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "fusion_0.4",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "fusion_0.4",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "fusion_0.6",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "cooking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "eval",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "travel"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "fusion_0.8",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "chunking",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "cooking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "fusion_0.8",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "fusion_0.8",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "fusion_0.8",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "fusion_0.8",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "fusion_0.8",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "fusion_0.8",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "fusion_0.8",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "fusion_0.8",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "fusion_0.8",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "travel"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "fusion_0.8",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "fusion_0.8",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "fusion_0.8",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "fusion_0.8",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "fusion_1.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "chunking",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "cooking",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "fusion_1.0",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "fusion_1.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "fusion_1.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "fusion_1.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "fusion_1.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "vector_db",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "fusion_1.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "fusion_1.0",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "fusion_1.0",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "fusion_1.0",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "travel"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "fusion_1.0",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "fusion_1.0",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "fusion_1.0",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 220,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "fusion_1.0",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "P2",
+      "method": "cosine",
+      "rank": 3
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "travel",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "cooking",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "travel",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "cosine",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 400,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 400,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 400,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "cosine",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": false,
+      "id": "P2",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "travel",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "cooking",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "travel",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "bm25",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 400,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "chunking"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 400,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 400,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P1",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": false,
+      "id": "P2",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "travel"
+      ],
+      "hit": true,
+      "id": "P3",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "travel"
+      ],
+      "hit": true,
+      "id": "P4",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "P5",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "P6",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P7",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "travel",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "P8",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E1",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E2",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "E3",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "chunking",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E4",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "cooking",
+        "vector_db",
+        "travel"
+      ],
+      "hit": true,
+      "id": "E5",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E6",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "rag_overview",
+        "chunking"
+      ],
+      "hit": true,
+      "id": "E7",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "travel",
+        "vector_db",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "E8",
+      "method": "fusion_0.6",
+      "rank": 1
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M1",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "rag_overview",
+        "agent_tools",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M2",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "hit": true,
+      "id": "M3",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "travel",
+        "cooking",
+        "vector_db"
+      ],
+      "hit": true,
+      "id": "M4",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "eval",
+        "rag_overview"
+      ],
+      "hit": true,
+      "id": "M5",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "agent_tools",
+        "rag_overview",
+        "eval"
+      ],
+      "hit": true,
+      "id": "M6",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "vector_db"
+      ],
+      "hit": null,
+      "id": "U1",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 400,
+      "docs": [],
+      "hit": null,
+      "id": "U2",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "travel",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U3",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": false,
+      "chunk": 400,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "hit": null,
+      "id": "U4",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 400,
+      "docs": [],
+      "hit": null,
+      "id": "U5",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "abstain": true,
+      "chunk": 400,
+      "docs": [],
+      "hit": null,
+      "id": "U6",
+      "method": "fusion_0.6",
+      "rank": 0
+    }
+  ],
+  "by_category_220": [
+    {
+      "category": "paraphrase",
+      "hits": 8,
+      "method": "cosine",
+      "mrr": "0.9375",
+      "mrr_ci": "[0.8125, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "hits": 8,
+      "method": "bm25",
+      "mrr": "0.9167",
+      "mrr_ci": "[0.7500, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "hits": 8,
+      "method": "fusion_0.6",
+      "mrr": "0.9167",
+      "mrr_ci": "[0.7500, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "hits": 8,
+      "method": "cosine",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "hits": 8,
+      "method": "bm25",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "hits": 8,
+      "method": "fusion_0.6",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "hits": 6,
+      "method": "cosine",
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "hits": 6,
+      "method": "bm25",
+      "mrr": "0.4722",
+      "mrr_ci": "[0.4167, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "hits": 6,
+      "method": "fusion_0.6",
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    }
+  ],
+  "category_counts": {
+    "exact_entity": 8,
+    "multi_doc": 6,
+    "paraphrase": 8,
+    "unanswerable": 6
+  },
+  "chunk_sweep": [
+    {
+      "category": "all",
+      "chunk": 120,
+      "hits": 22,
+      "method": "cosine",
+      "mrr": "0.8182",
+      "mrr_ci": "[0.7045, 0.9242]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "all",
+      "chunk": 120,
+      "hits": 22,
+      "method": "bm25",
+      "mrr": "0.8182",
+      "mrr_ci": "[0.7045, 0.9242]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "all",
+      "chunk": 120,
+      "hits": 22,
+      "method": "fusion_0.6",
+      "mrr": "0.8182",
+      "mrr_ci": "[0.7045, 0.9242]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "chunk": 120,
+      "hits": 8,
+      "method": "cosine",
+      "mrr": "0.9375",
+      "mrr_ci": "[0.8125, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "chunk": 120,
+      "hits": 8,
+      "method": "bm25",
+      "mrr": "0.9375",
+      "mrr_ci": "[0.8125, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "chunk": 120,
+      "hits": 8,
+      "method": "fusion_0.6",
+      "mrr": "0.9375",
+      "mrr_ci": "[0.8125, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "chunk": 120,
+      "hits": 8,
+      "method": "cosine",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "chunk": 120,
+      "hits": 8,
+      "method": "bm25",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "chunk": 120,
+      "hits": 8,
+      "method": "fusion_0.6",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "chunk": 120,
+      "hits": 6,
+      "method": "cosine",
+      "mrr": "0.4167",
+      "mrr_ci": "[0.3611, 0.4722]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "chunk": 120,
+      "hits": 6,
+      "method": "bm25",
+      "mrr": "0.4167",
+      "mrr_ci": "[0.3611, 0.4722]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "chunk": 120,
+      "hits": 6,
+      "method": "fusion_0.6",
+      "mrr": "0.4167",
+      "mrr_ci": "[0.3611, 0.4722]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "all",
+      "chunk": 220,
+      "hits": 22,
+      "method": "cosine",
+      "mrr": "0.8409",
+      "mrr_ci": "[0.7500, 0.9318]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "all",
+      "chunk": 220,
+      "hits": 22,
+      "method": "bm25",
+      "mrr": "0.8258",
+      "mrr_ci": "[0.7121, 0.9242]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "all",
+      "chunk": 220,
+      "hits": 22,
+      "method": "fusion_0.6",
+      "mrr": "0.8333",
+      "mrr_ci": "[0.7273, 0.9318]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "chunk": 220,
+      "hits": 8,
+      "method": "cosine",
+      "mrr": "0.9375",
+      "mrr_ci": "[0.8125, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "chunk": 220,
+      "hits": 8,
+      "method": "bm25",
+      "mrr": "0.9167",
+      "mrr_ci": "[0.7500, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "chunk": 220,
+      "hits": 8,
+      "method": "fusion_0.6",
+      "mrr": "0.9167",
+      "mrr_ci": "[0.7500, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "chunk": 220,
+      "hits": 8,
+      "method": "cosine",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "chunk": 220,
+      "hits": 8,
+      "method": "bm25",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "chunk": 220,
+      "hits": 8,
+      "method": "fusion_0.6",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "chunk": 220,
+      "hits": 6,
+      "method": "cosine",
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "chunk": 220,
+      "hits": 6,
+      "method": "bm25",
+      "mrr": "0.4722",
+      "mrr_ci": "[0.4167, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "chunk": 220,
+      "hits": 6,
+      "method": "fusion_0.6",
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "all",
+      "chunk": 400,
+      "hits": 22,
+      "method": "cosine",
+      "mrr": "0.8106",
+      "mrr_ci": "[0.7045, 0.9091]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "all",
+      "chunk": 400,
+      "hits": 21,
+      "method": "bm25",
+      "mrr": "0.8182",
+      "mrr_ci": "[0.6818, 0.9318]",
+      "n": 22,
+      "recall": "0.9545",
+      "recall_ci": "[0.8636, 1.0000]"
+    },
+    {
+      "category": "all",
+      "chunk": 400,
+      "hits": 21,
+      "method": "fusion_0.6",
+      "mrr": "0.7955",
+      "mrr_ci": "[0.6818, 0.9091]",
+      "n": 22,
+      "recall": "0.9545",
+      "recall_ci": "[0.8636, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "chunk": 400,
+      "hits": 8,
+      "method": "cosine",
+      "mrr": "0.8542",
+      "mrr_ci": "[0.6667, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "chunk": 400,
+      "hits": 7,
+      "method": "bm25",
+      "mrr": "0.8750",
+      "mrr_ci": "[0.6250, 1.0000]",
+      "n": 8,
+      "recall": "0.8750",
+      "recall_ci": "[0.6250, 1.0000]"
+    },
+    {
+      "category": "paraphrase",
+      "chunk": 400,
+      "hits": 7,
+      "method": "fusion_0.6",
+      "mrr": "0.8125",
+      "mrr_ci": "[0.5625, 1.0000]",
+      "n": 8,
+      "recall": "0.8750",
+      "recall_ci": "[0.6250, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "chunk": 400,
+      "hits": 8,
+      "method": "cosine",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "chunk": 400,
+      "hits": 8,
+      "method": "bm25",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "exact_entity",
+      "chunk": 400,
+      "hits": 8,
+      "method": "fusion_0.6",
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "chunk": 400,
+      "hits": 6,
+      "method": "cosine",
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "chunk": 400,
+      "hits": 6,
+      "method": "bm25",
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    },
+    {
+      "category": "multi_doc",
+      "chunk": 400,
+      "hits": 6,
+      "method": "fusion_0.6",
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]"
+    }
+  ],
+  "corpus_sha256": {
+    "agent_tools.md": "64c6df24fab00f62497ed9cab4f9763a3e555d895ca7790b69fba01c74074b8d",
+    "chunking.md": "084142f2e1ea5c30a44f7b1f3163cc9d029e74103da48cb49f63df2240d6f6b7",
+    "cooking.txt": "02b7f91914263beb0807edb8dc49afdaf3fb70b5cc0e92f0e0d957e74d79d7b2",
+    "eval.md": "2672866197a423981c8144db47563a368ed3453b9af39f04cee4cb090abaddb5",
+    "rag_overview.md": "efa1b30c0bb75f94ae4aede33d426daa33c3b5837f5635505f75df5cb7e07d97",
+    "travel.txt": "b48530cedfd8dcf1afb88734abe31fea689e040fa330bfd401fdd372f9f58803",
+    "vector_db.md": "982343faf6331b2bd0ed875e336bf49d5aaeb0a8d27e8a3688c94b29aa57424c"
+  },
+  "decision_en": [
+    "On recall, fusion(0.6) does not beat both single methods.",
+    "fusion(0.6) ties cosine on recall (diff 0.0000, CI [0.0000, 0.0000]).",
+    "fusion(0.6) ties bm25 on recall (diff 0.0000, CI [0.0000, 0.0000]).",
+    "On MRR, fusion(0.6) does not beat both single methods.",
+    "fusion(0.6) is lower than cosine on mrr (diff -0.0076, paired CI [-0.0227, 0.0000]).",
+    "fusion(0.6) is higher than bm25 on mrr (diff 0.0076, paired CI [0.0000, 0.0227]) but that is not a win."
+  ],
+  "decision_zh": [
+    "按预注册规则，fusion(0.6) 的 recall 没有同时胜过 cosine 和 bm25。",
+    "fusion(0.6) 与 cosine 在 recall 上打平（差 0.0000，区间 [0.0000, 0.0000]）。",
+    "fusion(0.6) 与 bm25 在 recall 上打平（差 0.0000，区间 [0.0000, 0.0000]）。",
+    "按预注册规则，fusion(0.6) 的 MRR 没有同时胜过 cosine 和 bm25。",
+    "fusion(0.6) 在 mrr 上低于 cosine（差 -0.0076，配对区间 [-0.0227, 0.0000]）。",
+    "fusion(0.6) 在 mrr 上的点估计高于 bm25（差 0.0076，配对区间 [0.0000, 0.0227]），但按规则不算赢。"
+  ],
+  "misses": [],
+  "n": 28,
+  "paired": [
+    {
+      "a": "fusion_0.6",
+      "b": "cosine",
+      "ci": "[0.0000, 0.0000]",
+      "diff": "0.0000",
+      "metric": "recall",
+      "relation": "tie",
+      "win": false
+    },
+    {
+      "a": "fusion_0.6",
+      "b": "cosine",
+      "ci": "[-0.0227, 0.0000]",
+      "diff": "-0.0076",
+      "metric": "mrr",
+      "relation": "lower",
+      "win": false
+    },
+    {
+      "a": "fusion_0.6",
+      "b": "bm25",
+      "ci": "[0.0000, 0.0000]",
+      "diff": "0.0000",
+      "metric": "recall",
+      "relation": "tie",
+      "win": false
+    },
+    {
+      "a": "fusion_0.6",
+      "b": "bm25",
+      "ci": "[0.0000, 0.0227]",
+      "diff": "0.0076",
+      "metric": "mrr",
+      "relation": "higher",
+      "win": false
+    },
+    {
+      "a": "bm25",
+      "b": "cosine",
+      "ci": "[0.0000, 0.0000]",
+      "diff": "0.0000",
+      "metric": "recall",
+      "relation": "tie",
+      "win": false
+    },
+    {
+      "a": "bm25",
+      "b": "cosine",
+      "ci": "[-0.0379, 0.0000]",
+      "diff": "-0.0152",
+      "metric": "mrr",
+      "relation": "lower",
+      "win": false
+    }
+  ],
+  "primary_overall": [
+    [
+      "cosine",
+      {
+        "hits": 22,
+        "mrr": "0.8409",
+        "mrr_ci": "[0.7500, 0.9318]",
+        "n": 22,
+        "recall": "1.0000",
+        "recall_ci": "[1.0000, 1.0000]"
+      }
+    ],
+    [
+      "bm25",
+      {
+        "hits": 22,
+        "mrr": "0.8258",
+        "mrr_ci": "[0.7121, 0.9242]",
+        "n": 22,
+        "recall": "1.0000",
+        "recall_ci": "[1.0000, 1.0000]"
+      }
+    ],
+    [
+      "fusion_0.6",
+      {
+        "hits": 22,
+        "mrr": "0.8333",
+        "mrr_ci": "[0.7273, 0.9318]",
+        "n": 22,
+        "recall": "1.0000",
+        "recall_ci": "[1.0000, 1.0000]"
+      }
+    ]
+  ],
+  "question_sha256": "4478e43167e17eea623850f15c761e6c1edd4eb0933d1a6c546cb51e28699718",
+  "readme_block": "hard_v1 questions.json sha256: 4478e43167e17eea623850f15c761e6c1edd4eb0933d1a6c546cb51e28699718\ncorpus sha256 (frozen in the question file, rechecked):\n- agent_tools.md 64c6df24fab00f62497ed9cab4f9763a3e555d895ca7790b69fba01c74074b8d\n- chunking.md 084142f2e1ea5c30a44f7b1f3163cc9d029e74103da48cb49f63df2240d6f6b7\n- cooking.txt 02b7f91914263beb0807edb8dc49afdaf3fb70b5cc0e92f0e0d957e74d79d7b2\n- eval.md 2672866197a423981c8144db47563a368ed3453b9af39f04cee4cb090abaddb5\n- rag_overview.md efa1b30c0bb75f94ae4aede33d426daa33c3b5837f5635505f75df5cb7e07d97\n- travel.txt b48530cedfd8dcf1afb88734abe31fea689e040fa330bfd401fdd372f9f58803\n- vector_db.md 982343faf6331b2bd0ed875e336bf49d5aaeb0a8d27e8a3688c94b29aa57424c\nSmoke (original five-question quiz, demo defaults, not part of the 28): docs 7, parsed chars 1411, chunks 10, vocab 1098, recall@3 5/5, MRR 1.0000.\nhard_v1 is author-written and small: n=28 (paraphrase 8, exact_entity 8, multi_doc 6, unanswerable 6). Labels were hashed before this scoring run.\nDecision (chunk 220, overlap 40, answerable items only):\n中文：\n- 按预注册规则，fusion(0.6) 的 recall 没有同时胜过 cosine 和 bm25。\n- fusion(0.6) 与 cosine 在 recall 上打平（差 0.0000，区间 [0.0000, 0.0000]）。\n- fusion(0.6) 与 bm25 在 recall 上打平（差 0.0000，区间 [0.0000, 0.0000]）。\n- 按预注册规则，fusion(0.6) 的 MRR 没有同时胜过 cosine 和 bm25。\n- fusion(0.6) 在 mrr 上低于 cosine（差 -0.0076，配对区间 [-0.0227, 0.0000]）。\n- fusion(0.6) 在 mrr 上的点估计高于 bm25（差 0.0076，配对区间 [0.0000, 0.0227]），但按规则不算赢。\nEnglish:\n- On recall, fusion(0.6) does not beat both single methods.\n- fusion(0.6) ties cosine on recall (diff 0.0000, CI [0.0000, 0.0000]).\n- fusion(0.6) ties bm25 on recall (diff 0.0000, CI [0.0000, 0.0000]).\n- On MRR, fusion(0.6) does not beat both single methods.\n- fusion(0.6) is lower than cosine on mrr (diff -0.0076, paired CI [-0.0227, 0.0000]).\n- fusion(0.6) is higher than bm25 on mrr (diff 0.0076, paired CI [0.0000, 0.0227]) but that is not a win.\n\nPrimary methods at chunk 220, all answerable items:\n| method | hits | n | recall@3 | recall 95% CI | MRR | MRR 95% CI |\n| --- | --- | --- | --- | --- | --- | --- |\n| cosine | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8409 | [0.7500, 0.9318] |\n| bm25 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8258 | [0.7121, 0.9242] |\n| fusion_0.6 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8333 | [0.7273, 0.9318] |\n\nPaired differences at chunk 220, all answerable items (A minus B):\n| metric | A | B | diff | paired 95% CI | relation | win |\n| --- | --- | --- | --- | --- | --- | --- |\n| recall | fusion_0.6 | cosine | 0.0000 | [0.0000, 0.0000] | tie | false |\n| mrr | fusion_0.6 | cosine | -0.0076 | [-0.0227, 0.0000] | lower | false |\n| recall | fusion_0.6 | bm25 | 0.0000 | [0.0000, 0.0000] | tie | false |\n| mrr | fusion_0.6 | bm25 | 0.0076 | [0.0000, 0.0227] | higher | false |\n| recall | bm25 | cosine | 0.0000 | [0.0000, 0.0000] | tie | false |\n| mrr | bm25 | cosine | -0.0152 | [-0.0379, 0.0000] | lower | false |\n\nPer category at chunk 220:\n| category | method | hits | n | recall@3 | recall 95% CI | MRR | MRR 95% CI |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| paraphrase | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |\n| paraphrase | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |\n| paraphrase | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |\n| exact_entity | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| exact_entity | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| exact_entity | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| multi_doc | cosine | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n| multi_doc | bm25 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4722 | [0.4167, 0.5000] |\n| multi_doc | fusion_0.6 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n\nFusion weight sweep at chunk 220. w_bm25 is IEEE 1-w_cos (1-0.8 = 0.19999999999999996, which is not the literal 0.2). w=0 reranks the cosine top-10; it is not full-corpus BM25.\n| w_cos | w_bm25 | category | hits | n | recall@3 | recall 95% CI | MRR | MRR 95% CI |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 0.0 | 1.0000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8258 | [0.7121, 0.9242] |\n| 0.0 | 1.0000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |\n| 0.0 | 1.0000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 0.0 | 1.0000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4722 | [0.4167, 0.5000] |\n| 0.2 | 0.8000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8258 | [0.7121, 0.9242] |\n| 0.2 | 0.8000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |\n| 0.2 | 0.8000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 0.2 | 0.8000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4722 | [0.4167, 0.5000] |\n| 0.4 | 0.6000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8333 | [0.7273, 0.9318] |\n| 0.4 | 0.6000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |\n| 0.4 | 0.6000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 0.4 | 0.6000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n| 0.6 | 0.4000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8333 | [0.7273, 0.9318] |\n| 0.6 | 0.4000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |\n| 0.6 | 0.4000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 0.6 | 0.4000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n| 0.8 | 0.2000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8333 | [0.7273, 0.9318] |\n| 0.8 | 0.2000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |\n| 0.8 | 0.2000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 0.8 | 0.2000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n| 1.0 | 0.0000 | all | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8409 | [0.7500, 0.9318] |\n| 1.0 | 0.0000 | paraphrase | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |\n| 1.0 | 0.0000 | exact_entity | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 1.0 | 0.0000 | multi_doc | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n\nChunk length sweep, overlap 40, three methods:\n| chunk | category | method | hits | n | recall@3 | recall 95% CI | MRR | MRR 95% CI |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 120 | all | cosine | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8182 | [0.7045, 0.9242] |\n| 120 | all | bm25 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8182 | [0.7045, 0.9242] |\n| 120 | all | fusion_0.6 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8182 | [0.7045, 0.9242] |\n| 120 | paraphrase | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |\n| 120 | paraphrase | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |\n| 120 | paraphrase | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |\n| 120 | exact_entity | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 120 | exact_entity | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 120 | exact_entity | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 120 | multi_doc | cosine | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4167 | [0.3611, 0.4722] |\n| 120 | multi_doc | bm25 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4167 | [0.3611, 0.4722] |\n| 120 | multi_doc | fusion_0.6 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4167 | [0.3611, 0.4722] |\n| 220 | all | cosine | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8409 | [0.7500, 0.9318] |\n| 220 | all | bm25 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8258 | [0.7121, 0.9242] |\n| 220 | all | fusion_0.6 | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8333 | [0.7273, 0.9318] |\n| 220 | paraphrase | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9375 | [0.8125, 1.0000] |\n| 220 | paraphrase | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |\n| 220 | paraphrase | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.9167 | [0.7500, 1.0000] |\n| 220 | exact_entity | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 220 | exact_entity | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 220 | exact_entity | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 220 | multi_doc | cosine | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n| 220 | multi_doc | bm25 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.4722 | [0.4167, 0.5000] |\n| 220 | multi_doc | fusion_0.6 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n| 400 | all | cosine | 22 | 22 | 1.0000 | [1.0000, 1.0000] | 0.8106 | [0.7045, 0.9091] |\n| 400 | all | bm25 | 21 | 22 | 0.9545 | [0.8636, 1.0000] | 0.8182 | [0.6818, 0.9318] |\n| 400 | all | fusion_0.6 | 21 | 22 | 0.9545 | [0.8636, 1.0000] | 0.7955 | [0.6818, 0.9091] |\n| 400 | paraphrase | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 0.8542 | [0.6667, 1.0000] |\n| 400 | paraphrase | bm25 | 7 | 8 | 0.8750 | [0.6250, 1.0000] | 0.8750 | [0.6250, 1.0000] |\n| 400 | paraphrase | fusion_0.6 | 7 | 8 | 0.8750 | [0.6250, 1.0000] | 0.8125 | [0.5625, 1.0000] |\n| 400 | exact_entity | cosine | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 400 | exact_entity | bm25 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 400 | exact_entity | fusion_0.6 | 8 | 8 | 1.0000 | [1.0000, 1.0000] | 1.0000 | [1.0000, 1.0000] |\n| 400 | multi_doc | cosine | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n| 400 | multi_doc | bm25 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n| 400 | multi_doc | fusion_0.6 | 6 | 6 | 1.0000 | [1.0000, 1.0000] | 0.5000 | [0.5000, 0.5000] |\n\nAbstain at chunk 220. A row abstains only when that procedure returns no chunk. rag_demo.retrieve has no score threshold.\n| method | answerable abstain | unanswerable abstain |\n| --- | --- | --- |\n| cosine | 0/22 | 3/6 |\n| bm25 | 0/22 | 3/6 |\n| fusion_0.6 | 0/22 | 3/6 |\nPre-registered abstain prediction failed: fusion(0.6) abstained on 3 of 6 unanswerable items. No score threshold was added after the fact.\nEmpty means the query bigram vector had no positive weight. It is not a score cutoff. Per unanswerable item at chunk 220:\n| id | method | abstain | returned docs |\n| --- | --- | --- | --- |\n| U1 | cosine | false | rag_overview,chunking,agent_tools |\n| U1 | bm25 | false | rag_overview,chunking,agent_tools |\n| U1 | fusion_0.6 | false | rag_overview,chunking,vector_db |\n| U2 | cosine | true | (empty) |\n| U2 | bm25 | true | (empty) |\n| U2 | fusion_0.6 | true | (empty) |\n| U3 | cosine | false | vector_db,agent_tools,chunking |\n| U3 | bm25 | false | vector_db,agent_tools,chunking |\n| U3 | fusion_0.6 | false | vector_db,vector_db,travel |\n| U4 | cosine | false | vector_db,agent_tools,rag_overview |\n| U4 | bm25 | false | vector_db,agent_tools,rag_overview |\n| U4 | fusion_0.6 | false | vector_db,agent_tools,rag_overview |\n| U5 | cosine | true | (empty) |\n| U5 | bm25 | true | (empty) |\n| U5 | fusion_0.6 | true | (empty) |\n| U6 | cosine | true | (empty) |\n| U6 | bm25 | true | (empty) |\n| U6 | fusion_0.6 | true | (empty) |\n\nDefinition, not a fitted result: a two-doc hit's rank is the covering prefix, so that rank is at least 2 and multi_doc MRR is at most 0.5000. 0.5000 on that category means every item completed at rank 2.\nObservational only, not the win rule: all-answerable recall is below the slice size at chunk 400 bm25 21/22, chunk 400 fusion_0.6 21/22. The win rule stays chunk 220 and is not moved onto these cells.\n\nAnswerable misses at chunk 220 for cosine, bm25, and fusion(0.6): none.\n\nAnswerable rows worse than the best rank this metric allows (1 for one doc, 2 for two docs), three methods, all three chunk lengths:\n- chunk 120 P2 paraphrase cosine rank 2 (best 1) got eval,chunking,rag_overview expect chunking\n- chunk 120 M2 multi_doc cosine rank 3 (best 2) got rag_overview,rag_overview,agent_tools expect rag_overview,agent_tools\n- chunk 120 M3 multi_doc cosine rank 3 (best 2) got chunking,chunking,vector_db expect chunking,vector_db\n- chunk 120 M5 multi_doc cosine rank 3 (best 2) got vector_db,vector_db,eval expect vector_db,eval\n- chunk 120 P2 paraphrase bm25 rank 2 (best 1) got eval,chunking,agent_tools expect chunking\n- chunk 120 M2 multi_doc bm25 rank 3 (best 2) got rag_overview,rag_overview,agent_tools expect rag_overview,agent_tools\n- chunk 120 M3 multi_doc bm25 rank 3 (best 2) got chunking,chunking,vector_db expect chunking,vector_db\n- chunk 120 M5 multi_doc bm25 rank 3 (best 2) got vector_db,vector_db,eval expect vector_db,eval\n- chunk 120 P2 paraphrase fusion_0.6 rank 2 (best 1) got eval,chunking,agent_tools expect chunking\n- chunk 120 M2 multi_doc fusion_0.6 rank 3 (best 2) got rag_overview,rag_overview,agent_tools expect rag_overview,agent_tools\n- chunk 120 M3 multi_doc fusion_0.6 rank 3 (best 2) got chunking,chunking,vector_db expect chunking,vector_db\n- chunk 120 M5 multi_doc fusion_0.6 rank 3 (best 2) got vector_db,vector_db,eval expect vector_db,eval\n- chunk 220 P2 paraphrase cosine rank 2 (best 1) got eval,chunking,agent_tools expect chunking\n- chunk 220 P2 paraphrase bm25 rank 3 (best 1) got eval,agent_tools,chunking expect chunking\n- chunk 220 M5 multi_doc bm25 rank 3 (best 2) got vector_db,vector_db,eval expect vector_db,eval\n- chunk 220 P2 paraphrase fusion_0.6 rank 3 (best 1) got eval,agent_tools,chunking expect chunking\n- chunk 400 P2 paraphrase cosine rank 3 (best 1) got eval,agent_tools,chunking expect chunking\n- chunk 400 P5 paraphrase cosine rank 2 (best 1) got chunking,vector_db,agent_tools expect vector_db\n- chunk 400 P2 paraphrase bm25 rank 0 (best 1) got eval,agent_tools,rag_overview expect chunking\n- chunk 400 P2 paraphrase fusion_0.6 rank 0 (best 1) got eval,agent_tools,rag_overview expect chunking\n- chunk 400 P5 paraphrase fusion_0.6 rank 2 (best 1) got chunking,vector_db,agent_tools expect vector_db\n\nTuning disclosure: 0.6/0.4 and chunk 220 / overlap 40 were already the demo defaults in rag_demo.py before these 28 questions existed. Neighbors 120 and 400 and weights [0.0, 0.2, 0.4, 0.6, 0.8, 1.0] were written into PROTOCOL.md before scoring. No weight or chunk length is promoted to a new default from this grid. Reporting the grid on the same frozen file is a tuning-on-test risk; the win rule is the only comparison that counts.\nBootstrap: B=2000, seed=20261116, fresh random.Random per interval, k_lo=(25*(B-1))//1000=49, k_hi=(975*(B-1)+999)//1000=1950.",
+  "shortfalls": [
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "chunking",
+        "rag_overview"
+      ],
+      "expect": [
+        "chunking"
+      ],
+      "id": "P2",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "best_possible_rank": 2,
+      "category": "multi_doc",
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "expect": [
+        "rag_overview",
+        "agent_tools"
+      ],
+      "id": "M2",
+      "method": "cosine",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 2,
+      "category": "multi_doc",
+      "chunk": 120,
+      "docs": [
+        "chunking",
+        "chunking",
+        "vector_db"
+      ],
+      "expect": [
+        "chunking",
+        "vector_db"
+      ],
+      "id": "M3",
+      "method": "cosine",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 2,
+      "category": "multi_doc",
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "eval"
+      ],
+      "expect": [
+        "vector_db",
+        "eval"
+      ],
+      "id": "M5",
+      "method": "cosine",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "expect": [
+        "chunking"
+      ],
+      "id": "P2",
+      "method": "bm25",
+      "rank": 2
+    },
+    {
+      "best_possible_rank": 2,
+      "category": "multi_doc",
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "expect": [
+        "rag_overview",
+        "agent_tools"
+      ],
+      "id": "M2",
+      "method": "bm25",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 2,
+      "category": "multi_doc",
+      "chunk": 120,
+      "docs": [
+        "chunking",
+        "chunking",
+        "vector_db"
+      ],
+      "expect": [
+        "chunking",
+        "vector_db"
+      ],
+      "id": "M3",
+      "method": "bm25",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 2,
+      "category": "multi_doc",
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "eval"
+      ],
+      "expect": [
+        "vector_db",
+        "eval"
+      ],
+      "id": "M5",
+      "method": "bm25",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 120,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "expect": [
+        "chunking"
+      ],
+      "id": "P2",
+      "method": "fusion_0.6",
+      "rank": 2
+    },
+    {
+      "best_possible_rank": 2,
+      "category": "multi_doc",
+      "chunk": 120,
+      "docs": [
+        "rag_overview",
+        "rag_overview",
+        "agent_tools"
+      ],
+      "expect": [
+        "rag_overview",
+        "agent_tools"
+      ],
+      "id": "M2",
+      "method": "fusion_0.6",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 2,
+      "category": "multi_doc",
+      "chunk": 120,
+      "docs": [
+        "chunking",
+        "chunking",
+        "vector_db"
+      ],
+      "expect": [
+        "chunking",
+        "vector_db"
+      ],
+      "id": "M3",
+      "method": "fusion_0.6",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 2,
+      "category": "multi_doc",
+      "chunk": 120,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "eval"
+      ],
+      "expect": [
+        "vector_db",
+        "eval"
+      ],
+      "id": "M5",
+      "method": "fusion_0.6",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "chunking",
+        "agent_tools"
+      ],
+      "expect": [
+        "chunking"
+      ],
+      "id": "P2",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "chunking"
+      ],
+      "expect": [
+        "chunking"
+      ],
+      "id": "P2",
+      "method": "bm25",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 2,
+      "category": "multi_doc",
+      "chunk": 220,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "eval"
+      ],
+      "expect": [
+        "vector_db",
+        "eval"
+      ],
+      "id": "M5",
+      "method": "bm25",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 220,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "chunking"
+      ],
+      "expect": [
+        "chunking"
+      ],
+      "id": "P2",
+      "method": "fusion_0.6",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "chunking"
+      ],
+      "expect": [
+        "chunking"
+      ],
+      "id": "P2",
+      "method": "cosine",
+      "rank": 3
+    },
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 400,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "expect": [
+        "vector_db"
+      ],
+      "id": "P5",
+      "method": "cosine",
+      "rank": 2
+    },
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "expect": [
+        "chunking"
+      ],
+      "id": "P2",
+      "method": "bm25",
+      "rank": 0
+    },
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 400,
+      "docs": [
+        "eval",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "expect": [
+        "chunking"
+      ],
+      "id": "P2",
+      "method": "fusion_0.6",
+      "rank": 0
+    },
+    {
+      "best_possible_rank": 1,
+      "category": "paraphrase",
+      "chunk": 400,
+      "docs": [
+        "chunking",
+        "vector_db",
+        "agent_tools"
+      ],
+      "expect": [
+        "vector_db"
+      ],
+      "id": "P5",
+      "method": "fusion_0.6",
+      "rank": 2
+    }
+  ],
+  "smoke": {
+    "chunks": 10,
+    "docs": 7,
+    "hits": 5,
+    "mrr": "1.0000",
+    "n": 5,
+    "parsed_chars": 1411,
+    "vocab": 1098
+  },
+  "unanswerable_220": [
+    {
+      "abstain": false,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "agent_tools"
+      ],
+      "id": "U1",
+      "method": "cosine",
+      "q": "Kubernetes HPA 应该按 CPU 还是按 QPS 扩容？"
+    },
+    {
+      "abstain": false,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "agent_tools"
+      ],
+      "id": "U1",
+      "method": "bm25",
+      "q": "Kubernetes HPA 应该按 CPU 还是按 QPS 扩容？"
+    },
+    {
+      "abstain": false,
+      "docs": [
+        "rag_overview",
+        "chunking",
+        "vector_db"
+      ],
+      "id": "U1",
+      "method": "fusion_0.6",
+      "q": "Kubernetes HPA 应该按 CPU 还是按 QPS 扩容？"
+    },
+    {
+      "abstain": true,
+      "docs": [],
+      "id": "U2",
+      "method": "cosine",
+      "q": "比特币减半大约每隔多少个区块发生一次？"
+    },
+    {
+      "abstain": true,
+      "docs": [],
+      "id": "U2",
+      "method": "bm25",
+      "q": "比特币减半大约每隔多少个区块发生一次？"
+    },
+    {
+      "abstain": true,
+      "docs": [],
+      "id": "U2",
+      "method": "fusion_0.6",
+      "q": "比特币减半大约每隔多少个区块发生一次？"
+    },
+    {
+      "abstain": false,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "chunking"
+      ],
+      "id": "U3",
+      "method": "cosine",
+      "q": "个人所得税住房租金专项附加扣除需要填什么材料？"
+    },
+    {
+      "abstain": false,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "chunking"
+      ],
+      "id": "U3",
+      "method": "bm25",
+      "q": "个人所得税住房租金专项附加扣除需要填什么材料？"
+    },
+    {
+      "abstain": false,
+      "docs": [
+        "vector_db",
+        "vector_db",
+        "travel"
+      ],
+      "id": "U3",
+      "method": "fusion_0.6",
+      "q": "个人所得税住房租金专项附加扣除需要填什么材料？"
+    },
+    {
+      "abstain": false,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "id": "U4",
+      "method": "cosine",
+      "q": "CPython 3.13 是否默认不再使用 GIL？"
+    },
+    {
+      "abstain": false,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "id": "U4",
+      "method": "bm25",
+      "q": "CPython 3.13 是否默认不再使用 GIL？"
+    },
+    {
+      "abstain": false,
+      "docs": [
+        "vector_db",
+        "agent_tools",
+        "rag_overview"
+      ],
+      "id": "U4",
+      "method": "fusion_0.6",
+      "q": "CPython 3.13 是否默认不再使用 GIL？"
+    },
+    {
+      "abstain": true,
+      "docs": [],
+      "id": "U5",
+      "method": "cosine",
+      "q": "做红烧肉时五花肉要不要先焯水？"
+    },
+    {
+      "abstain": true,
+      "docs": [],
+      "id": "U5",
+      "method": "bm25",
+      "q": "做红烧肉时五花肉要不要先焯水？"
+    },
+    {
+      "abstain": true,
+      "docs": [],
+      "id": "U5",
+      "method": "fusion_0.6",
+      "q": "做红烧肉时五花肉要不要先焯水？"
+    },
+    {
+      "abstain": true,
+      "docs": [],
+      "id": "U6",
+      "method": "cosine",
+      "q": "2024 年巴黎地铁一日票成人票价是多少欧元？"
+    },
+    {
+      "abstain": true,
+      "docs": [],
+      "id": "U6",
+      "method": "bm25",
+      "q": "2024 年巴黎地铁一日票成人票价是多少欧元？"
+    },
+    {
+      "abstain": true,
+      "docs": [],
+      "id": "U6",
+      "method": "fusion_0.6",
+      "q": "2024 年巴黎地铁一日票成人票价是多少欧元？"
+    }
+  ],
+  "weight_sweep": [
+    {
+      "category": "all",
+      "hits": 22,
+      "mrr": "0.8258",
+      "mrr_ci": "[0.7121, 0.9242]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "1.0000",
+      "w_cos": "0.0"
+    },
+    {
+      "category": "paraphrase",
+      "hits": 8,
+      "mrr": "0.9167",
+      "mrr_ci": "[0.7500, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "1.0000",
+      "w_cos": "0.0"
+    },
+    {
+      "category": "exact_entity",
+      "hits": 8,
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "1.0000",
+      "w_cos": "0.0"
+    },
+    {
+      "category": "multi_doc",
+      "hits": 6,
+      "mrr": "0.4722",
+      "mrr_ci": "[0.4167, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "1.0000",
+      "w_cos": "0.0"
+    },
+    {
+      "category": "all",
+      "hits": 22,
+      "mrr": "0.8258",
+      "mrr_ci": "[0.7121, 0.9242]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.8000",
+      "w_cos": "0.2"
+    },
+    {
+      "category": "paraphrase",
+      "hits": 8,
+      "mrr": "0.9167",
+      "mrr_ci": "[0.7500, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.8000",
+      "w_cos": "0.2"
+    },
+    {
+      "category": "exact_entity",
+      "hits": 8,
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.8000",
+      "w_cos": "0.2"
+    },
+    {
+      "category": "multi_doc",
+      "hits": 6,
+      "mrr": "0.4722",
+      "mrr_ci": "[0.4167, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.8000",
+      "w_cos": "0.2"
+    },
+    {
+      "category": "all",
+      "hits": 22,
+      "mrr": "0.8333",
+      "mrr_ci": "[0.7273, 0.9318]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.6000",
+      "w_cos": "0.4"
+    },
+    {
+      "category": "paraphrase",
+      "hits": 8,
+      "mrr": "0.9167",
+      "mrr_ci": "[0.7500, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.6000",
+      "w_cos": "0.4"
+    },
+    {
+      "category": "exact_entity",
+      "hits": 8,
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.6000",
+      "w_cos": "0.4"
+    },
+    {
+      "category": "multi_doc",
+      "hits": 6,
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.6000",
+      "w_cos": "0.4"
+    },
+    {
+      "category": "all",
+      "hits": 22,
+      "mrr": "0.8333",
+      "mrr_ci": "[0.7273, 0.9318]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.4000",
+      "w_cos": "0.6"
+    },
+    {
+      "category": "paraphrase",
+      "hits": 8,
+      "mrr": "0.9167",
+      "mrr_ci": "[0.7500, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.4000",
+      "w_cos": "0.6"
+    },
+    {
+      "category": "exact_entity",
+      "hits": 8,
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.4000",
+      "w_cos": "0.6"
+    },
+    {
+      "category": "multi_doc",
+      "hits": 6,
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.4000",
+      "w_cos": "0.6"
+    },
+    {
+      "category": "all",
+      "hits": 22,
+      "mrr": "0.8333",
+      "mrr_ci": "[0.7273, 0.9318]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.2000",
+      "w_cos": "0.8"
+    },
+    {
+      "category": "paraphrase",
+      "hits": 8,
+      "mrr": "0.9167",
+      "mrr_ci": "[0.7500, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.2000",
+      "w_cos": "0.8"
+    },
+    {
+      "category": "exact_entity",
+      "hits": 8,
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.2000",
+      "w_cos": "0.8"
+    },
+    {
+      "category": "multi_doc",
+      "hits": 6,
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.2000",
+      "w_cos": "0.8"
+    },
+    {
+      "category": "all",
+      "hits": 22,
+      "mrr": "0.8409",
+      "mrr_ci": "[0.7500, 0.9318]",
+      "n": 22,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.0000",
+      "w_cos": "1.0"
+    },
+    {
+      "category": "paraphrase",
+      "hits": 8,
+      "mrr": "0.9375",
+      "mrr_ci": "[0.8125, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.0000",
+      "w_cos": "1.0"
+    },
+    {
+      "category": "exact_entity",
+      "hits": 8,
+      "mrr": "1.0000",
+      "mrr_ci": "[1.0000, 1.0000]",
+      "n": 8,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.0000",
+      "w_cos": "1.0"
+    },
+    {
+      "category": "multi_doc",
+      "hits": 6,
+      "mrr": "0.5000",
+      "mrr_ci": "[0.5000, 0.5000]",
+      "n": 6,
+      "recall": "1.0000",
+      "recall_ci": "[1.0000, 1.0000]",
+      "w_bm25": "0.0000",
+      "w_cos": "1.0"
+    }
+  ]
+}
