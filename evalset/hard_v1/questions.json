@@ -1,0 +1,298 @@
+{
+  "name": "hard_v1",
+  "status_at_authoring": "labels frozen before any retrieval scoring",
+  "authored": "Author-written on 2026-11-16 by reading docs/ only. Not user logs. Not a second rater. Not edited after SHA256.txt.",
+  "corpus": "The seven files in docs/ (five topic notes plus cooking.txt and travel.txt). Not bline/.",
+  "corpus_sha256": {
+    "agent_tools.md": "64c6df24fab00f62497ed9cab4f9763a3e555d895ca7790b69fba01c74074b8d",
+    "chunking.md": "084142f2e1ea5c30a44f7b1f3163cc9d029e74103da48cb49f63df2240d6f6b7",
+    "cooking.txt": "02b7f91914263beb0807edb8dc49afdaf3fb70b5cc0e92f0e0d957e74d79d7b2",
+    "eval.md": "2672866197a423981c8144db47563a368ed3453b9af39f04cee4cb090abaddb5",
+    "rag_overview.md": "efa1b30c0bb75f94ae4aede33d426daa33c3b5837f5635505f75df5cb7e07d97",
+    "travel.txt": "b48530cedfd8dcf1afb88734abe31fea689e040fa330bfd401fdd372f9f58803",
+    "vector_db.md": "982343faf6331b2bd0ed875e336bf49d5aaeb0a8d27e8a3688c94b29aa57424c"
+  },
+  "n": 28,
+  "category_counts": {
+    "paraphrase": 8,
+    "exact_entity": 8,
+    "multi_doc": 6,
+    "unanswerable": 6
+  },
+  "items": [
+    {
+      "id": "P1",
+      "category": "paraphrase",
+      "answerable": true,
+      "expect_docs": [
+        "rag_overview"
+      ],
+      "q": "不想重新训练大模型，也希望回答能对上原文出处。这种系统通常分成哪三个模块？",
+      "support": "rag_overview：不用微调就能注入新知识，回答可追溯到具体文档；由检索器、生成器、知识库三部分组成。问句用了重新训练/出处/模块，没有点名这三个部件。"
+    },
+    {
+      "id": "P2",
+      "category": "paraphrase",
+      "answerable": true,
+      "expect_docs": [
+        "chunking"
+      ],
+      "q": "一段切得过长会把无关内容塞进模型一次能读的篇幅；切得过短会让后文里的代词失去着落。两种切法分别坏在哪里？",
+      "support": "chunking：太大把噪声带进提示词、浪费上下文窗口；太小切断语义、前后指代丢失。问句换成篇幅/代词/无关内容。"
+    },
+    {
+      "id": "P3",
+      "category": "paraphrase",
+      "answerable": true,
+      "expect_docs": [
+        "chunking"
+      ],
+      "q": "相邻两段各自留一截相同的字，用来减轻正好切在句子交界处的伤害。这种切法在减轻什么？",
+      "support": "chunking：滑动窗口重叠，相邻块保留重叠字符，缓解边界截断。问句没有使用滑动、窗口、重叠、截断这几个词。"
+    },
+    {
+      "id": "P4",
+      "category": "paraphrase",
+      "answerable": true,
+      "expect_docs": [
+        "vector_db"
+      ],
+      "q": "库还不大、也不用边服务边增删记录时，为什么往往先在一台机器上做精确近邻查找，而不是上分布式服务？",
+      "support": "vector_db：几十万以内单机 FAISS 暴力检索精度最高、运维成本最低；上千万或在线增删再考虑服务。问句没有点名 FAISS、暴力、几十万。"
+    },
+    {
+      "id": "P5",
+      "category": "paraphrase",
+      "answerable": true,
+      "expect_docs": [
+        "vector_db"
+      ],
+      "q": "只按语义去搜很少出现的词或专名，经常对不上原文。线上一般会再补上哪一类信号？",
+      "support": "vector_db：纯向量对生僻新词和精确实体翻车，线上一般向量加关键词加权融合。问句用很少出现的词/专名/语义，没有用向量、关键词、实体。"
+    },
+    {
+      "id": "P6",
+      "category": "paraphrase",
+      "answerable": true,
+      "expect_docs": [
+        "eval"
+      ],
+      "q": "题集一旦定稿，就不许再用这些题去挑系统参数；流水线改了任何一步都要把整套题重测。这是哪类纪律？",
+      "support": "eval：评测集必须冻结，不许拿测试问题调参；改动任何一环都要重跑全量评测。问句用定稿/挑参数/重测。"
+    },
+    {
+      "id": "P7",
+      "category": "paraphrase",
+      "answerable": true,
+      "expect_docs": [
+        "agent_tools"
+      ],
+      "q": "模型自己选定要调用的外部函数，执行完把结果写回对话，并且必须给来回打转设上限，否则会空耗费用。这是在约束什么？",
+      "support": "agent_tools：决定调哪个工具，结果塞回上下文，循环必须设最大步数，防止空转烧钱。问句用外部函数/写回/打转/空耗费用。"
+    },
+    {
+      "id": "P8",
+      "category": "paraphrase",
+      "answerable": true,
+      "expect_docs": [
+        "travel"
+      ],
+      "q": "短途进城只带用得着的物品，充电器和证件要放在手里的包里，不要放进托运的箱子。这是在说什么场景的打包？",
+      "support": "travel：行李只带必需品，充电宝和身份证放随身包。问句用充电器/证件/手里的包，没有用充电宝、身份证、随身包、旅行。"
+    },
+    {
+      "id": "E1",
+      "category": "exact_entity",
+      "answerable": true,
+      "expect_docs": [
+        "vector_db"
+      ],
+      "q": "ef_search 把哪一对目标之间的取舍拉开了？",
+      "support": "vector_db 独有字符串 ef_search：决定查询精度与延迟的 tradeoff。"
+    },
+    {
+      "id": "E2",
+      "category": "exact_entity",
+      "answerable": true,
+      "expect_docs": [
+        "vector_db"
+      ],
+      "q": "ef_construction 决定的是建索引质量，还是在线查询延迟？",
+      "support": "vector_db 独有字符串 ef_construction：决定建索引质量。ef_search 才对应查询。"
+    },
+    {
+      "id": "E3",
+      "category": "exact_entity",
+      "answerable": true,
+      "expect_docs": [
+        "vector_db"
+      ],
+      "q": "Milvus 和 Qdrant 是在数据量大到需要在线增删时，才和 HNSW 一起被比较的吗？",
+      "support": "vector_db：上千万或在线增删时再考虑 HNSW 或 Milvus、Qdrant。这三个名字只出现在该篇。"
+    },
+    {
+      "id": "E4",
+      "category": "exact_entity",
+      "answerable": true,
+      "expect_docs": [
+        "vector_db"
+      ],
+      "q": "FAISS 暴力检索被说成精度最高，前提是数据量处在什么范围？",
+      "support": "vector_db：数据量在几十万以内时，单机 FAISS 的暴力检索精度最高。FAISS 只出现在该篇。"
+    },
+    {
+      "id": "E5",
+      "category": "exact_entity",
+      "answerable": true,
+      "expect_docs": [
+        "cooking"
+      ],
+      "q": "番茄炒蛋里，鸡蛋倒回去之后除了盐还加了哪样调味？",
+      "support": "cooking：把鸡蛋倒回去，加盐和少许糖调味。番茄炒蛋只出现在该篇。"
+    },
+    {
+      "id": "E6",
+      "category": "exact_entity",
+      "answerable": true,
+      "expect_docs": [
+        "eval"
+      ],
+      "q": "资料里的 judge 模型是给生成侧的什么打分？",
+      "support": "eval 独有拉丁字符串 judge：再训一个 judge 模型自动打分，对象是生成侧忠实度。"
+    },
+    {
+      "id": "E7",
+      "category": "exact_entity",
+      "answerable": true,
+      "expect_docs": [
+        "eval"
+      ],
+      "q": "recall@3 和 MRR 在资料里被当作检索侧的常用指标，对吗？",
+      "support": "eval：检索侧常用 recall@3 和 MRR。在 docs/ 七篇里，这个写法只出现在 eval.md。"
+    },
+    {
+      "id": "E8",
+      "category": "exact_entity",
+      "answerable": true,
+      "expect_docs": [
+        "travel"
+      ],
+      "q": "三天两晚的行程里，充电宝应该放在随身包还是托运行李？",
+      "support": "travel：充电宝和身份证放随身包。充电宝只出现在该篇。问句里的托运不是文档原词，文档答案是随身包。"
+    },
+    {
+      "id": "M1",
+      "category": "multi_doc",
+      "answerable": true,
+      "expect_docs": [
+        "chunking",
+        "eval"
+      ],
+      "q": "哪篇讲切得太大或太小的坏处，哪篇规定不许拿测试题去调参？",
+      "support": "前半只在 chunking（太大/太小）。后半只在 eval（不许拿测试问题去调参）。"
+    },
+    {
+      "id": "M2",
+      "category": "multi_doc",
+      "answerable": true,
+      "expect_docs": [
+        "rag_overview",
+        "agent_tools"
+      ],
+      "q": "哪篇说不用微调就能注入新知识，哪篇说缺知识时可以把检索当成一个工具？",
+      "support": "前半只在 rag_overview。后半只在 agent_tools（Agent 把检索也当成一个工具，缺知识时自己去查）。"
+    },
+    {
+      "id": "M3",
+      "category": "multi_doc",
+      "answerable": true,
+      "expect_docs": [
+        "chunking",
+        "vector_db"
+      ],
+      "q": "哪篇用滑动窗口重叠来缓解边界截断，哪篇的选型口号是先暴力后近似？",
+      "support": "前半只在 chunking。后半只在 vector_db（先暴力后近似）。"
+    },
+    {
+      "id": "M4",
+      "category": "multi_doc",
+      "answerable": true,
+      "expect_docs": [
+        "cooking",
+        "travel"
+      ],
+      "q": "哪篇要求番茄炒蛋全程大火，哪篇建议三天两晚去菜市场买特产？",
+      "support": "前半只在 cooking。后半只在 travel（第三天去菜市场买特产；标题语境是三天两晚）。"
+    },
+    {
+      "id": "M5",
+      "category": "multi_doc",
+      "answerable": true,
+      "expect_docs": [
+        "vector_db",
+        "eval"
+      ],
+      "q": "哪篇要求做余弦相似度之前先做 L2 归一化，哪篇要求新旧版本只看差值不看绝对值？",
+      "support": "前半只在 vector_db。后半只在 eval（只看差值不看绝对值）。"
+    },
+    {
+      "id": "M6",
+      "category": "multi_doc",
+      "answerable": true,
+      "expect_docs": [
+        "agent_tools",
+        "rag_overview"
+      ],
+      "q": "哪篇要求工具循环设最大步数以防空转烧钱，哪篇说这种生成方式的幻觉率明显低于纯生成？",
+      "support": "前半只在 agent_tools。后半只在 rag_overview（幻觉率明显低于纯生成）。"
+    },
+    {
+      "id": "U1",
+      "category": "unanswerable",
+      "answerable": false,
+      "expect_docs": [],
+      "q": "Kubernetes HPA 应该按 CPU 还是按 QPS 扩容？",
+      "support": "docs/ 七篇均未提到 Kubernetes、HPA、QPS。写作时用检索前的全文检索确认这些词不在 docs/。"
+    },
+    {
+      "id": "U2",
+      "category": "unanswerable",
+      "answerable": false,
+      "expect_docs": [],
+      "q": "比特币减半大约每隔多少个区块发生一次？",
+      "support": "docs/ 没有比特币或减半。与旅行/做饭无关。"
+    },
+    {
+      "id": "U3",
+      "category": "unanswerable",
+      "answerable": false,
+      "expect_docs": [],
+      "q": "个人所得税住房租金专项附加扣除需要填什么材料？",
+      "support": "docs/ 没有个人所得税或专项附加扣除。"
+    },
+    {
+      "id": "U4",
+      "category": "unanswerable",
+      "answerable": false,
+      "expect_docs": [],
+      "q": "CPython 3.13 是否默认不再使用 GIL？",
+      "support": "docs/ 没有 CPython 或 GIL。eval 里的 Python 字样也不存在；此题不是语料内容。"
+    },
+    {
+      "id": "U5",
+      "category": "unanswerable",
+      "answerable": false,
+      "expect_docs": [],
+      "q": "做红烧肉时五花肉要不要先焯水？",
+      "support": "做饭文档只有番茄炒蛋，没有红烧肉、五花肉或焯水。"
+    },
+    {
+      "id": "U6",
+      "category": "unanswerable",
+      "answerable": false,
+      "expect_docs": [],
+      "q": "2024 年巴黎地铁一日票成人票价是多少欧元？",
+      "support": "旅行文档是泛泛的城市三日游，没有巴黎、地铁或欧元。"
+    }
+  ]
+}
